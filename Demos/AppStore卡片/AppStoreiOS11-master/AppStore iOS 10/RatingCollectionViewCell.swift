@@ -23,7 +23,7 @@ class RatingCollectionViewCell: UICollectionViewCell , UICollectionViewDelegate,
         layout.minimumLineSpacing = 0
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.decelerationRate = UIScrollViewDecelerationRateFast
+        cv.decelerationRate = UIScrollView.DecelerationRate.fast
         cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .white
         return cv
@@ -54,7 +54,7 @@ class RatingCollectionViewCell: UICollectionViewCell , UICollectionViewDelegate,
         
         collectionView.anchor(titleLbl.bottomAnchor, left: leftAnchor, bottom: divider.topAnchor, right: rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        collectionView.contentInset = UIEdgeInsetsMake(0, 10, 0, 14)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 14)
         
         divider.anchor(nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
         

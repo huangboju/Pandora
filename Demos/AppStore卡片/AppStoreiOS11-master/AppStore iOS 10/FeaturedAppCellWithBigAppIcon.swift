@@ -26,12 +26,12 @@ class FeaturedAppCellWithBigAppIcon: FeaturedAppCardCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4
         
-        let attributedString = NSMutableAttributedString(string: "\(app.appName!)\n".capitalized, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: UIColor.black])
+        let attributedString = NSMutableAttributedString(string: "\(app.appName!)\n".capitalized, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.black])
         
-        attributedString.append(NSAttributedString(string: "\(app.appDesc!)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: lightGray]))
+        attributedString.append(NSAttributedString(string: "\(app.appDesc!)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: lightGray]))
         
-        let range = NSRange(location: 0, length: attributedString.string.characters.count)
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: range)
+        let range = NSRange(location: 0, length: attributedString.string.count)
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
         
         return attributedString
     }
@@ -44,7 +44,7 @@ class FeaturedAppCellWithBigAppIcon: FeaturedAppCardCell {
         let backGroundImage = UIImage(color: lightGray, size: CGSize(width: 20, height: 10))
         
         let btn = UIButton()
-        let attributedString = NSMutableAttributedString(string: "GET".uppercased(), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: headerBlue])
+        let attributedString = NSMutableAttributedString(string: "GET".uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: headerBlue])
         btn.setAttributedTitle(attributedString, for: .normal)
         btn.setBackgroundImage(backGroundImage, for: .normal)
         btn.layer.cornerRadius = 10

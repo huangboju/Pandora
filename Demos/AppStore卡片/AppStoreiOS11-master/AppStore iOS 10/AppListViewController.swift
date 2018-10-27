@@ -19,7 +19,7 @@ class AppListViewController: UIViewController, UICollectionViewDelegateFlowLayou
         layout.minimumLineSpacing = 0
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.decelerationRate = UIScrollViewDecelerationRateFast
+        cv.decelerationRate = UIScrollView.DecelerationRate.fast
         cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = .white
         return cv

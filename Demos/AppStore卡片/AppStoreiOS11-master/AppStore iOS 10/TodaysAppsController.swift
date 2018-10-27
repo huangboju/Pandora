@@ -16,7 +16,7 @@ class TodaysAppsController: DatasourceController  {
         super.viewDidLoad()
         
         collectionView?.showsVerticalScrollIndicator = false
-        collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView?.decelerationRate = UIScrollView.DecelerationRate.fast
 
         if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout{
             layout.sectionHeadersPinToVisibleBounds = false
@@ -100,7 +100,7 @@ class TodaysAppsController: DatasourceController  {
         
         let header : GeneralHeaderCell
         
-        if(kind == UICollectionElementKindSectionHeader){
+        if(kind == UICollectionView.elementKindSectionHeader){
             header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self), for: indexPath) as? GeneralHeaderCell)!
             
             let headerItem = HeaderItem(smallTitle: "Monday, June 5".uppercased(), bigTitle: "Today", hideDiv: true)

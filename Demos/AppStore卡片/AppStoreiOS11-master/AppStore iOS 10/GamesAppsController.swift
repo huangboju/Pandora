@@ -36,7 +36,7 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
         layout.minimumLineSpacing = 0
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.decelerationRate = UIScrollViewDecelerationRateFast
+        cv.decelerationRate = UIScrollView.DecelerationRate.fast
         cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .white
         return cv
@@ -66,11 +66,11 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
         
         collectionView.register(SmallListHolderCell.self, forCellWithReuseIdentifier: NSStringFromClass(SmallListHolderCell.self))
         
-        collectionView.register(GeneralHeaderCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self))
+        collectionView.register(GeneralHeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self))
         
-        collectionView.register(DividerFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: NSStringFromClass(DividerFooter.self))
+        collectionView.register(DividerFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: NSStringFromClass(DividerFooter.self))
         
-        collectionView.register(SmallAppListHeader.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: NSStringFromClass(SmallAppListHeader.self))
+        collectionView.register(SmallAppListHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: NSStringFromClass(SmallAppListHeader.self))
         
         self.collectionView.reloadData()
     }
@@ -89,7 +89,7 @@ class GamesAppsController:  UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        if(kind == UICollectionElementKindSectionHeader){
+        if(kind == UICollectionView.elementKindSectionHeader){
             
             if indexPath.section == 1{
                 if let header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(SmallAppListHeader.self), for: indexPath) as? SmallAppListHeader){

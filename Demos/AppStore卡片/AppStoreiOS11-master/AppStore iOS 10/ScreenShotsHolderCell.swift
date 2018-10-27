@@ -23,7 +23,7 @@ class ScreenShotsHolderCell: UICollectionViewCell , UICollectionViewDelegate, UI
         layout.minimumLineSpacing = 0
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.decelerationRate = UIScrollViewDecelerationRateFast
+        cv.decelerationRate = UIScrollView.DecelerationRate.fast
         cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .white
         return cv
@@ -61,7 +61,7 @@ class ScreenShotsHolderCell: UICollectionViewCell , UICollectionViewDelegate, UI
         
         collectionView.anchor(topAnchor, left: leftAnchor, bottom: iPadAppsLabl.topAnchor, right: rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        collectionView.contentInset = UIEdgeInsetsMake(0, 14, 0, 14)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
         
         iPadImage.anchor(nil, left: leftAnchor, bottom: divider.topAnchor, right: nil, topConstant: 16, leftConstant: 16, bottomConstant: 8, rightConstant: 16, widthConstant: 10, heightConstant: 20)
         

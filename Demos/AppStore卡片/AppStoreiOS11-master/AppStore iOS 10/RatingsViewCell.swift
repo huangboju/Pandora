@@ -44,13 +44,13 @@ class RatingsViewCell: UICollectionViewCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 1
         
-        let attributedString = NSMutableAttributedString(string: "\(review.author!)\n\(review.date!)\n\n", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 9), NSForegroundColorAttributeName: lightGray])
+        let attributedString = NSMutableAttributedString(string: "\(review.author!)\n\(review.date!)\n\n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 9), NSAttributedString.Key.foregroundColor: lightGray])
         
         
-        attributedString.append(NSAttributedString(string: "\(review.content!)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: UIColor.black]))
+        attributedString.append(NSAttributedString(string: "\(review.content!)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.black]))
         
-        let range = NSMakeRange(0, attributedString.string.characters.count)
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: range)
+        let range = NSMakeRange(0, attributedString.string.count)
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
         
         return attributedString
     }
@@ -59,7 +59,7 @@ class RatingsViewCell: UICollectionViewCell {
         let label = UITextView()
         label.backgroundColor = .clear
         label.isScrollEnabled = false
-        label.contentMode = UIViewContentMode.top
+        label.contentMode = UIView.ContentMode.top
         // label.attributedText = attributedString
         return label
     }()

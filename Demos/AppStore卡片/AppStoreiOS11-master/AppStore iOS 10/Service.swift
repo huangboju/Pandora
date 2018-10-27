@@ -31,12 +31,12 @@ class Service: NSObject {
                     if !mainDict.isEmpty{
                         for article in mainDict{
                             var app = App()
-                            app.appName = article["title"] as! String!
-                            app.appDesc = article["developer"] as! String!
-                            app.appPhoto = article["icon"] as! String!
-                            app.appID = article["id"] as! Int!
-                            app.appCategory = article["price"] as! String!
-                            app.appRating = article["rating"] as! Double
+                            app.appName = article["title"] as? String
+                            app.appDesc = article["developer"] as? String
+                            app.appPhoto = article["icon"] as? String
+                            app.appID = article["id"] as? Int
+                            app.appCategory = article["price"] as? String
+                            app.appRating = article["rating"] as? Double
                             apps.append(app)
                         }
                         
@@ -59,10 +59,10 @@ class Service: NSObject {
                 var app = App()
                 if let allData = result["content"] as? Dictionary<String, Any>{
                     if let article = allData["store_info"] as? Dictionary<String, Any>{
-                        app.appName = article["title"] as! String!
-                        app.appDesc = article["description"] as! String!
-                        app.appPhoto = article["icon"] as! String!
-                        app.appCategory = article["price"] as! String!
+                        app.appName = article["title"] as? String
+                        app.appDesc = article["description"] as? String
+                        app.appPhoto = article["icon"] as? String
+                        app.appCategory = article["price"] as? String
                         
                         var screens = [String]()
                         if let screenShotsDict = article["screenshots"] as? Dictionary<String, Any>{
@@ -84,7 +84,7 @@ class Service: NSObject {
                         print("I AM HERE")
                         for reviewJSON in reviewsDict{
                             var review = Review()
-                            review.author = reviewJSON["author"] as! String
+                            review.author = reviewJSON["author"] as? String
                             
                             //Skipped some reviews for pleasing aesthetics
                             if let title = reviewJSON["title"] as? String{
@@ -94,7 +94,7 @@ class Service: NSObject {
                             }
                             
                             if let content = reviewJSON["content"] as? String{
-                                if content.characters.count < 100 {
+                                if content.count < 100 {
                                     continue
                                 }
                                 review.content = content
@@ -102,8 +102,8 @@ class Service: NSObject {
                                 continue
                             }
                             //review.version = reviewJSON["version"] as! String
-                            review.date = reviewJSON["date"] as! String
-                            review.rating = reviewJSON["rating"] as! Double
+                            review.date = reviewJSON["date"] as? String
+                            review.rating = reviewJSON["rating"] as? Double
                             reviews.append(review)
                         }
                         app.appReviews = reviews

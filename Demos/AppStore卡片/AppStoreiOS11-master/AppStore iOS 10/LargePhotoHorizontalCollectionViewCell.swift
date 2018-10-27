@@ -17,7 +17,7 @@ class LargePhotoHorizontalCollectionViewCell: DatasourceCell, UICollectionViewDe
         layout.minimumLineSpacing = 0
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.decelerationRate = UIScrollViewDecelerationRateFast
+        cv.decelerationRate = UIScrollView.DecelerationRate.fast
         cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .white
         return cv

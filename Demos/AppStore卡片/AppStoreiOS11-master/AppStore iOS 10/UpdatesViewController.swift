@@ -78,7 +78,7 @@ class SearchViewController: AppListViewController, AZSearchViewDelegate, AZSearc
         self.searchController.keyboardAppearnce = .default
         self.searchController.separatorColor = .clear
         
-        let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(self.showSearchBar(sender:)))
+        let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.search, target: self, action: #selector(self.showSearchBar(sender:)))
         self.tabBarController?.navigationItem.rightBarButtonItem = button
         
         //Add bar button item on the navigation bar using the navigation item.
@@ -89,7 +89,7 @@ class SearchViewController: AppListViewController, AZSearchViewDelegate, AZSearc
         // Do any additional setup after loading the view.
     }
     
-    func showSearchBar(sender:AnyObject?)  {
+    @objc func showSearchBar(sender:AnyObject?)  {
         self.searchController.show(in: (self.tabBarController?.navigationController!)!)
     }
     
@@ -138,7 +138,7 @@ class SearchViewController: AppListViewController, AZSearchViewDelegate, AZSearc
         return 0
     }
 
-    func close(sender:AnyObject?){
+    @objc func close(sender:AnyObject?){
         searchController.dismiss(animated: true)
     }
     
