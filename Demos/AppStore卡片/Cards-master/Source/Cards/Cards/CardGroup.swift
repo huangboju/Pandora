@@ -15,7 +15,7 @@ import UIKit
     @IBInspectable var titleSize: CGFloat = 26
     @IBInspectable var subtitle: String = "from the editors"
     @IBInspectable var subtitleSize: CGFloat = 26
-    @IBInspectable var blurEffect: UIBlurEffectStyle = UIBlurEffectStyle.extraLight
+    @IBInspectable var blurEffect: UIBlurEffect.Style = UIBlurEffect.Style.extraLight
     
     // Delegate
     var delegate: CardDelegate?
