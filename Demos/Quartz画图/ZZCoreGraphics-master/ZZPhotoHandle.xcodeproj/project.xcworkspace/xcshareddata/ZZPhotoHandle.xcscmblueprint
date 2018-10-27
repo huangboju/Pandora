@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FAECDD832A4C64ABC3ADC88F519BB6D68B79612F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6B4ED8BBDD23D1064858EBF6047E4E22FA6CB62A" : 0,
+    "FAECDD832A4C64ABC3ADC88F519BB6D68B79612F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7E9479A4-C332-4810-972C-7A2643E92BF2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6B4ED8BBDD23D1064858EBF6047E4E22FA6CB62A" : "",
+    "FAECDD832A4C64ABC3ADC88F519BB6D68B79612F" : "ZZCoreGraphics\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZZPhotoHandle",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZZPhotoHandle.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/smalldu\/ZZCoreGraphics.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6B4ED8BBDD23D1064858EBF6047E4E22FA6CB62A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:smalldu\/ZZCoreGraphics.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FAECDD832A4C64ABC3ADC88F519BB6D68B79612F"
+    }
+  ]
+}

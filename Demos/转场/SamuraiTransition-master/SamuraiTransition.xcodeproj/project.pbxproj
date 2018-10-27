@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD5B398C1E0438F2004C56A2 /* CircleZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B398B1E0438F2004C56A2 /* CircleZanConfig.swift */; };
+		AD5B39901E06C341004C56A2 /* RectangleZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B398F1E06C341004C56A2 /* RectangleZanConfig.swift */; };
+		AD8D82471E4E0247006E26E4 /* ChoppedZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8D82461E4E0247006E26E4 /* ChoppedZanConfig.swift */; };
+		ADDC02611DF99FEC009EEC45 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC02601DF99FEC009EEC45 /* UIView+Extension.swift */; };
+		ADDC02641DFD332A009EEC45 /* CrossZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDC02631DFD332A009EEC45 /* CrossZanConfig.swift */; };
+		C2576BFF1E111EC9003572C2 /* ShreddedZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2576BFE1E111EC9003572C2 /* ShreddedZanConfig.swift */; };
+		C2576F0F1E288E5E002F3B78 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2576F0E1E288E5E002F3B78 /* Device.swift */; };
+		C27839E71DF58ECF004B1E0C /* ZanViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27839E61DF58ECF004B1E0C /* ZanViewConfig.swift */; };
+		C2892D891DFEAE5C007FE39E /* XZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2892D881DFEAE5C007FE39E /* XZanConfig.swift */; };
+		C29236721E03D4AD00A04FEE /* JaggedZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29236711E03D4AD00A04FEE /* JaggedZanConfig.swift */; };
+		C29236751E07F80D00A04FEE /* TriangleZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29236741E07F80D00A04FEE /* TriangleZanConfig.swift */; };
+		C2E5F6DE1DF806A30012CFE2 /* ZanViewConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5F6DD1DF806A30012CFE2 /* ZanViewConfigProtocol.swift */; };
+		C2E5F6E01DF80D730012CFE2 /* SamuraiConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5F6DF1DF80D730012CFE2 /* SamuraiConfigProtocol.swift */; };
+		C2E5F6E61DF8239F0012CFE2 /* ZanLineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5F6E51DF8239F0012CFE2 /* ZanLineProtocol.swift */; };
+		C2E5F6E81DF825310012CFE2 /* VerticalZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5F6E71DF825310012CFE2 /* VerticalZanConfig.swift */; };
+		C2E5F6EA1DF828830012CFE2 /* DiagonallyZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5F6E91DF828830012CFE2 /* DiagonallyZanConfig.swift */; };
+		C2E5F6EC1DF82AC40012CFE2 /* HorizontalZanConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5F6EB1DF82AC40012CFE2 /* HorizontalZanConfig.swift */; };
+		C2F716561DE9565000480CAB /* SamuraiTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = C2F716541DE9565000480CAB /* SamuraiTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2F716861DE959FF00480CAB /* Zan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F716851DE959FF00480CAB /* Zan.swift */; };
+		C2F716881DE95ABC00480CAB /* SamuraiTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F716871DE95ABC00480CAB /* SamuraiTransition.swift */; };
+		C2F716921DF2665C00480CAB /* SamuraiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F716911DF2665C00480CAB /* SamuraiViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AD5B398B1E0438F2004C56A2 /* CircleZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleZanConfig.swift; sourceTree = "<group>"; };
+		AD5B398F1E06C341004C56A2 /* RectangleZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleZanConfig.swift; sourceTree = "<group>"; };
+		AD8D82461E4E0247006E26E4 /* ChoppedZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoppedZanConfig.swift; sourceTree = "<group>"; };
+		ADDC02601DF99FEC009EEC45 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		ADDC02631DFD332A009EEC45 /* CrossZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossZanConfig.swift; sourceTree = "<group>"; };
+		C2576BFE1E111EC9003572C2 /* ShreddedZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShreddedZanConfig.swift; sourceTree = "<group>"; };
+		C2576F0E1E288E5E002F3B78 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C27839E61DF58ECF004B1E0C /* ZanViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZanViewConfig.swift; sourceTree = "<group>"; };
+		C2892D881DFEAE5C007FE39E /* XZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XZanConfig.swift; sourceTree = "<group>"; };
+		C29236711E03D4AD00A04FEE /* JaggedZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JaggedZanConfig.swift; sourceTree = "<group>"; };
+		C29236741E07F80D00A04FEE /* TriangleZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleZanConfig.swift; sourceTree = "<group>"; };
+		C2E5F6DD1DF806A30012CFE2 /* ZanViewConfigProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZanViewConfigProtocol.swift; sourceTree = "<group>"; };
+		C2E5F6DF1DF80D730012CFE2 /* SamuraiConfigProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamuraiConfigProtocol.swift; sourceTree = "<group>"; };
+		C2E5F6E51DF8239F0012CFE2 /* ZanLineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZanLineProtocol.swift; sourceTree = "<group>"; };
+		C2E5F6E71DF825310012CFE2 /* VerticalZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalZanConfig.swift; sourceTree = "<group>"; };
+		C2E5F6E91DF828830012CFE2 /* DiagonallyZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagonallyZanConfig.swift; sourceTree = "<group>"; };
+		C2E5F6EB1DF82AC40012CFE2 /* HorizontalZanConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalZanConfig.swift; sourceTree = "<group>"; };
+		C2F716511DE9565000480CAB /* SamuraiTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SamuraiTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F716541DE9565000480CAB /* SamuraiTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SamuraiTransition.h; sourceTree = "<group>"; };
+		C2F716551DE9565000480CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2F716851DE959FF00480CAB /* Zan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zan.swift; sourceTree = "<group>"; };
+		C2F716871DE95ABC00480CAB /* SamuraiTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamuraiTransition.swift; sourceTree = "<group>"; };
+		C2F716911DF2665C00480CAB /* SamuraiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamuraiViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2F7164D1DE9565000480CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2F716471DE9565000480CAB = {
+			isa = PBXGroup;
+			children = (
+				C2F716531DE9565000480CAB /* SamuraiTransition */,
+				C2F716521DE9565000480CAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2F716521DE9565000480CAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2F716511DE9565000480CAB /* SamuraiTransition.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2F716531DE9565000480CAB /* SamuraiTransition */ = {
+			isa = PBXGroup;
+			children = (
+				C2F716541DE9565000480CAB /* SamuraiTransition.h */,
+				C2F716551DE9565000480CAB /* Info.plist */,
+				C2F716871DE95ABC00480CAB /* SamuraiTransition.swift */,
+				C2E5F6E51DF8239F0012CFE2 /* ZanLineProtocol.swift */,
+				C2F716851DE959FF00480CAB /* Zan.swift */,
+				C2E5F6EB1DF82AC40012CFE2 /* HorizontalZanConfig.swift */,
+				C2E5F6E71DF825310012CFE2 /* VerticalZanConfig.swift */,
+				C2E5F6E91DF828830012CFE2 /* DiagonallyZanConfig.swift */,
+				ADDC02631DFD332A009EEC45 /* CrossZanConfig.swift */,
+				C2892D881DFEAE5C007FE39E /* XZanConfig.swift */,
+				C29236711E03D4AD00A04FEE /* JaggedZanConfig.swift */,
+				AD5B398B1E0438F2004C56A2 /* CircleZanConfig.swift */,
+				AD5B398F1E06C341004C56A2 /* RectangleZanConfig.swift */,
+				C29236741E07F80D00A04FEE /* TriangleZanConfig.swift */,
+				C2576BFE1E111EC9003572C2 /* ShreddedZanConfig.swift */,
+				AD8D82461E4E0247006E26E4 /* ChoppedZanConfig.swift */,
+				C27839E61DF58ECF004B1E0C /* ZanViewConfig.swift */,
+				C2E5F6DD1DF806A30012CFE2 /* ZanViewConfigProtocol.swift */,
+				C2E5F6DF1DF80D730012CFE2 /* SamuraiConfigProtocol.swift */,
+				C2F716911DF2665C00480CAB /* SamuraiViewController.swift */,
+				ADDC02601DF99FEC009EEC45 /* UIView+Extension.swift */,
+				C2576F0E1E288E5E002F3B78 /* Device.swift */,
+			);
+			path = SamuraiTransition;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C2F7164E1DE9565000480CAB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F716561DE9565000480CAB /* SamuraiTransition.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C2F716501DE9565000480CAB /* SamuraiTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F716591DE9565000480CAB /* Build configuration list for PBXNativeTarget "SamuraiTransition" */;
+			buildPhases = (
+				C2F7164C1DE9565000480CAB /* Sources */,
+				C2F7164D1DE9565000480CAB /* Frameworks */,
+				C2F7164E1DE9565000480CAB /* Headers */,
+				C2F7164F1DE9565000480CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamuraiTransition;
+			productName = SamuraiTransition;
+			productReference = C2F716511DE9565000480CAB /* SamuraiTransition.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2F716481DE9565000480CAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = hachinobu;
+				TargetAttributes = {
+					C2F716501DE9565000480CAB = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C2F7164B1DE9565000480CAB /* Build configuration list for PBXProject "SamuraiTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C2F716471DE9565000480CAB;
+			productRefGroup = C2F716521DE9565000480CAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2F716501DE9565000480CAB /* SamuraiTransition */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2F7164F1DE9565000480CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2F7164C1DE9565000480CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDC02611DF99FEC009EEC45 /* UIView+Extension.swift in Sources */,
+				C2F716861DE959FF00480CAB /* Zan.swift in Sources */,
+				C2E5F6DE1DF806A30012CFE2 /* ZanViewConfigProtocol.swift in Sources */,
+				AD5B398C1E0438F2004C56A2 /* CircleZanConfig.swift in Sources */,
+				C29236751E07F80D00A04FEE /* TriangleZanConfig.swift in Sources */,
+				C2E5F6EA1DF828830012CFE2 /* DiagonallyZanConfig.swift in Sources */,
+				C2576BFF1E111EC9003572C2 /* ShreddedZanConfig.swift in Sources */,
+				ADDC02641DFD332A009EEC45 /* CrossZanConfig.swift in Sources */,
+				C2892D891DFEAE5C007FE39E /* XZanConfig.swift in Sources */,
+				AD5B39901E06C341004C56A2 /* RectangleZanConfig.swift in Sources */,
+				C2E5F6EC1DF82AC40012CFE2 /* HorizontalZanConfig.swift in Sources */,
+				C2E5F6E61DF8239F0012CFE2 /* ZanLineProtocol.swift in Sources */,
+				C2E5F6E81DF825310012CFE2 /* VerticalZanConfig.swift in Sources */,
+				C2576F0F1E288E5E002F3B78 /* Device.swift in Sources */,
+				C2F716881DE95ABC00480CAB /* SamuraiTransition.swift in Sources */,
+				C2F716921DF2665C00480CAB /* SamuraiViewController.swift in Sources */,
+				C27839E71DF58ECF004B1E0C /* ZanViewConfig.swift in Sources */,
+				C2E5F6E01DF80D730012CFE2 /* SamuraiConfigProtocol.swift in Sources */,
+				C29236721E03D4AD00A04FEE /* JaggedZanConfig.swift in Sources */,
+				AD8D82471E4E0247006E26E4 /* ChoppedZanConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C2F716571DE9565000480CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C2F716581DE9565000480CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C2F7165A1DE9565000480CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SamuraiTransition/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hachinobu.SamuraiTransition.SamuraiTransition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C2F7165B1DE9565000480CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SamuraiTransition/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hachinobu.SamuraiTransition.SamuraiTransition;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2F7164B1DE9565000480CAB /* Build configuration list for PBXProject "SamuraiTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F716571DE9565000480CAB /* Debug */,
+				C2F716581DE9565000480CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F716591DE9565000480CAB /* Build configuration list for PBXNativeTarget "SamuraiTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F7165A1DE9565000480CAB /* Debug */,
+				C2F7165B1DE9565000480CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2F716481DE9565000480CAB /* Project object */;
+}

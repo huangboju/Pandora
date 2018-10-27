@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4938292E6D857240ABA36371 /* Pods_TanVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CD64B7D0428082E3846B1A4 /* Pods_TanVIPER.framework */; };
+		BADC5BC11DF66C2300CE1ECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BC01DF66C2300CE1ECE /* AppDelegate.swift */; };
+		BADC5BC31DF66C2300CE1ECE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BC21DF66C2300CE1ECE /* ViewController.swift */; };
+		BADC5BC81DF66C2300CE1ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADC5BC71DF66C2300CE1ECE /* Assets.xcassets */; };
+		BADC5BCB1DF66C2300CE1ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADC5BC91DF66C2300CE1ECE /* LaunchScreen.storyboard */; };
+		BADC5BD31DF66CA300CE1ECE /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BD21DF66CA300CE1ECE /* Entity.swift */; };
+		BADC5BD51DF66CB500CE1ECE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BD41DF66CB500CE1ECE /* Config.swift */; };
+		BADC5BD71DF6D44200CE1ECE /* OneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BD61DF6D44200CE1ECE /* OneView.swift */; };
+		BADC5BD91DF6D45600CE1ECE /* OnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BD81DF6D45600CE1ECE /* OnePresenter.swift */; };
+		BADC5BDB1DF6D46700CE1ECE /* OneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BDA1DF6D46700CE1ECE /* OneInteractor.swift */; };
+		BADC5BE01DF712E800CE1ECE /* TwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BDF1DF712E800CE1ECE /* TwoView.swift */; };
+		BADC5BE21DF712F900CE1ECE /* TwoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BE11DF712F900CE1ECE /* TwoInteractor.swift */; };
+		BADC5BE41DF7130A00CE1ECE /* TwoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC5BE31DF7130A00CE1ECE /* TwoPresenter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2CD64B7D0428082E3846B1A4 /* Pods_TanVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TanVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78CAB89470E576FEA4026746 /* Pods-TanVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TanVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TanVIPER/Pods-TanVIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		8BBCB99C2E91A10F08EF95AA /* Pods-TanVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TanVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-TanVIPER/Pods-TanVIPER.release.xcconfig"; sourceTree = "<group>"; };
+		BADC5BBD1DF66C2300CE1ECE /* TanVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TanVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BADC5BC01DF66C2300CE1ECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BADC5BC21DF66C2300CE1ECE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BADC5BC71DF66C2300CE1ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BADC5BCA1DF66C2300CE1ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BADC5BCC1DF66C2300CE1ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADC5BD21DF66CA300CE1ECE /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		BADC5BD41DF66CB500CE1ECE /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		BADC5BD61DF6D44200CE1ECE /* OneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneView.swift; sourceTree = "<group>"; };
+		BADC5BD81DF6D45600CE1ECE /* OnePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePresenter.swift; sourceTree = "<group>"; };
+		BADC5BDA1DF6D46700CE1ECE /* OneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneInteractor.swift; sourceTree = "<group>"; };
+		BADC5BDF1DF712E800CE1ECE /* TwoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoView.swift; sourceTree = "<group>"; };
+		BADC5BE11DF712F900CE1ECE /* TwoInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoInteractor.swift; sourceTree = "<group>"; };
+		BADC5BE31DF7130A00CE1ECE /* TwoPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoPresenter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BADC5BBA1DF66C2300CE1ECE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4938292E6D857240ABA36371 /* Pods_TanVIPER.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11A552EAD2C9D479467DC567 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CD64B7D0428082E3846B1A4 /* Pods_TanVIPER.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BADC5BB41DF66C2300CE1ECE = {
+			isa = PBXGroup;
+			children = (
+				BADC5BBF1DF66C2300CE1ECE /* TanVIPER */,
+				BADC5BBE1DF66C2300CE1ECE /* Products */,
+				CB7B0A9611B8569CD4D5459C /* Pods */,
+				11A552EAD2C9D479467DC567 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BADC5BBE1DF66C2300CE1ECE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BADC5BBD1DF66C2300CE1ECE /* TanVIPER.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BADC5BBF1DF66C2300CE1ECE /* TanVIPER */ = {
+			isa = PBXGroup;
+			children = (
+				BADC5BDE1DF712D600CE1ECE /* Two */,
+				BADC5BDD1DF712CE00CE1ECE /* One */,
+				BADC5BC01DF66C2300CE1ECE /* AppDelegate.swift */,
+				BADC5BC21DF66C2300CE1ECE /* ViewController.swift */,
+				BADC5BD21DF66CA300CE1ECE /* Entity.swift */,
+				BADC5BD41DF66CB500CE1ECE /* Config.swift */,
+				BADC5BC71DF66C2300CE1ECE /* Assets.xcassets */,
+				BADC5BC91DF66C2300CE1ECE /* LaunchScreen.storyboard */,
+				BADC5BCC1DF66C2300CE1ECE /* Info.plist */,
+			);
+			path = TanVIPER;
+			sourceTree = "<group>";
+		};
+		BADC5BDD1DF712CE00CE1ECE /* One */ = {
+			isa = PBXGroup;
+			children = (
+				BADC5BD61DF6D44200CE1ECE /* OneView.swift */,
+				BADC5BD81DF6D45600CE1ECE /* OnePresenter.swift */,
+				BADC5BDA1DF6D46700CE1ECE /* OneInteractor.swift */,
+			);
+			name = One;
+			sourceTree = "<group>";
+		};
+		BADC5BDE1DF712D600CE1ECE /* Two */ = {
+			isa = PBXGroup;
+			children = (
+				BADC5BDF1DF712E800CE1ECE /* TwoView.swift */,
+				BADC5BE11DF712F900CE1ECE /* TwoInteractor.swift */,
+				BADC5BE31DF7130A00CE1ECE /* TwoPresenter.swift */,
+			);
+			name = Two;
+			sourceTree = "<group>";
+		};
+		CB7B0A9611B8569CD4D5459C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78CAB89470E576FEA4026746 /* Pods-TanVIPER.debug.xcconfig */,
+				8BBCB99C2E91A10F08EF95AA /* Pods-TanVIPER.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BADC5BBC1DF66C2300CE1ECE /* TanVIPER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BADC5BCF1DF66C2300CE1ECE /* Build configuration list for PBXNativeTarget "TanVIPER" */;
+			buildPhases = (
+				205031C97240497099D7BD6F /* [CP] Check Pods Manifest.lock */,
+				BADC5BB91DF66C2300CE1ECE /* Sources */,
+				BADC5BBA1DF66C2300CE1ECE /* Frameworks */,
+				BADC5BBB1DF66C2300CE1ECE /* Resources */,
+				9FFABFBA7BA9E5DA8A042832 /* [CP] Embed Pods Frameworks */,
+				6118EEC69B8F193FB1A809EC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TanVIPER;
+			productName = TanVIPER;
+			productReference = BADC5BBD1DF66C2300CE1ECE /* TanVIPER.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BADC5BB51DF66C2300CE1ECE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Tangent;
+				TargetAttributes = {
+					BADC5BBC1DF66C2300CE1ECE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9PA6Z533LV;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BADC5BB81DF66C2300CE1ECE /* Build configuration list for PBXProject "TanVIPER" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BADC5BB41DF66C2300CE1ECE;
+			productRefGroup = BADC5BBE1DF66C2300CE1ECE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BADC5BBC1DF66C2300CE1ECE /* TanVIPER */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BADC5BBB1DF66C2300CE1ECE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADC5BCB1DF66C2300CE1ECE /* LaunchScreen.storyboard in Resources */,
+				BADC5BC81DF66C2300CE1ECE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		205031C97240497099D7BD6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6118EEC69B8F193FB1A809EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TanVIPER/Pods-TanVIPER-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FFABFBA7BA9E5DA8A042832 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TanVIPER/Pods-TanVIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BADC5BB91DF66C2300CE1ECE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BADC5BC31DF66C2300CE1ECE /* ViewController.swift in Sources */,
+				BADC5BE21DF712F900CE1ECE /* TwoInteractor.swift in Sources */,
+				BADC5BD51DF66CB500CE1ECE /* Config.swift in Sources */,
+				BADC5BC11DF66C2300CE1ECE /* AppDelegate.swift in Sources */,
+				BADC5BD91DF6D45600CE1ECE /* OnePresenter.swift in Sources */,
+				BADC5BD31DF66CA300CE1ECE /* Entity.swift in Sources */,
+				BADC5BE01DF712E800CE1ECE /* TwoView.swift in Sources */,
+				BADC5BE41DF7130A00CE1ECE /* TwoPresenter.swift in Sources */,
+				BADC5BD71DF6D44200CE1ECE /* OneView.swift in Sources */,
+				BADC5BDB1DF6D46700CE1ECE /* OneInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BADC5BC91DF66C2300CE1ECE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BADC5BCA1DF66C2300CE1ECE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BADC5BCD1DF66C2300CE1ECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BADC5BCE1DF66C2300CE1ECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BADC5BD01DF66C2300CE1ECE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78CAB89470E576FEA4026746 /* Pods-TanVIPER.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PA6Z533LV;
+				INFOPLIST_FILE = TanVIPER/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tangent.TanVIPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BADC5BD11DF66C2300CE1ECE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BBCB99C2E91A10F08EF95AA /* Pods-TanVIPER.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9PA6Z533LV;
+				INFOPLIST_FILE = TanVIPER/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tangent.TanVIPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BADC5BB81DF66C2300CE1ECE /* Build configuration list for PBXProject "TanVIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADC5BCD1DF66C2300CE1ECE /* Debug */,
+				BADC5BCE1DF66C2300CE1ECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BADC5BCF1DF66C2300CE1ECE /* Build configuration list for PBXNativeTarget "TanVIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BADC5BD01DF66C2300CE1ECE /* Debug */,
+				BADC5BD11DF66C2300CE1ECE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BADC5BB51DF66C2300CE1ECE /* Project object */;
+}

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RAMReel Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RAMReel" class="dashAnchor"></a>
+    <a title="RAMReel Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RAMReel Docs</a> (96% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RAMReel Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RAMReel Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CollectionViewWrapper.html">CollectionViewWrapper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RAMCell.html">RAMCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RAMReel.html">RAMReel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RAMTextField.html">RAMTextField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions/*&gt;(_:_:).html">*&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions/&lt;&amp;&gt;(_:_:).html">&lt;&amp;&gt;(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigurableCell.html">ConfigurableCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlowDataDestination.html">FlowDataDestination</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlowDataSource.html">FlowDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Parsable.html">Parsable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Renderable.html">Renderable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Theme.html">Theme</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:V7RAMReel8DataFlow">DataFlow</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RAMTheme.html">RAMTheme</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SimplePrefixQueryDataSource.html">SimplePrefixQueryDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:V7RAMReel16TextFieldReactor">TextFieldReactor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RAMReel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">RAMReel</span>
+    <span class="o">&lt;</span>
+    <span class="kt">CellClass</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span>
+    <span class="kt">TextFieldClass</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span>
+    <span class="kt">DataSource</span><span class="p">:</span> <span class="kt">FlowDataSource</span>
+    <span class="k">where</span>
+    <span class="kt">CellClass</span><span class="p">:</span> <span class="kt">ConfigurableCell</span><span class="p">,</span>
+    <span class="kt">CellClass</span><span class="o">.</span><span class="kt">DataType</span>   <span class="o">==</span> <span class="kt">DataSource</span><span class="o">.</span><span class="kt">ResultType</span><span class="p">,</span>
+    <span class="kt">DataSource</span><span class="o">.</span><span class="kt">QueryType</span> <span class="o">==</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="kt">DataSource</span><span class="o">.</span><span class="kt">ResultType</span><span class="p">:</span> <span class="kt">Renderable</span><span class="p">,</span>
+    <span class="kt">DataSource</span><span class="o">.</span><span class="kt">ResultType</span><span class="p">:</span> <span class="kt">Parsable</span>
+<span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p><a href='#ramreel' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='ramreel'>RAMReel</h2></p>
+
+<p>Reel class</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RAMReel7RAMReel4viewCSo6UIView"></a>
+                    <a name="//apple_ref/swift/Property/view" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RAMReel7RAMReel4viewCSo6UIView">view</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Container view</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C7RAMReel7RAMReel8HookType"></a>
+                    <a name="//apple_ref/swift/Alias/HookType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C7RAMReel7RAMReel8HookType">HookType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Type of selected item change callback hook</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">HookType</span> <span class="o">=</span> <span class="p">(</span><span class="kt">DataSource</span><span class="o">.</span><span class="kt">ResultType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TextField"></a>
+                <a name="//apple_ref/swift/Section/TextField" class="dashAnchor"></a>
+                <a href="#/TextField">
+                  <h3 class="section-name">TextField</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RAMReel7RAMReel17textFieldDelegateGSqPSo19UITextFieldDelegate__"></a>
+                    <a name="//apple_ref/swift/Property/textFieldDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RAMReel7RAMReel17textFieldDelegateGSqPSo19UITextFieldDelegate__">textFieldDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delegate of text field, is used for extra control over text field.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">textFieldDelegate</span><span class="p">:</span> <span class="kt">UITextFieldDelegate</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RAMReel7RAMReel20resignFirstResponderFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/resignFirstResponder()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RAMReel7RAMReel20resignFirstResponderFT_T_">resignFirstResponder()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this method when you want textField release input focus.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">resignFirstResponder</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CollectionView"></a>
+                <a name="//apple_ref/swift/Section/CollectionView" class="dashAnchor"></a>
+                <a href="#/CollectionView">
+                  <h3 class="section-name">CollectionView</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RAMReel7RAMReel14collectionViewCSo16UICollectionView"></a>
+                    <a name="//apple_ref/swift/Property/collectionView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RAMReel7RAMReel14collectionViewCSo16UICollectionView">collectionView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Collection view with data items.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Data%20Source"></a>
+                <a name="//apple_ref/swift/Section/Data Source" class="dashAnchor"></a>
+                <a href="#/Data%20Source">
+                  <h3 class="section-name">Data Source</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RAMReel7RAMReel10dataSourceq0_"></a>
+                    <a name="//apple_ref/swift/Property/dataSource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RAMReel7RAMReel10dataSourceq0_">dataSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Data source of RAMReel</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">dataSource</span><span class="p">:</span> <span class="kt">DataSource</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Selected%20Item"></a>
+                <a name="//apple_ref/swift/Section/Selected Item" class="dashAnchor"></a>
+                <a href="#/Selected%20Item">
+                  <h3 class="section-name">Selected Item</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RAMReel7RAMReel12selectedItemGSqwx8DataType_"></a>
+                    <a name="//apple_ref/swift/Property/selectedItem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RAMReel7RAMReel12selectedItemGSqwx8DataType_">selectedItem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this property to get which item was selected.
+Value is nil, if data source output is empty.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">selectedItem</span><span class="p">:</span> <span class="kt">DataSource</span><span class="o">.</span><span class="kt">ResultType</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Hooks"></a>
+                <a name="//apple_ref/swift/Section/Hooks" class="dashAnchor"></a>
+                <a href="#/Hooks">
+                  <h3 class="section-name">Hooks</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RAMReel7RAMReel5hooksGSaFwx8DataTypeT__"></a>
+                    <a name="//apple_ref/swift/Property/hooks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RAMReel7RAMReel5hooksGSaFwx8DataTypeT__">hooks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This hooks that are called on selected item change</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hooks</span><span class="p">:</span> <span class="p">[</span><span class="kt">HookType</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Theme"></a>
+                <a name="//apple_ref/swift/Section/Theme" class="dashAnchor"></a>
+                <a href="#/Theme">
+                  <h3 class="section-name">Theme</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RAMReel7RAMReel5themePS_5Theme_"></a>
+                    <a name="//apple_ref/swift/Property/theme" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RAMReel7RAMReel5themePS_5Theme_">theme</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Visual appearance theme</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">theme</span><span class="p">:</span> <span class="kt">Theme</span> <span class="o">=</span> <span class="kt">RAMTheme</span><span class="o">.</span><span class="n">sharedTheme</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC7RAMReel7RAMReel11placeholderSS"></a>
+                    <a name="//apple_ref/swift/Property/placeholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC7RAMReel7RAMReel11placeholderSS">placeholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Placeholder in text field.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RAMReel7RAMReelcFT5frameVSC6CGRect10dataSourceq0_11placeholderSS4hookGSqFwx8DataTypeT___GS0_xq_q0__"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:dataSource:placeholder:hook:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RAMReel7RAMReelcFT5frameVSC6CGRect10dataSourceq0_11placeholderSS4hookGSqFwx8DataTypeT___GS0_xq_q0__">init(frame:dataSource:placeholder:hook:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new <code><a href="../Classes/RAMReel.html">RAMReel</a></code> instance.</p>
+
+<ul>
+<li>parameters:
+
+<ul>
+<li>frame: Rect that Reel will occupy</li>
+<li>dataSource: Object of type that implements FlowDataSource protocol</li>
+<li>placeholder: Optional text field placeholder</li>
+<li>hook: Optional initial value change hook</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">,</span> <span class="nv">dataSource</span><span class="p">:</span> <span class="kt">DataSource</span><span class="p">,</span> <span class="nv">placeholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">hook</span><span class="p">:</span> <span class="kt">HookType</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frame</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Rect that Reel will occupy</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataSource</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Object of type that implements FlowDataSource protocol</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>placeholder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional text field placeholder</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hook</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional initial value change hook</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RAMReel7RAMReel17prepareForViewingFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/prepareForViewing()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RAMReel7RAMReel17prepareForViewingFT_T_">prepareForViewing()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Call this method to update <code><a href="../Classes/RAMReel.html">RAMReel</a></code> visuals before showing it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepareForViewing</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC7RAMReel7RAMReel15prepareForReuseFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/prepareForReuse()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC7RAMReel7RAMReel15prepareForReuseFT_T_">prepareForReuse()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If you use <code><a href="../Classes/RAMReel.html">RAMReel</a></code> to enter set of values from the list call this method before each input.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepareForReuse</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/Ramotion/reel-search" target="_blank" rel="external">Mikhail Stepkin, Ramotion Inc.</a>. All rights reserved. (Last updated: 2016-05-30)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

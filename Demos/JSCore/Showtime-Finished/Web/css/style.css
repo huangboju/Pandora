@@ -1,0 +1,65 @@
+body {
+	margin: 0;
+	font-family: -apple-system, Helvetica, Arial, sans-serif;
+}
+
+input {
+	text-align: center;
+	height: 20px;
+}
+
+table {
+	width: 100%;
+}
+
+h1 {
+	color: #fff;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.titlebar {
+	width: 100%;
+	text-align: center;
+	background: #006837;
+	padding: 5px;
+}
+
+.searchInput {
+	width: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.results {
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.column {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+	width: 300px;
+}
+
+#errorMessage {
+	font-size:80%;
+	color: red;
+}
+
+#titleLabel {
+	font-weight: bold;
+}
+
+#titleLabel, #priceLabel {
+	font-size:80%;
+	color: #006837;
+}

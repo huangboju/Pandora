@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78915AAD19B4194400D4E352 /* SyntaxHighlightTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78915AAC19B4194400D4E352 /* SyntaxHighlightTextStorage.swift */; };
+		C062BEAD1978ACB400B42456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062BEAC1978ACB400B42456 /* AppDelegate.swift */; };
+		C062BEB41978ACB400B42456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C062BEB21978ACB400B42456 /* Main.storyboard */; };
+		C062BEB61978ACB400B42456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C062BEB51978ACB400B42456 /* Images.xcassets */; };
+		C062BEC21978ACB400B42456 /* SwiftTextKitNotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062BEC11978ACB400B42456 /* SwiftTextKitNotepadTests.swift */; };
+		C062BECC1978ADBC00B42456 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C062BECB1978ADBC00B42456 /* Note.swift */; };
+		C07E2CD51978B69B00C40BB2 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E2CD41978B69B00C40BB2 /* NotesListViewController.swift */; };
+		C07E2CD71978BAB100C40BB2 /* NoteEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E2CD61978BAB100C40BB2 /* NoteEditorViewController.swift */; };
+		C07E2CD91978D11E00C40BB2 /* TimeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07E2CD81978D11E00C40BB2 /* TimeIndicatorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C062BEBC1978ACB400B42456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C062BE9F1978ACB400B42456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C062BEA61978ACB400B42456;
+			remoteInfo = SwiftTextKitNotepad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		78915AAC19B4194400D4E352 /* SyntaxHighlightTextStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightTextStorage.swift; sourceTree = "<group>"; };
+		C062BEA71978ACB400B42456 /* SwiftTextKitNotepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTextKitNotepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C062BEAB1978ACB400B42456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C062BEAC1978ACB400B42456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C062BEB31978ACB400B42456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C062BEB51978ACB400B42456 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C062BEBB1978ACB400B42456 /* SwiftTextKitNotepadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTextKitNotepadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C062BEC01978ACB400B42456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C062BEC11978ACB400B42456 /* SwiftTextKitNotepadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTextKitNotepadTests.swift; sourceTree = "<group>"; };
+		C062BECB1978ADBC00B42456 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		C07E2CD41978B69B00C40BB2 /* NotesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesListViewController.swift; sourceTree = "<group>"; };
+		C07E2CD61978BAB100C40BB2 /* NoteEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteEditorViewController.swift; sourceTree = "<group>"; };
+		C07E2CD81978D11E00C40BB2 /* TimeIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIndicatorView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C062BEA41978ACB400B42456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C062BEB81978ACB400B42456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C062BE9E1978ACB400B42456 = {
+			isa = PBXGroup;
+			children = (
+				C062BEA91978ACB400B42456 /* SwiftTextKitNotepad */,
+				C062BEBE1978ACB400B42456 /* SwiftTextKitNotepadTests */,
+				C062BEA81978ACB400B42456 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C062BEA81978ACB400B42456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C062BEA71978ACB400B42456 /* SwiftTextKitNotepad.app */,
+				C062BEBB1978ACB400B42456 /* SwiftTextKitNotepadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C062BEA91978ACB400B42456 /* SwiftTextKitNotepad */ = {
+			isa = PBXGroup;
+			children = (
+				C062BEAC1978ACB400B42456 /* AppDelegate.swift */,
+				C062BECB1978ADBC00B42456 /* Note.swift */,
+				C07E2CD61978BAB100C40BB2 /* NoteEditorViewController.swift */,
+				C07E2CD41978B69B00C40BB2 /* NotesListViewController.swift */,
+				C07E2CD81978D11E00C40BB2 /* TimeIndicatorView.swift */,
+				78915AAC19B4194400D4E352 /* SyntaxHighlightTextStorage.swift */,
+				C062BEB51978ACB400B42456 /* Images.xcassets */,
+				C062BEB21978ACB400B42456 /* Main.storyboard */,
+				C062BEAA1978ACB400B42456 /* Supporting Files */,
+			);
+			path = SwiftTextKitNotepad;
+			sourceTree = "<group>";
+		};
+		C062BEAA1978ACB400B42456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C062BEAB1978ACB400B42456 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C062BEBE1978ACB400B42456 /* SwiftTextKitNotepadTests */ = {
+			isa = PBXGroup;
+			children = (
+				C062BEC11978ACB400B42456 /* SwiftTextKitNotepadTests.swift */,
+				C062BEBF1978ACB400B42456 /* Supporting Files */,
+			);
+			path = SwiftTextKitNotepadTests;
+			sourceTree = "<group>";
+		};
+		C062BEBF1978ACB400B42456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C062BEC01978ACB400B42456 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C062BEA61978ACB400B42456 /* SwiftTextKitNotepad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C062BEC51978ACB400B42456 /* Build configuration list for PBXNativeTarget "SwiftTextKitNotepad" */;
+			buildPhases = (
+				C062BEA31978ACB400B42456 /* Sources */,
+				C062BEA41978ACB400B42456 /* Frameworks */,
+				C062BEA51978ACB400B42456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftTextKitNotepad;
+			productName = SwiftTextKitNotepad;
+			productReference = C062BEA71978ACB400B42456 /* SwiftTextKitNotepad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C062BEBA1978ACB400B42456 /* SwiftTextKitNotepadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C062BEC81978ACB400B42456 /* Build configuration list for PBXNativeTarget "SwiftTextKitNotepadTests" */;
+			buildPhases = (
+				C062BEB71978ACB400B42456 /* Sources */,
+				C062BEB81978ACB400B42456 /* Frameworks */,
+				C062BEB91978ACB400B42456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C062BEBD1978ACB400B42456 /* PBXTargetDependency */,
+			);
+			name = SwiftTextKitNotepadTests;
+			productName = SwiftTextKitNotepadTests;
+			productReference = C062BEBB1978ACB400B42456 /* SwiftTextKitNotepadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C062BE9F1978ACB400B42456 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Gabriel Hauber";
+				TargetAttributes = {
+					C062BEA61978ACB400B42456 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 46A8679957;
+						LastSwiftMigration = 0820;
+					};
+					C062BEBA1978ACB400B42456 = {
+						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0820;
+						TestTargetID = C062BEA61978ACB400B42456;
+					};
+				};
+			};
+			buildConfigurationList = C062BEA21978ACB400B42456 /* Build configuration list for PBXProject "SwiftTextKitNotepad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C062BE9E1978ACB400B42456;
+			productRefGroup = C062BEA81978ACB400B42456 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C062BEA61978ACB400B42456 /* SwiftTextKitNotepad */,
+				C062BEBA1978ACB400B42456 /* SwiftTextKitNotepadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C062BEA51978ACB400B42456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C062BEB41978ACB400B42456 /* Main.storyboard in Resources */,
+				C062BEB61978ACB400B42456 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C062BEB91978ACB400B42456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C062BEA31978ACB400B42456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78915AAD19B4194400D4E352 /* SyntaxHighlightTextStorage.swift in Sources */,
+				C07E2CD71978BAB100C40BB2 /* NoteEditorViewController.swift in Sources */,
+				C062BEAD1978ACB400B42456 /* AppDelegate.swift in Sources */,
+				C07E2CD51978B69B00C40BB2 /* NotesListViewController.swift in Sources */,
+				C062BECC1978ADBC00B42456 /* Note.swift in Sources */,
+				C07E2CD91978D11E00C40BB2 /* TimeIndicatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C062BEB71978ACB400B42456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C062BEC21978ACB400B42456 /* SwiftTextKitNotepadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C062BEBD1978ACB400B42456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C062BEA61978ACB400B42456 /* SwiftTextKitNotepad */;
+			targetProxy = C062BEBC1978ACB400B42456 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C062BEB21978ACB400B42456 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C062BEB31978ACB400B42456 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C062BEC31978ACB400B42456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C062BEC41978ACB400B42456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C062BEC61978ACB400B42456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 46A8679957;
+				INFOPLIST_FILE = SwiftTextKitNotepad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.gabrielhauber.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C062BEC71978ACB400B42456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 46A8679957;
+				INFOPLIST_FILE = SwiftTextKitNotepad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.gabrielhauber.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C062BEC91978ACB400B42456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwiftTextKitNotepad.app/SwiftTextKitNotepad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftTextKitNotepadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.gabrielhauber.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		C062BECA1978ACB400B42456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwiftTextKitNotepad.app/SwiftTextKitNotepad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwiftTextKitNotepadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.gabrielhauber.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C062BEA21978ACB400B42456 /* Build configuration list for PBXProject "SwiftTextKitNotepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C062BEC31978ACB400B42456 /* Debug */,
+				C062BEC41978ACB400B42456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C062BEC51978ACB400B42456 /* Build configuration list for PBXNativeTarget "SwiftTextKitNotepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C062BEC61978ACB400B42456 /* Debug */,
+				C062BEC71978ACB400B42456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C062BEC81978ACB400B42456 /* Build configuration list for PBXNativeTarget "SwiftTextKitNotepadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C062BEC91978ACB400B42456 /* Debug */,
+				C062BECA1978ACB400B42456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C062BE9F1978ACB400B42456 /* Project object */;
+}

@@ -1,0 +1,11 @@
+
+platform :ios, '7.0'
+use_frameworks!
+
+target 'RTRootNavigationController_Example' do
+  pod 'RTRootNavigationController', :path => '../', :subspecs => ['Push']
+
+  target 'RTRootNavigationController_Tests' do
+    
+  end
+end

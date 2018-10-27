@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4971320D1EB1E9F900CCC608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4971320B1EB1E9F900CCC608 /* Main.storyboard */; };
+		4971320F1EB1E9FA00CCC608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4971320E1EB1E9FA00CCC608 /* Assets.xcassets */; };
+		497132121EB1E9FA00CCC608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497132101EB1E9FA00CCC608 /* LaunchScreen.storyboard */; };
+		497132331EB2124300CCC608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497132261EB2124300CCC608 /* AppDelegate.swift */; };
+		497132341EB2124300CCC608 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497132281EB2124300CCC608 /* ViewController.swift */; };
+		497132351EB2124300CCC608 /* Dog0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4971322A1EB2124300CCC608 /* Dog0.jpg */; };
+		497132361EB2124300CCC608 /* Dog1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4971322B1EB2124300CCC608 /* Dog1.jpg */; };
+		497132371EB2124300CCC608 /* Dog2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4971322C1EB2124300CCC608 /* Dog2.jpg */; };
+		497132381EB2124300CCC608 /* Dog3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4971322D1EB2124300CCC608 /* Dog3.jpg */; };
+		4971323A1EB2124300CCC608 /* ReverseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497132311EB2124300CCC608 /* ReverseTableViewCell.swift */; };
+		4971323B1EB2124300CCC608 /* ReverseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 497132321EB2124300CCC608 /* ReverseTableViewCell.xib */; };
+		4971323D1EB2134400CCC608 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4971323C1EB2134400CCC608 /* Info.plist */; };
+		C4457F12D170F3D759FA050E /* Pods_ReverseExtensionDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB574BF887CBC43EDD491343 /* Pods_ReverseExtensionDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14FDB2C2115AB5E7B47C3D28 /* Pods-ReverseExtensionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReverseExtensionDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReverseExtensionDemo/Pods-ReverseExtensionDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		497132041EB1E9F800CCC608 /* ReverseExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReverseExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4971320C1EB1E9F900CCC608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4971320E1EB1E9FA00CCC608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		497132111EB1E9FA00CCC608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		497132261EB2124300CCC608 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		497132281EB2124300CCC608 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4971322A1EB2124300CCC608 /* Dog0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dog0.jpg; sourceTree = "<group>"; };
+		4971322B1EB2124300CCC608 /* Dog1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dog1.jpg; sourceTree = "<group>"; };
+		4971322C1EB2124300CCC608 /* Dog2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dog2.jpg; sourceTree = "<group>"; };
+		4971322D1EB2124300CCC608 /* Dog3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dog3.jpg; sourceTree = "<group>"; };
+		497132311EB2124300CCC608 /* ReverseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseTableViewCell.swift; sourceTree = "<group>"; };
+		497132321EB2124300CCC608 /* ReverseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReverseTableViewCell.xib; sourceTree = "<group>"; };
+		4971323C1EB2134400CCC608 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB574BF887CBC43EDD491343 /* Pods_ReverseExtensionDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReverseExtensionDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA633452E22647FEFA10D22 /* Pods-ReverseExtensionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReverseExtensionDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReverseExtensionDemo/Pods-ReverseExtensionDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		497132011EB1E9F800CCC608 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4457F12D170F3D759FA050E /* Pods_ReverseExtensionDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2158FBC4350F8ED014900215 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB574BF887CBC43EDD491343 /* Pods_ReverseExtensionDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		497131FB1EB1E9F700CCC608 = {
+			isa = PBXGroup;
+			children = (
+				497132061EB1E9F800CCC608 /* ReverseExtensionDemo */,
+				497132051EB1E9F800CCC608 /* Products */,
+				E264F8CB82F0E4A9F3494ED5 /* Pods */,
+				2158FBC4350F8ED014900215 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		497132051EB1E9F800CCC608 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				497132041EB1E9F800CCC608 /* ReverseExtensionDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		497132061EB1E9F800CCC608 /* ReverseExtensionDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4971323C1EB2134400CCC608 /* Info.plist */,
+				497132251EB2124300CCC608 /* Classes */,
+				497132271EB2124300CCC608 /* Controllers */,
+				497132291EB2124300CCC608 /* Images */,
+				497132301EB2124300CCC608 /* Views */,
+				4971320B1EB1E9F900CCC608 /* Main.storyboard */,
+				4971320E1EB1E9FA00CCC608 /* Assets.xcassets */,
+				497132101EB1E9FA00CCC608 /* LaunchScreen.storyboard */,
+			);
+			path = ReverseExtensionDemo;
+			sourceTree = "<group>";
+		};
+		497132251EB2124300CCC608 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				497132261EB2124300CCC608 /* AppDelegate.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		497132271EB2124300CCC608 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				497132281EB2124300CCC608 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		497132291EB2124300CCC608 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4971322A1EB2124300CCC608 /* Dog0.jpg */,
+				4971322B1EB2124300CCC608 /* Dog1.jpg */,
+				4971322C1EB2124300CCC608 /* Dog2.jpg */,
+				4971322D1EB2124300CCC608 /* Dog3.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		497132301EB2124300CCC608 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				497132311EB2124300CCC608 /* ReverseTableViewCell.swift */,
+				497132321EB2124300CCC608 /* ReverseTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E264F8CB82F0E4A9F3494ED5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14FDB2C2115AB5E7B47C3D28 /* Pods-ReverseExtensionDemo.debug.xcconfig */,
+				FCA633452E22647FEFA10D22 /* Pods-ReverseExtensionDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		497132031EB1E9F800CCC608 /* ReverseExtensionDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497132161EB1E9FA00CCC608 /* Build configuration list for PBXNativeTarget "ReverseExtensionDemo" */;
+			buildPhases = (
+				02910338046D5B21D54E3BE6 /* [CP] Check Pods Manifest.lock */,
+				497132001EB1E9F800CCC608 /* Sources */,
+				497132011EB1E9F800CCC608 /* Frameworks */,
+				497132021EB1E9F800CCC608 /* Resources */,
+				A8831921420B1F7AA5C06720 /* [CP] Embed Pods Frameworks */,
+				612DCA22B75601F3A734FD21 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReverseExtensionDemo;
+			productName = ReverseExtensionDemo;
+			productReference = 497132041EB1E9F800CCC608 /* ReverseExtensionDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		497131FC1EB1E9F800CCC608 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = SOTSYS022s;
+				TargetAttributes = {
+					497132031EB1E9F800CCC608 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = B5CET962M5;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 497131FF1EB1E9F800CCC608 /* Build configuration list for PBXProject "ReverseExtensionDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 497131FB1EB1E9F700CCC608;
+			productRefGroup = 497132051EB1E9F800CCC608 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				497132031EB1E9F800CCC608 /* ReverseExtensionDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		497132021EB1E9F800CCC608 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497132121EB1E9FA00CCC608 /* LaunchScreen.storyboard in Resources */,
+				497132361EB2124300CCC608 /* Dog1.jpg in Resources */,
+				497132351EB2124300CCC608 /* Dog0.jpg in Resources */,
+				4971320F1EB1E9FA00CCC608 /* Assets.xcassets in Resources */,
+				497132381EB2124300CCC608 /* Dog3.jpg in Resources */,
+				497132371EB2124300CCC608 /* Dog2.jpg in Resources */,
+				4971323B1EB2124300CCC608 /* ReverseTableViewCell.xib in Resources */,
+				4971320D1EB1E9F900CCC608 /* Main.storyboard in Resources */,
+				4971323D1EB2134400CCC608 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02910338046D5B21D54E3BE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		612DCA22B75601F3A734FD21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReverseExtensionDemo/Pods-ReverseExtensionDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8831921420B1F7AA5C06720 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReverseExtensionDemo/Pods-ReverseExtensionDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		497132001EB1E9F800CCC608 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497132341EB2124300CCC608 /* ViewController.swift in Sources */,
+				497132331EB2124300CCC608 /* AppDelegate.swift in Sources */,
+				4971323A1EB2124300CCC608 /* ReverseTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4971320B1EB1E9F900CCC608 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4971320C1EB1E9F900CCC608 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		497132101EB1E9FA00CCC608 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				497132111EB1E9FA00CCC608 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		497132141EB1E9FA00CCC608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		497132151EB1E9FA00CCC608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		497132171EB1E9FA00CCC608 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14FDB2C2115AB5E7B47C3D28 /* Pods-ReverseExtensionDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B5CET962M5;
+				INFOPLIST_FILE = ReverseExtensionDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spaceo.ReverseExtensionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f212b1c1-2a88-4799-8151-36936273a07a";
+				PROVISIONING_PROFILE_SPECIFIER = GabWildcard_December;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		497132181EB1E9FA00CCC608 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA633452E22647FEFA10D22 /* Pods-ReverseExtensionDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ReverseExtensionDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.spaceo.ReverseExtensionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		497131FF1EB1E9F800CCC608 /* Build configuration list for PBXProject "ReverseExtensionDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497132141EB1E9FA00CCC608 /* Debug */,
+				497132151EB1E9FA00CCC608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		497132161EB1E9FA00CCC608 /* Build configuration list for PBXNativeTarget "ReverseExtensionDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497132171EB1E9FA00CCC608 /* Debug */,
+				497132181EB1E9FA00CCC608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 497131FC1EB1E9F800CCC608 /* Project object */;
+}

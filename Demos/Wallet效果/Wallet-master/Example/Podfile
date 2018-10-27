@@ -1,0 +1,7 @@
+use_frameworks!
+
+target 'Wallet_Example' do
+    pod 'RandomColorSwift'
+    pod 'DynamicColor'
+    pod 'Wallet', :path => '../'
+end

@@ -1,0 +1,14 @@
+language: objective-c
+osx_image: xcode9.3
+
+xcode_sdk:
+- iphonesimulator11.3
+
+xcode_workspace: Parade.xcworkspace
+
+jobs:
+  include:
+    - script: xcodebuild -workspace Parade.xcworkspace -scheme Parade-iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=11.3' test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

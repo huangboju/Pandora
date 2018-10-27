@@ -1,0 +1,10 @@
+PODS:
+  - TWTToast/UIKit/ViewControllerTransitions (0.15)
+
+DEPENDENCIES:
+  - TWTToast/UIKit/ViewControllerTransitions (~> 0.4)
+
+SPEC CHECKSUMS:
+  TWTToast: b60517f987885c3782aa4928c5973de64a3e76e9
+
+COCOAPODS: 0.36.3

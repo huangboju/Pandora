@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReverseTableViewCell" rowHeight="172" id="KGk-i7-Jjw" userLabel="ReverseTableViewCell" customClass="ReverseTableViewCell" customModule="ReverseExtensionDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="171"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dog3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sxE-79-QFY">
+                        <rect key="frame" x="5" y="5" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="jTj-5Q-aCT"/>
+                            <constraint firstAttribute="height" constant="80" id="qA7-kG-cV4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFh-ud-eHW">
+                        <rect key="frame" x="85" y="0.0" width="270" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="sxE-79-QFY" secondAttribute="bottom" constant="5" id="3Mj-Gx-N3w"/>
+                    <constraint firstAttribute="bottom" secondItem="wFh-ud-eHW" secondAttribute="bottom" id="6pB-s0-hSO"/>
+                    <constraint firstItem="sxE-79-QFY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="DdX-Ce-TxS"/>
+                    <constraint firstAttribute="trailing" secondItem="wFh-ud-eHW" secondAttribute="trailing" id="QIF-VK-BjX"/>
+                    <constraint firstItem="wFh-ud-eHW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ssi-dd-E8T"/>
+                    <constraint firstItem="wFh-ud-eHW" firstAttribute="leading" secondItem="sxE-79-QFY" secondAttribute="trailing" id="gpe-Pt-cSx"/>
+                    <constraint firstItem="sxE-79-QFY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="jU1-0i-nXL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellImageView" destination="sxE-79-QFY" id="oIC-nY-MAc"/>
+                <outlet property="cellLabel" destination="wFh-ud-eHW" id="3PJ-IX-ls2"/>
+            </connections>
+            <point key="canvasLocation" x="8.5" y="75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Dog3.jpg" width="300" height="332"/>
+    </resources>
+</document>

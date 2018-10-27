@@ -1,0 +1,19 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+# Our Libraries
+def libraries
+  pod 'TransitionTreasury', :path => "../"
+  pod 'TransitionAnimation', :path => "../"
+end
+
+target 'Demo' do
+  platform :ios, '8.0'
+  libraries
+end
+
+target 'TabBarDemo' do
+    platform :ios, '8.0'
+    libraries
+end

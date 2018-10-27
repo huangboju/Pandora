@@ -1,0 +1,16 @@
+PODS:
+  - BubbleTransition (2.0.0)
+
+DEPENDENCIES:
+  - BubbleTransition (from `../`)
+
+EXTERNAL SOURCES:
+  BubbleTransition:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BubbleTransition: bdb9d71993b8d3513008e2dda6bada1ddad25d4f
+
+PODFILE CHECKSUM: 509266e47632f639195bfac1deb46ad87c1fc5f6
+
+COCOAPODS: 1.1.0.rc.2

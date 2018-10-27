@@ -1,0 +1,5 @@
+target 'ReadMoreTextViewExample'
+
+use_frameworks!
+
+pod 'ReadMoreTextView', :path => '..'

@@ -1,0 +1,17 @@
+PODS:
+  - MPParallaxCollection (0.1.0)
+  - MPTextReveal (0.1.0)
+
+DEPENDENCIES:
+  - MPParallaxCollection (from `../`)
+  - MPTextReveal
+
+EXTERNAL SOURCES:
+  MPParallaxCollection:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MPParallaxCollection: b697bfaafccb2fa3d1ac09613dca4cb030ab00e3
+  MPTextReveal: 29988b398eed444171ddb2b589307aabe27b99a7
+
+COCOAPODS: 0.33.1

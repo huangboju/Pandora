@@ -1,0 +1,15 @@
+PODS:
+  - ReverseExtension (0.4.5)
+  - TouchVisualizer (2.1.0)
+
+DEPENDENCIES:
+  - ReverseExtension
+  - TouchVisualizer
+
+SPEC CHECKSUMS:
+  ReverseExtension: 226920932726c30c618eb9913ecd5ae052c667d9
+  TouchVisualizer: a67d7b7c2786b6a2e13103fd76ac08093542f0c0
+
+PODFILE CHECKSUM: a193d786bcf64f0e372bc84b4eef340873133929
+
+COCOAPODS: 1.1.1

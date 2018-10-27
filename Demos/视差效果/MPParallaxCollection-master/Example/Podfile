@@ -1,0 +1,9 @@
+target 'MPParallaxCollection', :exclusive => true do
+  pod "MPParallaxCollection", :path => "../"
+pod "MPTextReveal"
+
+end
+
+target 'Tests', :exclusive => true do
+  pod "MPParallaxCollection", :path => "../"
+end

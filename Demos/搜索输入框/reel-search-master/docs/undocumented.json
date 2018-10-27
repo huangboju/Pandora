@@ -1,0 +1,12 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/juriv/tmp/reel-search/RAMReel/Framework/TextFieldReactor.swift",
+      "line": 30,
+      "symbol": "DS",
+      "symbol_kind": "source.lang.swift.decl.generic_type_param",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/juriv/tmp/reel-search"
+}

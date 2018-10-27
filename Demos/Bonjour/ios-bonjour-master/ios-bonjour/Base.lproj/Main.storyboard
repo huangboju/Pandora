@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_bonjour" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TPn-af-3rI">
+                                <rect key="frame" x="16" y="116" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gDI-4o-apy">
+                                <rect key="frame" x="16" y="417" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receiver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q61-PZ-Fv6">
+                                <rect key="frame" x="241" y="365" width="119" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CZJ-gH-kIJ"/>
+                                    <constraint firstAttribute="width" constant="119" id="d9W-wG-uXA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6F2-wR-cBc">
+                                <rect key="frame" x="259" y="154" width="83" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="G3n-Qc-91Q"/>
+                                    <constraint firstAttribute="height" constant="55" id="TeM-nO-bi6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendText" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ab7-Ib-vcx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGj-wY-zdf">
+                                <rect key="frame" x="241" y="64" width="119" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TPn-af-3rI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1Zw-1f-IqC"/>
+                            <constraint firstItem="gDI-4o-apy" firstAttribute="top" secondItem="q61-PZ-Fv6" secondAttribute="bottom" constant="8" symbolic="YES" id="725-Gf-A96"/>
+                            <constraint firstItem="TPn-af-3rI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GFS-d1-yJi"/>
+                            <constraint firstItem="gDI-4o-apy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J3g-jF-kUz"/>
+                            <constraint firstAttribute="centerY" secondItem="gDI-4o-apy" secondAttribute="centerY" constant="-132" id="JI0-88-qC8"/>
+                            <constraint firstItem="6F2-wR-cBc" firstAttribute="centerX" secondItem="HGj-wY-zdf" secondAttribute="centerX" id="MHX-Al-cly"/>
+                            <constraint firstItem="HGj-wY-zdf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="SPU-8s-PBF"/>
+                            <constraint firstItem="6F2-wR-cBc" firstAttribute="top" secondItem="TPn-af-3rI" secondAttribute="bottom" constant="8" symbolic="YES" id="W3v-An-kBc"/>
+                            <constraint firstItem="6F2-wR-cBc" firstAttribute="centerX" secondItem="q61-PZ-Fv6" secondAttribute="centerX" id="iqS-AA-a6e"/>
+                            <constraint firstItem="6F2-wR-cBc" firstAttribute="centerX" secondItem="TPn-af-3rI" secondAttribute="centerX" id="m2y-D7-AJn"/>
+                            <constraint firstItem="q61-PZ-Fv6" firstAttribute="leading" secondItem="HGj-wY-zdf" secondAttribute="leading" id="mg0-c8-3Qn"/>
+                            <constraint firstAttribute="centerY" secondItem="TPn-af-3rI" secondAttribute="centerY" constant="169" id="tHh-7u-xd2"/>
+                            <constraint firstItem="gDI-4o-apy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tlf-Im-U7Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="receiverTextField" destination="gDI-4o-apy" id="BmP-cV-bMg"/>
+                        <outlet property="senderTextField" destination="TPn-af-3rI" id="Qzt-em-WBs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="173"/>
+        </scene>
+    </scenes>
+</document>

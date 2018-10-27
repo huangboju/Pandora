@@ -1,0 +1,6 @@
+"sbe.general.cancel" = "Annulla";
+"sbe.textfieldPlaceholder.default" = "Segnaposto";
+"sbe.exampleText.simple" = "Esempio con il testo";
+"sbe.exampleText.withLeftView" = "Esempio Con Vista sinistra";
+"sbe.exampleText.centered" = "Esempio con testo centrato";
+"sbe.exampleText.noCancelButton" = "Esempio senza pulsante di annullamento";

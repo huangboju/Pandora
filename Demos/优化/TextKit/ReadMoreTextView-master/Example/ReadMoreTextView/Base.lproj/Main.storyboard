@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ReadMoreTextViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="83" translatesAutoresizingMaskIntoConstraints="NO" id="7yf-iD-cBY" customClass="ReadMoreTextView" customModule="ReadMoreTextView">
+                                <rect key="frame" x="20" y="20" width="335" height="83"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumNumberOfLines">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldTrim" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="33" editable="NO" text="Lorem ipsum" translatesAutoresizingMaskIntoConstraints="NO" id="cOR-AP-kCJ" customClass="ReadMoreTextView" customModule="ReadMoreTextView">
+                                <rect key="frame" x="20" y="103" width="335" height="33"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumNumberOfLines">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldTrim" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyy-oP-Kwa">
+                                <rect key="frame" x="125" y="136" width="126" height="30"/>
+                                <state key="normal" title="Show less or more"/>
+                                <connections>
+                                    <action selector="toggleTrim:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8g3-5d-jrP"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n1Q-KB-Lhd">
+                                <rect key="frame" x="0.0" y="166" width="375" height="501"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReadMoreCell" id="T6X-yQ-sZ9" customClass="ReadMoreCell" customModule="ReadMoreTextViewExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6X-yQ-sZ9" id="dhB-Yu-31g">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="83" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-8o-RMG" customClass="ReadMoreTextView" customModule="ReadMoreTextView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="maximumNumberOfLines">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldTrim" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="readMoreText" value="... Read more"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="readLessText" value=" Read less"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PSZ-8o-RMG" firstAttribute="top" secondItem="dhB-Yu-31g" secondAttribute="top" id="4Od-OC-I74"/>
+                                                <constraint firstAttribute="bottom" secondItem="PSZ-8o-RMG" secondAttribute="bottom" id="Inh-jG-4DU"/>
+                                                <constraint firstAttribute="trailing" secondItem="PSZ-8o-RMG" secondAttribute="trailing" id="SzD-SK-A1I"/>
+                                                <constraint firstItem="PSZ-8o-RMG" firstAttribute="leading" secondItem="dhB-Yu-31g" secondAttribute="leading" id="ige-55-0fs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="readMoreTextView" destination="PSZ-8o-RMG" id="p20-Hz-Y30"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="nZ0-Om-Ht8"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="G2G-7Q-Q9p"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n1Q-KB-Lhd" firstAttribute="top" secondItem="Pyy-oP-Kwa" secondAttribute="bottom" id="5vE-Dx-wcw"/>
+                            <constraint firstItem="7yf-iD-cBY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="Af2-KZ-n37"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7yf-iD-cBY" secondAttribute="trailing" constant="4" id="M5r-dM-HQk"/>
+                            <constraint firstItem="n1Q-KB-Lhd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="N2b-kz-2k8"/>
+                            <constraint firstItem="cOR-AP-kCJ" firstAttribute="top" secondItem="7yf-iD-cBY" secondAttribute="bottom" id="T7C-4d-PKn"/>
+                            <constraint firstItem="Pyy-oP-Kwa" firstAttribute="top" secondItem="cOR-AP-kCJ" secondAttribute="bottom" id="Yqg-4L-kMh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="n1Q-KB-Lhd" secondAttribute="bottom" id="bAh-Vj-Fhg"/>
+                            <constraint firstItem="Pyy-oP-Kwa" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="bqD-Fl-I6N"/>
+                            <constraint firstItem="7yf-iD-cBY" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="20" id="fkF-Id-VvP"/>
+                            <constraint firstItem="cOR-AP-kCJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="4" id="p1H-oa-Wte"/>
+                            <constraint firstAttribute="trailing" secondItem="n1Q-KB-Lhd" secondAttribute="trailing" id="rg4-cT-ibY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cOR-AP-kCJ" secondAttribute="trailing" constant="4" id="u7f-Qu-J4r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="readMoreTextView" destination="cOR-AP-kCJ" id="bvT-iX-UXL"/>
+                        <outlet property="tableView" destination="n1Q-KB-Lhd" id="LhJ-DN-hTL"/>
+                        <outlet property="topReadMoreTextView" destination="7yf-iD-cBY" id="FXd-Kn-CWH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
