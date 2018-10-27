@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30988EF62ECF21DA756549CC /* Pods_RainForestSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC4E76883AF501DB79F5118 /* Pods_RainForestSwift.framework */; };
+		AEB7014C1CDBABBD00745427 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB7014B1CDBABBD00745427 /* AppDelegate.swift */; };
+		AEB7014E1CDBABBD00745427 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB7014D1CDBABBD00745427 /* ViewController.swift */; };
+		AEB701531CDBABBD00745427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB701521CDBABBD00745427 /* Assets.xcassets */; };
+		AEB701641CDBD6EC00745427 /* RainforestCardInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB701631CDBD6EC00745427 /* RainforestCardInfo.m */; };
+		AEB701681CDBD82600745427 /* AnimalTableNodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB701671CDBD82600745427 /* AnimalTableNodeController.swift */; };
+		AEB7016B1CDBDD5500745427 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB7016A1CDBDD5500745427 /* UIImage+ImageEffects.m */; };
+		AEB7016D1CDBDDA100745427 /* CardCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB7016C1CDBDDA100745427 /* CardCellNode.swift */; };
+		AECCF9901E1456D4003C07F8 /* ASImageNode+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = AECCF98F1E1456D4003C07F8 /* ASImageNode+Placeholder.m */; };
+		D836EA941EA85E900020A331 /* GradientNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836EA931EA85E900020A331 /* GradientNode.swift */; };
+		D836EA981EA8614D0020A331 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836EA971EA8614D0020A331 /* Factories.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BA051F02B0292F0B6D1D6C4 /* Pods-RainForestSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainForestSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RainForestSwift/Pods-RainForestSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		64DADCB20833037A21928F99 /* Pods-RainForestSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainForestSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-RainForestSwift/Pods-RainForestSwift.release.xcconfig"; sourceTree = "<group>"; };
+		8EC4E76883AF501DB79F5118 /* Pods_RainForestSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainForestSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB701481CDBABBD00745427 /* RainForestSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainForestSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB7014B1CDBABBD00745427 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEB7014D1CDBABBD00745427 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEB701521CDBABBD00745427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEB701571CDBABBD00745427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB7015D1CDBB17400745427 /* RainForestSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RainForestSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		AEB701631CDBD6EC00745427 /* RainforestCardInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RainforestCardInfo.m; sourceTree = "<group>"; };
+		AEB701651CDBD71D00745427 /* RainforestCardInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RainforestCardInfo.h; sourceTree = "<group>"; };
+		AEB701671CDBD82600745427 /* AnimalTableNodeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalTableNodeController.swift; sourceTree = "<group>"; };
+		AEB701691CDBDD5500745427 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		AEB7016A1CDBDD5500745427 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		AEB7016C1CDBDDA100745427 /* CardCellNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCellNode.swift; sourceTree = "<group>"; };
+		AECCF98E1E1456D4003C07F8 /* ASImageNode+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASImageNode+Placeholder.h"; sourceTree = "<group>"; };
+		AECCF98F1E1456D4003C07F8 /* ASImageNode+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ASImageNode+Placeholder.m"; sourceTree = "<group>"; };
+		D836EA931EA85E900020A331 /* GradientNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientNode.swift; sourceTree = "<group>"; };
+		D836EA971EA8614D0020A331 /* Factories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEB701451CDBABBD00745427 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30988EF62ECF21DA756549CC /* Pods_RainForestSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E533A4AA243988605B19B13 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EC4E76883AF501DB79F5118 /* Pods_RainForestSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D564947F5E6DF4B2D2B6160 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BA051F02B0292F0B6D1D6C4 /* Pods-RainForestSwift.debug.xcconfig */,
+				64DADCB20833037A21928F99 /* Pods-RainForestSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AEB7013F1CDBABBD00745427 = {
+			isa = PBXGroup;
+			children = (
+				AEB7014A1CDBABBD00745427 /* RainForestSwift */,
+				AEB701491CDBABBD00745427 /* Products */,
+				7D564947F5E6DF4B2D2B6160 /* Pods */,
+				4E533A4AA243988605B19B13 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEB701491CDBABBD00745427 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEB701481CDBABBD00745427 /* RainForestSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEB7014A1CDBABBD00745427 /* RainForestSwift */ = {
+			isa = PBXGroup;
+			children = (
+				D836EA971EA8614D0020A331 /* Factories.swift */,
+				D836EA931EA85E900020A331 /* GradientNode.swift */,
+				AEB7015D1CDBB17400745427 /* RainForestSwift-Bridging-Header.h */,
+				AEB7014B1CDBABBD00745427 /* AppDelegate.swift */,
+				AEB7014D1CDBABBD00745427 /* ViewController.swift */,
+				AEB701671CDBD82600745427 /* AnimalTableNodeController.swift */,
+				AEB7016C1CDBDDA100745427 /* CardCellNode.swift */,
+				AEB701661CDBD72500745427 /* RainforestCards */,
+				AEB701521CDBABBD00745427 /* Assets.xcassets */,
+				AEB701571CDBABBD00745427 /* Info.plist */,
+			);
+			path = RainForestSwift;
+			sourceTree = "<group>";
+		};
+		AEB701661CDBD72500745427 /* RainforestCards */ = {
+			isa = PBXGroup;
+			children = (
+				AEB701691CDBDD5500745427 /* UIImage+ImageEffects.h */,
+				AEB7016A1CDBDD5500745427 /* UIImage+ImageEffects.m */,
+				AECCF98E1E1456D4003C07F8 /* ASImageNode+Placeholder.h */,
+				AECCF98F1E1456D4003C07F8 /* ASImageNode+Placeholder.m */,
+				AEB701651CDBD71D00745427 /* RainforestCardInfo.h */,
+				AEB701631CDBD6EC00745427 /* RainforestCardInfo.m */,
+			);
+			name = RainforestCards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEB701471CDBABBD00745427 /* RainForestSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB7015A1CDBABBD00745427 /* Build configuration list for PBXNativeTarget "RainForestSwift" */;
+			buildPhases = (
+				FA9053270B5C9BC3B4A8A249 /* [CP] Check Pods Manifest.lock */,
+				AEB701441CDBABBD00745427 /* Sources */,
+				AEB701451CDBABBD00745427 /* Frameworks */,
+				AEB701461CDBABBD00745427 /* Resources */,
+				8E54A03E278483EB1A496B6A /* [CP] Embed Pods Frameworks */,
+				D9D5AF2A0DD35A2649D0E3D9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RainForestSwift;
+			productName = RainForestSwift;
+			productReference = AEB701481CDBABBD00745427 /* RainForestSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEB701401CDBABBD00745427 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				TargetAttributes = {
+					AEB701471CDBABBD00745427 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 46A8679957;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = AEB701431CDBABBD00745427 /* Build configuration list for PBXProject "RainForestSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEB7013F1CDBABBD00745427;
+			productRefGroup = AEB701491CDBABBD00745427 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEB701471CDBABBD00745427 /* RainForestSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEB701461CDBABBD00745427 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB701531CDBABBD00745427 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E54A03E278483EB1A496B6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RainForestSwift/Pods-RainForestSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9D5AF2A0DD35A2649D0E3D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RainForestSwift/Pods-RainForestSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA9053270B5C9BC3B4A8A249 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEB701441CDBABBD00745427 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D836EA981EA8614D0020A331 /* Factories.swift in Sources */,
+				AECCF9901E1456D4003C07F8 /* ASImageNode+Placeholder.m in Sources */,
+				D836EA941EA85E900020A331 /* GradientNode.swift in Sources */,
+				AEB701641CDBD6EC00745427 /* RainforestCardInfo.m in Sources */,
+				AEB7016B1CDBDD5500745427 /* UIImage+ImageEffects.m in Sources */,
+				AEB7014E1CDBABBD00745427 /* ViewController.swift in Sources */,
+				AEB7016D1CDBDDA100745427 /* CardCellNode.swift in Sources */,
+				AEB701681CDBD82600745427 /* AnimalTableNodeController.swift in Sources */,
+				AEB7014C1CDBABBD00745427 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AEB701581CDBABBD00745427 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AEB701591CDBABBD00745427 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEB7015B1CDBABBD00745427 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BA051F02B0292F0B6D1D6C4 /* Pods-RainForestSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 46A8679957;
+				INFOPLIST_FILE = RainForestSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RainForestSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RainForestSwift/RainForestSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AEB7015C1CDBABBD00745427 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64DADCB20833037A21928F99 /* Pods-RainForestSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 46A8679957;
+				INFOPLIST_FILE = RainForestSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.RainForestSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RainForestSwift/RainForestSwift-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEB701431CDBABBD00745427 /* Build configuration list for PBXProject "RainForestSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB701581CDBABBD00745427 /* Debug */,
+				AEB701591CDBABBD00745427 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEB7015A1CDBABBD00745427 /* Build configuration list for PBXNativeTarget "RainForestSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB7015B1CDBABBD00745427 /* Debug */,
+				AEB7015C1CDBABBD00745427 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEB701401CDBABBD00745427 /* Project object */;
+}
