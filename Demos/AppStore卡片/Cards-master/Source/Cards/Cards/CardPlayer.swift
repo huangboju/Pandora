@@ -66,7 +66,7 @@ import UIKit
         backgroundIV.addSubview(self.player.view)
         //player.view.addSubview(playPauseV)
         playPauseV.contentView.addSubview(playIV)
-        playPauseV.contentView.bringSubview(toFront: playIV)
+        playPauseV.contentView.bringSubviewToFront(playIV)
         
         // Gestures
         player.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(playerTapped)))

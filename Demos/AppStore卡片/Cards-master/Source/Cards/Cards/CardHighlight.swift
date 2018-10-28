@@ -65,7 +65,7 @@ import UIKit
         func Y(_ percentage: CGFloat, from: UIView ) -> CGFloat { return percentage*rect.height/100 + from.frame.maxY }
         func RevX(_ percentage: CGFloat, width: CGFloat ) -> CGFloat { return (rect.width - percentage*rect.width/100) - width }
         func RevY(_ percentage: CGFloat, height: CGFloat) -> CGFloat { return (rect.height - percentage*rect.height/100) - height }
-        let btnWidth = CGFloat((buttonText.characters.count + 2) * 10)
+        let btnWidth = CGFloat((buttonText.count + 2) * 10)
         
         //Draw
         bgIconIV.frame = CGRect(x: RevX(-20, width: X(60)), y: Y(0), width: X(60), height: X(60))
@@ -113,11 +113,11 @@ import UIKit
         actionBtn.backgroundColor = UIColor.clear
         actionBtn.layer.backgroundColor = lightColor.cgColor
         actionBtn.layer.cornerRadius = actionBtn.layer.bounds.height/2
-        let btnTitle = NSAttributedString(string: buttonText.uppercased(), attributes: [ NSAttributedStringKey.font : UIFont.systemFont(ofSize: 16, weight: .black), NSAttributedStringKey.foregroundColor : self.tintColor])
+        let btnTitle = NSAttributedString(string: buttonText.uppercased(), attributes: [ NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .black), NSAttributedString.Key.foregroundColor : self.tintColor])
         actionBtn.setAttributedTitle(btnTitle, for: .normal)
-        actionBtn.addTarget(self, action: #selector(buttonTapped), for: UIControlEvents.touchUpInside)
+        actionBtn.addTarget(self, action: #selector(buttonTapped), for: UIControl.Event.touchUpInside)
         
-        backgroundIV.bringSubview(toFront: titleLbl)
+        backgroundIV.bringSubviewToFront(titleLbl)
         
     }
     

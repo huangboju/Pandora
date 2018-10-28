@@ -16,7 +16,7 @@ import UIKit
     @IBInspectable var subtitle: String = "Inside the extraordinary world of Monument Valley 2"
     @IBInspectable var subtitleSize: CGFloat = 17
     @IBInspectable var category: String = "world premiere"
-    @IBInspectable var blurEffect: UIBlurEffectStyle = UIBlurEffectStyle.extraLight
+    @IBInspectable var blurEffect: UIBlurEffect.Style = UIBlurEffect.Style.extraLight
     
     // Delegate
     var delegate: CardDelegate?

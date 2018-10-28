@@ -24,9 +24,9 @@ class AppDescriptionCell: UICollectionViewCell {
         let readMore = ReadMoreTextView()
         let headerBlue = UIColor(red: 136/255, green: 190/255, blue: 249/255, alpha: 1)
     
-        let moreAttribString = NSMutableAttributedString(string: "more".uppercased(), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 9), NSForegroundColorAttributeName: headerBlue])
+        let moreAttribString = NSMutableAttributedString(string: "more".uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 9), NSAttributedString.Key.foregroundColor: headerBlue])
         
-        let lessAttribString = NSMutableAttributedString(string: "less".uppercased(), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 9), NSForegroundColorAttributeName: headerBlue])
+        let lessAttribString = NSMutableAttributedString(string: "less".uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 9), NSAttributedString.Key.foregroundColor: headerBlue])
 
         readMore.attributedReadLessText = lessAttribString
         readMore.attributedReadMoreText = moreAttribString
@@ -41,9 +41,9 @@ class AppDescriptionCell: UICollectionViewCell {
 
         let headerBlue = UIColor(red: 136/255, green: 190/255, blue: 249/255, alpha: 1)
         
-        let developer = NSMutableAttributedString(string: "Developer\n", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 9), NSForegroundColorAttributeName: lightGray])
+        let developer = NSMutableAttributedString(string: "Developer\n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 9), NSAttributedString.Key.foregroundColor: lightGray])
         
-        developer.append(NSMutableAttributedString(string: "Aliu Abdul-Mujib", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: headerBlue]))
+        developer.append(NSMutableAttributedString(string: "Aliu Abdul-Mujib", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: headerBlue]))
         
         devTV.attributedText = developer
         
@@ -60,9 +60,9 @@ class AppDescriptionCell: UICollectionViewCell {
         let atrributedString = NSMutableAttributedString()
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 2
-        atrributedString.append(NSAttributedString(string: "\(text)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: UIColor.black]))
-        let range = NSMakeRange(0, atrributedString.string.characters.count)
-        atrributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: range)
+        atrributedString.append(NSAttributedString(string: "\(text)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.black]))
+        let range = NSMakeRange(0, atrributedString.string.count)
+        atrributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
         return atrributedString
     }
     

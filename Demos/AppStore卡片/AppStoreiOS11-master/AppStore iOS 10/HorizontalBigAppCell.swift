@@ -27,13 +27,13 @@ class HorizontalBigAppCell: DatasourceCell {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 2
         
-        let attributedString = NSMutableAttributedString(string: "\(app.appCategory!)\n".uppercased(), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 9), NSForegroundColorAttributeName: headerBlue])
+        let attributedString = NSMutableAttributedString(string: "\(app.appCategory!)\n".uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 9), NSAttributedString.Key.foregroundColor: headerBlue])
         
-        attributedString.append(NSAttributedString(string: "\(app.appName!)\n", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 20), NSForegroundColorAttributeName: UIColor.black]))
+        attributedString.append(NSAttributedString(string: "\(app.appName!)\n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.black]))
         
-        attributedString.append(NSAttributedString(string: "\(app.appDesc!)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 20), NSForegroundColorAttributeName: lightGray]))
-        let range = NSMakeRange(0, attributedString.string.characters.count)
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: range)
+        attributedString.append(NSAttributedString(string: "\(app.appDesc!)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: lightGray]))
+        let range = NSMakeRange(0, attributedString.string.count)
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
 
         return attributedString
     }

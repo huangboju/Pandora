@@ -19,7 +19,7 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         layout.minimumLineSpacing = 0
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.decelerationRate = UIScrollViewDecelerationRateFast
+        cv.decelerationRate = UIScrollView.DecelerationRate.fast
         cv.showsVerticalScrollIndicator = false
         cv.backgroundColor = .white
         return cv
@@ -39,7 +39,7 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
             appDetails.attributedText = getAttributedStringForDescDetail(app: app!)
             
             if let price = app?.appCategory{
-                let attributedString = NSMutableAttributedString(string: price, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: UIColor.white])
+                let attributedString = NSMutableAttributedString(string: price, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: UIColor.white])
                 getBtn.setAttributedTitle(attributedString, for: .normal)
             }
             if let rating = app?.appRating{
@@ -110,12 +110,12 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         var attributedString = NSMutableAttributedString()
         
         
-        attributedString = NSMutableAttributedString(string: "\(98)\n".capitalized, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 18), NSForegroundColorAttributeName: lightGray])
+        attributedString = NSMutableAttributedString(string: "\(98)\n".capitalized, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: lightGray])
         
-        let range = NSMakeRange(0, attributedString.string.characters.count)
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: range)
+        let range = NSMakeRange(0, attributedString.string.count)
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
         
-        attributedString.append(NSAttributedString(string: "Age Rating", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: lightGray]))
+        attributedString.append(NSAttributedString(string: "Age Rating", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: lightGray]))
         
         label.attributedText = attributedString
         
@@ -134,12 +134,12 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         var attributedString = NSMutableAttributedString()
         
         
-        attributedString = NSMutableAttributedString(string: "\(2.3)\n".capitalized, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 18), NSForegroundColorAttributeName: lightGray])
+        attributedString = NSMutableAttributedString(string: "\(2.3)\n".capitalized, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18), NSAttributedString.Key.foregroundColor: lightGray])
         
-        let range = NSMakeRange(0, attributedString.string.characters.count)
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: range)
+        let range = NSMakeRange(0, attributedString.string.count)
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
         
-        attributedString.append(NSAttributedString(string: "Version", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: lightGray]))
+        attributedString.append(NSAttributedString(string: "Version", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: lightGray]))
 
         
         label.attributedText = attributedString
@@ -354,7 +354,7 @@ class AppDetailViewController: UIViewController , UICollectionViewDelegate, UICo
         collectionView.register(ScreenShotsHolderCell.self, forCellWithReuseIdentifier: screenShotCellID)
         collectionView.register(AppDescriptionCell.self, forCellWithReuseIdentifier: descCellID)
         collectionView.register(RatingCollectionViewCell.self, forCellWithReuseIdentifier: reviewsCellID)
-        collectionView.register(DividerFooter.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerID)
+        collectionView.register(DividerFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerID)
         collectionView.anchor(headerBG.bottomAnchor, left: self.view.leftAnchor, bottom: self.view.bottomAnchor, right: self.view.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 8, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         self.automaticallyAdjustsScrollViewInsets = false
         collectionView.delegate = self

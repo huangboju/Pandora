@@ -17,11 +17,11 @@ func getAttributedStringForDesc(app : App) -> NSAttributedString {
     var attributedString = NSMutableAttributedString()
     
     if let appName = app.appName{
-        attributedString = NSMutableAttributedString(string: "\(appName)\n".capitalized, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: UIColor.black])
+        attributedString = NSMutableAttributedString(string: "\(appName)\n".capitalized, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.black])
     }
     
     if let appDesc = app.appDesc, let appCateg = app.appCategory{
-        attributedString.append(NSAttributedString(string: "\(appDesc)\n\(appCateg)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: lightGray]))
+        attributedString.append(NSAttributedString(string: "\(appDesc)\n\(appCateg)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: lightGray]))
     }
     
     return attributedString
@@ -36,14 +36,14 @@ func getAttributedStringForDescDetail(app : App) -> NSAttributedString {
     var attributedString = NSMutableAttributedString()
     
     if let appName = app.appName{
-        attributedString = NSMutableAttributedString(string: "\(appName)\n".capitalized, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17), NSForegroundColorAttributeName: UIColor.black])
+        attributedString = NSMutableAttributedString(string: "\(appName)\n".capitalized, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17), NSAttributedString.Key.foregroundColor: UIColor.black])
     }
     
-    let range = NSMakeRange(0, attributedString.string.characters.count)
-    attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: range)
+    let range = NSMakeRange(0, attributedString.string.count)
+    attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
     
     if let appDesc = app.appDesc, let appCateg = app.appCategory{
-        attributedString.append(NSAttributedString(string: "\(appDesc)\n\(appCateg)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: lightGray]))
+        attributedString.append(NSAttributedString(string: "\(appDesc)\n\(appCateg)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: lightGray]))
     }
     
     return attributedString

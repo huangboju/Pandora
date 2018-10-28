@@ -246,7 +246,7 @@ open class Player: UIViewController {
             if let playerItem = self._playerItem {
                 return CMTimeGetSeconds(playerItem.duration)
             } else {
-                return CMTimeGetSeconds(kCMTimeIndefinite)
+                return CMTimeGetSeconds(CMTime.indefinite)
             }
         }
     }
@@ -257,7 +257,7 @@ open class Player: UIViewController {
             if let playerItem = self._playerItem {
                 return CMTimeGetSeconds(playerItem.currentTime())
             } else {
-                return CMTimeGetSeconds(kCMTimeIndefinite)
+                return CMTimeGetSeconds(CMTime.indefinite)
             }
         }
     }
@@ -269,7 +269,7 @@ open class Player: UIViewController {
                 let track = playerItem.asset.tracks(withMediaType: .video).first {
 
                 let size = track.naturalSize.applying(track.preferredTransform)
-                return CGSize(width: fabs(size.width), height: fabs(size.height))
+                return CGSize(width: abs(size.width), height: abs(size.height))
             } else {
                 return CGSize.zero
             }
@@ -381,7 +381,7 @@ open class Player: UIViewController {
     /// Begins playback of the media from the beginning.
     open func playFromBeginning() {
         self.playbackDelegate?.playerPlaybackWillStartFromBeginning(self)
-        self._avplayer.seek(to: kCMTimeZero)
+        self._avplayer.seek(to: CMTime.zero)
         self.playFromCurrentTime()
     }
 
@@ -577,12 +577,12 @@ extension Player {
     @objc internal func playerItemDidPlayToEndTime(_ aNotification: Notification) {
         if self.playbackLoops {
             self.playbackDelegate?.playerPlaybackWillLoop(self)
-            self._avplayer.seek(to: kCMTimeZero)
+            self._avplayer.seek(to: CMTime.zero)
         } else {
             if self.playbackFreezesAtEnd {
                 self.stop()
             } else {
-                self._avplayer.seek(to: kCMTimeZero, completionHandler: { _ in
+                self._avplayer.seek(to: CMTime.zero, completionHandler: { _ in
                     self.stop()
                 })
             }
@@ -596,10 +596,10 @@ extension Player {
     // MARK: - UIApplication
     
     internal func addApplicationObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationWillResignActive(_:)), name: .UIApplicationWillResignActive, object: UIApplication.shared)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationDidBecomeActive(_:)), name: .UIApplicationDidBecomeActive, object: UIApplication.shared)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationDidEnterBackground(_:)), name: .UIApplicationDidEnterBackground, object: UIApplication.shared)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationWillEnterForeground(_:)), name: .UIApplicationWillEnterForeground, object: UIApplication.shared)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: UIApplication.shared)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationDidBecomeActive(_:)), name: UIApplication.didBecomeActiveNotification, object: UIApplication.shared)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationDidEnterBackground(_:)), name: UIApplication.didEnterBackgroundNotification, object: UIApplication.shared)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleApplicationWillEnterForeground(_:)), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
     }
     
     internal func removeApplicationObservers() {
@@ -675,7 +675,7 @@ extension Player {
     // MARK: - AVPlayerObservers
     
     internal func addPlayerObservers() {
-        self._timeObserver = self._avplayer.addPeriodicTimeObserver(forInterval: CMTimeMake(1, 100), queue: DispatchQueue.main, using: { [weak self] timeInterval in
+        self._timeObserver = self._avplayer.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: 100), queue: DispatchQueue.main, using: { [weak self] timeInterval in
             guard let strongSelf = self
             else {
                 return
@@ -717,11 +717,11 @@ extension Player {
                 }
                 
                 if let status = change?[NSKeyValueChangeKey.newKey] as? NSNumber {
-                    switch status.intValue as AVPlayerStatus.RawValue {
-                    case AVPlayerStatus.readyToPlay.rawValue:
+                    switch status.intValue as AVPlayer.Status.RawValue {
+                    case AVPlayer.Status.readyToPlay.rawValue:
                         self._playerView.playerLayer.player = self._avplayer
                         self._playerView.playerLayer.isHidden = false
-                    case AVPlayerStatus.failed.rawValue:
+                    case AVPlayer.Status.failed.rawValue:
                         self.playbackState = PlaybackState.failed
                     default:
                         break
@@ -739,11 +739,11 @@ extension Player {
                 }
                 
                 if let status = change?[NSKeyValueChangeKey.newKey] as? NSNumber {
-                    switch status.intValue as AVPlayerStatus.RawValue {
-                    case AVPlayerStatus.readyToPlay.rawValue:
+                    switch status.intValue as AVPlayer.Status.RawValue {
+                    case AVPlayer.Status.readyToPlay.rawValue:
                         self._playerView.playerLayer.player = self._avplayer
                         self._playerView.playerLayer.isHidden = false
-                    case AVPlayerStatus.failed.rawValue:
+                    case AVPlayer.Status.failed.rawValue:
                         self.playbackState = PlaybackState.failed
                     default:
                         break
@@ -848,13 +848,13 @@ internal class PlayerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.playerLayer.backgroundColor = UIColor.black.cgColor
-        self.playerLayer.fillMode = PlayerFillMode.resizeAspectFit.avFoundationType
+        self.playerLayer.fillMode = CAMediaTimingFillMode(rawValue: PlayerFillMode.resizeAspectFit.avFoundationType)
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.playerLayer.backgroundColor = UIColor.black.cgColor
-        self.playerLayer.fillMode = PlayerFillMode.resizeAspectFit.avFoundationType
+        self.playerLayer.fillMode = CAMediaTimingFillMode(rawValue: PlayerFillMode.resizeAspectFit.avFoundationType)
     }
 
     deinit {

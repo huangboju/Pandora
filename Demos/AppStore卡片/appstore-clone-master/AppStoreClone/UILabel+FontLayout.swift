@@ -77,7 +77,7 @@ extension UILabel {
     
     var insets: UIEdgeInsets {
         get {
-            return UIEdgeInsetsMake(topInset, leftInset, bottomInset, rightInset)
+            return UIEdgeInsets(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
         }
         set {
             topInset = newValue.top
@@ -88,7 +88,7 @@ extension UILabel {
     }
     
     override func drawText(in rect: CGRect) {
-        super.drawText(in: UIEdgeInsetsInsetRect(rect, insets))
+        super.drawText(in: rect.inset(by: insets))
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {

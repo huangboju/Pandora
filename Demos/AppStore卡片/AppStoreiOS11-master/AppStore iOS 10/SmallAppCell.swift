@@ -64,7 +64,7 @@ class SmallAppCell: DatasourceCell {
         let backGroundImage = UIImage(color: lightGray, size: CGSize(width: 20, height: 10))
         
         let btn = UIButton()
-        let attributedString = NSMutableAttributedString(string: "GET".uppercased(), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10), NSForegroundColorAttributeName: headerBlue])
+        let attributedString = NSMutableAttributedString(string: "GET".uppercased(), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key.foregroundColor: headerBlue])
         btn.setAttributedTitle(attributedString, for: .normal)
         btn.setBackgroundImage(backGroundImage, for: .normal)
         btn.layer.cornerRadius = 10

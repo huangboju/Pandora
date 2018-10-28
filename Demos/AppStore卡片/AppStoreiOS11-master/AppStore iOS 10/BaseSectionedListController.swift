@@ -40,8 +40,8 @@ class BaseSectionedListController: DatasourceController {
     
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-                
-        if(kind == UICollectionElementKindSectionHeader){
+        
+        if(kind == UICollectionView.elementKindSectionHeader){
             
             if let header = (collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: NSStringFromClass(GeneralHeaderCell.self), for: indexPath) as? GeneralHeaderCell){
                 
@@ -81,12 +81,11 @@ class BaseSectionedListController: DatasourceController {
     
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        super.collectionView(collectionView, cellForItemAt: indexPath)
-        
+        _ = super.collectionView(collectionView, cellForItemAt: indexPath)
         if (indexPath.section != 0){
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(SmallListHolderCell.self), for: indexPath) as? SmallListHolderCell
+            if collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(SmallListHolderCell.self), for: indexPath) is SmallListHolderCell
             {
-                print(sectionItems?.count)
+                print(sectionItems!.count)
                 //USe the section to access array instead of index, the offset by one
 //                if(!(sectionItems?.isEmpty)!){
 //                    cell.searchTerm = sectionItems?[indexPath.section - 1]

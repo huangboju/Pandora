@@ -15,7 +15,7 @@ class CustomNavigationController: UINavigationController {
         
         // Do any additional setup after loading the view.
         //Make color of title
-        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black]
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         
         self.navigationBar.tintColor = UIColor(red: 5/255, green: 123/255, blue: 253/255, alpha: 1)
         self.navigationBar.isTranslucent = false

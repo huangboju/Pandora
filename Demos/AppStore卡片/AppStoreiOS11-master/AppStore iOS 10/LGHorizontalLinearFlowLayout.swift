@@ -24,7 +24,7 @@ open class LGHorizontalLinearFlowLayout: UICollectionViewFlowLayout {
         layout.minimumLineSpacing = minimumLineSpacing
         layout.itemSize = itemSize
         
-        collectionView.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         collectionView.collectionViewLayout = layout
         
         return layout
@@ -51,7 +51,7 @@ open class LGHorizontalLinearFlowLayout: UICollectionViewFlowLayout {
         }
 
         let inset = self.collectionView!.bounds.size.width / 2 - self.itemSize.width / 2
-        self.collectionView!.contentInset = UIEdgeInsetsMake(0, inset, 0, inset)
+        self.collectionView!.contentInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
         self.collectionView!.contentOffset = CGPoint(x: -inset, y: 0)
     }
     
@@ -82,7 +82,7 @@ open class LGHorizontalLinearFlowLayout: UICollectionViewFlowLayout {
                 continue
             }
             
-            if fabs(attributes.center.x - proposedContentOffsetCenterX) < fabs(candidateAttributes!.center.x - proposedContentOffsetCenterX) {
+            if abs(attributes.center.x - proposedContentOffsetCenterX) < abs(candidateAttributes!.center.x - proposedContentOffsetCenterX) {
                 candidateAttributes = attributes
             }
         }
