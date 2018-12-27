@@ -13,31 +13,31 @@ import UIKit
 public struct Configuration {
     
     /// Offset(distance between the top of the consecutive cards) between the cards while the cards are in collapsed state
-    public let cardOffset: Float
+    public let cardOffset: CGFloat
     
     /// Height of the collection view when the cards are in collapsed state
-    public let collapsedHeight:Float
+    public let collapsedHeight:CGFloat
     
     /// Height of the collection view when the cards are in expanded state
-    public let expandedHeight:Float
+    public let expandedHeight:CGFloat
     
     /// Height of the cards
-    public let cardHeight: Float
+    public let cardHeight: CGFloat
     
     /// The minimum threshold required for the cards to be dragged down when the cards are in expanded state
-    public let downwardThreshold: Float
+    public let downwardThreshold: CGFloat
     
     /// The minimum threshold required for the cards to be dragged up when the cards are in collapsed state
-    public let upwardThreshold: Float
+    public let upwardThreshold: CGFloat
     
     /// Vertical Spacing between the cards while the cards are in expanded state
-    public let verticalSpacing: Float
+    public let verticalSpacing: CGFloat
     
     /// Leading space for the cards
-    public let leftSpacing: Float
+    public let leftSpacing: CGFloat
     
     /// Trailing space for the cards
-    public let rightSpacing: Float
+    public let rightSpacing: CGFloat
     
 
     /// init
@@ -53,7 +53,7 @@ public struct Configuration {
     /// - parameter verticalSpacing:   Leading space for the cards. Optional field, default value is 8
     ///
     /// - returns: Configuration
-    public init(cardOffset: Float, collapsedHeight: Float, expandedHeight: Float, cardHeight: Float, downwardThreshold: Float = 20, upwardThreshold: Float = 20, leftSpacing: Float = 8.0, rightSpacing: Float = 8.0, verticalSpacing: Float = 8.0) {
+    public init(cardOffset: CGFloat, collapsedHeight: CGFloat, expandedHeight: CGFloat, cardHeight: CGFloat, downwardThreshold: CGFloat = 20, upwardThreshold: CGFloat = 20, leftSpacing: CGFloat = 8.0, rightSpacing: CGFloat = 8.0, verticalSpacing: CGFloat = 8.0) {
         self.cardOffset = cardOffset
         self.collapsedHeight = collapsedHeight
         self.expandedHeight = expandedHeight

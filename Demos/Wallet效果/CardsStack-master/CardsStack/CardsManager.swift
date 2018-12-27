@@ -17,7 +17,7 @@ internal enum CardState {
 
 class CardsManager: NSObject, CardLayoutDelegate {
     
-    var fractionToMove:Float = 0
+    var fractionToMove: CGFloat = 0
     var cardState: CardState {
         didSet {
             switch cardState {
@@ -128,11 +128,11 @@ class CardsManager: NSObject, CardLayoutDelegate {
             case .changed:
                 heightConstraint.constant -= distanceMoved
                 
-                heightConstraint.constant = Swift.min(heightConstraint.constant, CGFloat(self.configuration.expandedHeight))
-                heightConstraint.constant = Swift.max(heightConstraint.constant, CGFloat(self.configuration.collapsedHeight))
+                heightConstraint.constant = Swift.min(heightConstraint.constant, configuration.expandedHeight)
+                heightConstraint.constant = Swift.max(heightConstraint.constant, configuration.collapsedHeight)
                 
                 self.cardState = .inTransit
-                self.fractionToMove = Float(heightConstraint.constant - CGFloat(self.configuration.collapsedHeight))
+                self.fractionToMove = heightConstraint.constant - configuration.collapsedHeight
                 self.collectionView?.isScrollEnabled = false
                 
                 self.collectionView?.collectionViewLayout.invalidateLayout()
@@ -192,7 +192,7 @@ class CardsManager: NSObject, CardLayoutDelegate {
     }
     
     func updateView(with position: CardsPosition) {
-        var ht:Float = 0.0
+        var ht: CGFloat = 0.0
         cardState = cardsStateFromCardsPosition(position: position)
         switch cardState {
         case .collapsed:
@@ -204,18 +204,14 @@ class CardsManager: NSObject, CardLayoutDelegate {
             return
         }
         
-        DispatchQueue.main.async { [weak self] in
-            
-            guard let weakSelf = self else {
-                return
-            }
-            weakSelf.cardsCollectionViewHeight?.constant = CGFloat(ht)
+        DispatchQueue.main.async {
+            self.cardsCollectionViewHeight?.constant = ht
             
             UIView.animate(withDuration: 0.3, animations: {
-                weakSelf.collectionView?.collectionViewLayout.invalidateLayout()
-                weakSelf.collectionView?.superview?.layoutIfNeeded()
-                }, completion: { (finished) in
-                    weakSelf.triggerStateCallBack()
+                self.collectionView?.collectionViewLayout.invalidateLayout()
+                self.collectionView?.superview?.layoutIfNeeded()
+            }, completion: { (finished) in
+                self.triggerStateCallBack()
             })
         }
     }

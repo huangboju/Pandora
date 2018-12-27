@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        let expandedHeight = Float(UIScreen.main.bounds.size.height - 124)
+        let expandedHeight = UIScreen.main.bounds.size.height - 124
         
         let config = Configuration(cardOffset: 40, collapsedHeight: 200, expandedHeight: expandedHeight, cardHeight: 200, downwardThreshold: 20, upwardThreshold: 20, leftSpacing: 8.0, rightSpacing: 8.0)
 

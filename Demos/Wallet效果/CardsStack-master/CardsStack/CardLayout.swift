@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 internal protocol CardLayoutDelegate {
-    var fractionToMove: Float { get }
+    var fractionToMove: CGFloat { get }
     var cardState: CardState { get }
     var configuration: Configuration { get }
 }
@@ -80,27 +80,27 @@ class CardLayout: UICollectionViewLayout {
         return cachedAttributes[indexPath.item]
     }
     
-    func frameFor(index: Int, cardState: CardState, translation: Float) -> CGRect {
-        var frame = CGRect(origin: CGPoint(x: CGFloat(delegate.configuration.leftSpacing), y:0), size: CGSize(width: UIScreen.main.bounds.width - CGFloat(delegate.configuration.leftSpacing + delegate.configuration.rightSpacing), height: CGFloat(delegate.configuration.cardHeight)))
+    func frameFor(index: Int, cardState: CardState, translation: CGFloat) -> CGRect {
+        var frame = CGRect(origin: CGPoint(x: delegate.configuration.leftSpacing, y:0), size: CGSize(width: UIScreen.main.bounds.width - delegate.configuration.leftSpacing + delegate.configuration.rightSpacing, height: delegate.configuration.cardHeight))
         var frameOrigin = frame.origin
         switch cardState {
         case .expanded:
-            let val = (delegate.configuration.cardHeight * Float(index))
-            frameOrigin.y = CGFloat(Float(delegate.configuration.verticalSpacing * Float(index)) + val)
+            let val = (delegate.configuration.cardHeight * CGFloat(index))
+            frameOrigin.y = CGFloat(delegate.configuration.verticalSpacing * CGFloat(index) + val)
             
         case .inTransit:
             if index > 0 {
                 
-                let collapsedY = delegate.configuration.verticalSpacing + (delegate.configuration.cardOffset * Float(index))
-                let finalDistToMove = Swift.abs(((delegate.configuration.verticalSpacing + delegate.configuration.cardHeight) * Float(index)) - collapsedY)
+                let collapsedY = delegate.configuration.verticalSpacing + (delegate.configuration.cardOffset * CGFloat(index))
+                let finalDistToMove = Swift.abs(((delegate.configuration.verticalSpacing + delegate.configuration.cardHeight) * CGFloat(index)) - collapsedY)
                 let fract = (finalDistToMove * translation)/(delegate.configuration.expandedHeight - delegate.configuration.collapsedHeight)
-                let val = CGFloat(delegate.configuration.verticalSpacing + (delegate.configuration.cardOffset * Float(index)) + fract)
+                let val = CGFloat(delegate.configuration.verticalSpacing + (delegate.configuration.cardOffset * CGFloat(index)) + fract)
                 frameOrigin.y = val
             }
             
         case .collapsed:
             if index > 0 {
-                frameOrigin.y = CGFloat(delegate.configuration.verticalSpacing + (delegate.configuration.cardOffset * Float(index)))
+                frameOrigin.y = CGFloat(delegate.configuration.verticalSpacing + (delegate.configuration.cardOffset * CGFloat(index)))
             }
         }
         frame.origin = frameOrigin
