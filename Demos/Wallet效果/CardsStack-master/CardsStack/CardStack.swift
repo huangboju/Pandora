@@ -69,10 +69,10 @@ public struct Configuration {
 /// Enum for decribing the state of the cards
 @objc public enum CardsPosition: Int {
     /// Case when the cards are collapsed
-    case Collapsed
+    case collapsed
     
     /// Case when the cards are expanded
-    case Expanded
+    case expanded
 }
 
 /// Delegate to get hooks to interaction over cards
@@ -103,7 +103,7 @@ public class CardStack {
     public convenience init() {
         let configuration = Configuration(cardOffset: 40, collapsedHeight: 200, expandedHeight: 500, cardHeight: 200, downwardThreshold: 20, upwardThreshold: 20)
 
-        self.init(cardsState: .Collapsed, configuration: configuration, collectionView: nil, collectionViewHeight: nil)
+        self.init(cardsState: .collapsed, configuration: configuration, collectionView: nil, collectionViewHeight: nil)
     }
     
     /// init

@@ -40,7 +40,7 @@ class CardLayout: UICollectionViewLayout {
     
     override func prepare() {
         cachedAttributes.removeAll()
-        contentHeight = delegate.cardState == .Expanded ? 0.0 : CGFloat(delegate.configuration.collapsedHeight + delegate.fractionToMove)
+        contentHeight = delegate.cardState == .expanded ? 0.0 : CGFloat(delegate.configuration.collapsedHeight + delegate.fractionToMove)
         
         guard let numberOfItems = collectionView?.numberOfItems(inSection: 0) else {
             return
@@ -49,7 +49,7 @@ class CardLayout: UICollectionViewLayout {
         for index in 0..<numberOfItems {
             let layout = UICollectionViewLayoutAttributes(forCellWith: IndexPath(row: index, section: 0))
             layout.frame = frameFor(index: index, cardState: delegate!.cardState, translation: delegate.fractionToMove)
-            if delegate.cardState == .Expanded {
+            if delegate.cardState == .expanded {
                 contentHeight += CGFloat(delegate.configuration.verticalSpacing) + layout.frame.size.height
             }
             layout.zIndex = index
@@ -84,11 +84,11 @@ class CardLayout: UICollectionViewLayout {
         var frame = CGRect(origin: CGPoint(x: CGFloat(delegate.configuration.leftSpacing), y:0), size: CGSize(width: UIScreen.main.bounds.width - CGFloat(delegate.configuration.leftSpacing + delegate.configuration.rightSpacing), height: CGFloat(delegate.configuration.cardHeight)))
         var frameOrigin = frame.origin
         switch cardState {
-        case .Expanded:
+        case .expanded:
             let val = (delegate.configuration.cardHeight * Float(index))
             frameOrigin.y = CGFloat(Float(delegate.configuration.verticalSpacing * Float(index)) + val)
             
-        case .InTransit:
+        case .inTransit:
             if index > 0 {
                 
                 let collapsedY = delegate.configuration.verticalSpacing + (delegate.configuration.cardOffset * Float(index))
@@ -98,7 +98,7 @@ class CardLayout: UICollectionViewLayout {
                 frameOrigin.y = val
             }
             
-        case .Collapsed:
+        case .collapsed:
             if index > 0 {
                 frameOrigin.y = CGFloat(delegate.configuration.verticalSpacing + (delegate.configuration.cardOffset * Float(index)))
             }

@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
 
     @IBOutlet weak var pokemon: UIImageView!
-    var cardState: CardsPosition = .Collapsed
+    var cardState: CardsPosition = .collapsed
     var cardsStack: CardStack = CardStack()
     var pokemons = [Pokemon(name: "Pikachu", imageName:"pika"), Pokemon(name: "Squirtle", imageName:"squirtle"), Pokemon(name: "Blastoise", imageName:"blastoise"), Pokemon(name: "Charmender", imageName:"charmender"), Pokemon(name: "Raichu", imageName:"raichu"), Pokemon(name: "Evy", imageName:"evy"),Pokemon(name: "Charizard", imageName:"charizard"),Pokemon(name: "gengar", imageName:"gengar"),Pokemon(name: "Alakazam", imageName:"alakazam")]
     
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource, CardsManagerDelegate {
     
     func tappedOnCardsStack(cardsCollectionView: UICollectionView) {
-        cardsStack.changeCardsPosition(to: .Expanded)
+        cardsStack.changeCardsPosition(to: .expanded)
     }
     
     func cardsCollectionView(_ cardsCollectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

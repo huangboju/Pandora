@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 internal enum CardState {
-    case Expanded
-    case InTransit
-    case Collapsed
+    case expanded
+    case inTransit
+    case collapsed
 }
 
 class CardsManager: NSObject, CardLayoutDelegate {
@@ -21,15 +21,15 @@ class CardsManager: NSObject, CardLayoutDelegate {
     var cardState: CardState {
         didSet {
             switch cardState {
-            case .InTransit:
+            case .inTransit:
                 tapGesture.isEnabled = false
                 
-            case .Collapsed:
-                cardsDelegate?.position = .Collapsed
+            case .collapsed:
+                cardsDelegate?.position = .collapsed
                 tapGesture.isEnabled = true
                 
-            case .Expanded:
-                cardsDelegate?.position = .Expanded
+            case .expanded:
+                cardsDelegate?.position = .expanded
                 tapGesture.isEnabled = false
             }
         }
@@ -50,24 +50,24 @@ class CardsManager: NSObject, CardLayoutDelegate {
         
         let configuration = Configuration(cardOffset: 40, collapsedHeight: 200, expandedHeight: 500, cardHeight: 200, downwardThreshold: 20, upwardThreshold: 20)
         
-        self.init(cardState: .Collapsed, configuration: configuration, collectionView: nil, heightConstraint: nil)
+        self.init(cardState: .collapsed, configuration: configuration, collectionView: nil, heightConstraint: nil)
     }
     
     func cardsStateFromCardsPosition(position: CardsPosition) -> CardState {
         switch position {
-        case .Expanded:
-            return CardState.Expanded
-        case .Collapsed:
-            return CardState.Collapsed
+        case .expanded:
+            return CardState.expanded
+        case .collapsed:
+            return CardState.collapsed
         }
     }
     
     func cardsPositionFromCardsState(state: CardState) -> CardsPosition? {
         switch state {
-        case .Collapsed:
-            return CardsPosition.Expanded
-        case .Expanded:
-            return CardsPosition.Collapsed
+        case .collapsed:
+            return CardsPosition.expanded
+        case .expanded:
+            return CardsPosition.collapsed
         default:
             return nil
         }
@@ -76,10 +76,10 @@ class CardsManager: NSObject, CardLayoutDelegate {
     init(cardState: CardsPosition, configuration: Configuration, collectionView: UICollectionView?, heightConstraint: NSLayoutConstraint?) {
         
         switch cardState {
-        case .Expanded:
-            self.cardState = CardState.Expanded
-        case .Collapsed:
-            self.cardState = CardState.Collapsed
+        case .expanded:
+            self.cardState = CardState.expanded
+        case .collapsed:
+            self.cardState = CardState.collapsed
         }
 
         self.configuration = configuration
@@ -96,22 +96,22 @@ class CardsManager: NSObject, CardLayoutDelegate {
         cardsView.alwaysBounceVertical = true
         cardsView.delegate = self
         
-        panGesture = UIPanGestureRecognizer(target: self, action:#selector(self.pannedCard))
-        tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedCard))
+        panGesture = UIPanGestureRecognizer(target: self, action:#selector(pannedCard))
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(tappedCard))
         cardsView.addGestureRecognizer(panGesture)
         cardsView.addGestureRecognizer(tapGesture)
-        panGesture.isEnabled = cardState == .Collapsed
-        tapGesture.isEnabled = cardState == .Collapsed
+        panGesture.isEnabled = cardState == .collapsed
+        tapGesture.isEnabled = cardState == .collapsed
     }
     
-    func tappedCard(tapGesture: UITapGestureRecognizer) {
+    @objc func tappedCard(tapGesture: UITapGestureRecognizer) {
         guard let cardsCollectionView = collectionView else {
             return
         }
         delegate?.tappedOnCardsStack?(cardsCollectionView: cardsCollectionView)
     }
     
-    func pannedCard(panGesture: UIPanGestureRecognizer) {
+    @objc func pannedCard(panGesture: UIPanGestureRecognizer) {
 
         guard let collectionView = self.collectionView else {
             return
@@ -131,7 +131,7 @@ class CardsManager: NSObject, CardLayoutDelegate {
                 heightConstraint.constant = Swift.min(heightConstraint.constant, CGFloat(self.configuration.expandedHeight))
                 heightConstraint.constant = Swift.max(heightConstraint.constant, CGFloat(self.configuration.collapsedHeight))
                 
-                self.cardState = .InTransit
+                self.cardState = .inTransit
                 self.fractionToMove = Float(heightConstraint.constant - CGFloat(self.configuration.collapsedHeight))
                 self.collectionView?.isScrollEnabled = false
                 
@@ -145,25 +145,25 @@ class CardsManager: NSObject, CardLayoutDelegate {
                 if self.previousTranslation < 0 {
                     if heightConstraint.constant > CGFloat(self.configuration.collapsedHeight + self.configuration.upwardThreshold) {
                         heightConstraint.constant = CGFloat(self.configuration.expandedHeight)
-                        self.cardState = .Expanded
+                        self.cardState = .expanded
                         self.panGesture.isEnabled = false
                     }
                     else {
                         heightConstraint.constant = CGFloat(self.configuration.collapsedHeight)
-                        self.cardState = .Collapsed
+                        self.cardState = .collapsed
                         self.panGesture.isEnabled = true
                     }
                 }
                 else {
                     if heightConstraint.constant < CGFloat(self.configuration.expandedHeight - self.configuration.downwardThreshold) {
                         heightConstraint.constant = CGFloat(self.configuration.collapsedHeight)
-                        self.cardState = .Collapsed
+                        self.cardState = .collapsed
                         self.panGesture.isEnabled = true
                     }
                     else {
                         
                         heightConstraint.constant = CGFloat(self.configuration.expandedHeight)
-                        self.cardState = .Expanded
+                        self.cardState = .expanded
                         self.panGesture.isEnabled = false
                     }
                     
@@ -195,10 +195,10 @@ class CardsManager: NSObject, CardLayoutDelegate {
         var ht:Float = 0.0
         cardState = cardsStateFromCardsPosition(position: position)
         switch cardState {
-        case .Collapsed:
+        case .collapsed:
             ht = configuration.collapsedHeight
             
-        case .Expanded:
+        case .expanded:
             ht = configuration.expandedHeight
         default:
             return
