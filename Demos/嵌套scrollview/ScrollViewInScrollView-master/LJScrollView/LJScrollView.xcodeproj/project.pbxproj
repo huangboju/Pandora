@@ -217,7 +217,7 @@
 				TargetAttributes = {
 					DD2A5ACF1EC07313005C294C = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 6E5E8VY4L7;
+						DevelopmentTeam = 7XJTY6W57S;
 						ProvisioningStyle = Automatic;
 					};
 					DD2A5AE81EC07313005C294C = {
@@ -437,10 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6E5E8VY4L7;
+				DEVELOPMENT_TEAM = 7XJTY6W57S;
 				INFOPLIST_FILE = LJScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.LJ.LJScrollView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LJ.LJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -449,10 +449,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6E5E8VY4L7;
+				DEVELOPMENT_TEAM = 7XJTY6W57S;
 				INFOPLIST_FILE = LJScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.LJ.LJScrollView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LJ.LJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

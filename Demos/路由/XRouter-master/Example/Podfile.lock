@@ -1,0 +1,16 @@
+PODS:
+  - XRouter (0.1.0)
+
+DEPENDENCIES:
+  - XRouter (from `../`)
+
+EXTERNAL SOURCES:
+  XRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XRouter: c32f81553610aef73d75161a3524dcc2f4e37cb9
+
+PODFILE CHECKSUM: 89fa0371a18615ddf0b05edcc0a8a2834124b902
+
+COCOAPODS: 1.5.3

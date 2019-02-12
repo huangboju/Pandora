@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RouteProvider Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/RouteProvider" class="dashAnchor"></a>
+    <a title="RouteProvider Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">XRouter Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/reececomo/XRouter.git"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">XRouter Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RouteProvider Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MatchedURL.html">MatchedURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PathPattern.html">PathPattern</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PathPattern/Component.html">– Component</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Router.html">Router</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Router/URLMatcher.html">– URLMatcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Router/URLMatcherGroup.html">– URLMatcherGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Router/URLPathMatcher.html">– URLPathMatcher</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RouteTransition.html">RouteTransition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RouterError.html">RouterError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/RouteProvider.html">RouteProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RouterCustomTransitionDelegate.html">RouterCustomTransitionDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RouteProvider</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">RouteProvider</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Defines the minimum requirements for describing a Route list.</p>
+
+<p>Your Route list enum should inherit from this protocol.</p>
+<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">MyRoutes</span><span class="p">:</span> <span class="kt">RouteProvider</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">homePage</span>
+    <span class="k">case</span> <span class="nf">profilePage</span><span class="p">(</span><span class="nv">profileID</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
+    <span class="o">...</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XRouter13RouteProviderP4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XRouter13RouteProviderP4nameSSvp">name</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Route identifier</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Default implementation provided
+
+</div>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Route name (default: <code>baseName</code>)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XRouter13RouteProviderP10transitionAA0B10TransitionOvp"></a>
+                    <a name="//apple_ref/swift/Property/transition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XRouter13RouteProviderP10transitionAA0B10TransitionOvp">transition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Transition type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">transition</span><span class="p">:</span> <span class="kt"><a href="../Enums/RouteTransition.html">RouteTransition</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Methods"></a>
+                <a name="//apple_ref/swift/Section/Methods" class="dashAnchor"></a>
+                <a href="#/Methods">
+                  <h3 class="section-name">Methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XRouter13RouteProviderP20prepareForTransition4fromSo16UIViewControllerCAG_tKF"></a>
+                    <a name="//apple_ref/swift/Method/prepareForTransition(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XRouter13RouteProviderP20prepareForTransition4fromSo16UIViewControllerCAG_tKF">prepareForTransition(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepare the route for transition and return the view controller
+ to transition to on the view hierachy.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Throwing an error here will cancel the transition
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareForTransition</span><span class="p">(</span><span class="n">from</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XRouter13RouteProviderP12registerURLsAA6RouterC15URLMatcherGroupVyx_GSgyFZ"></a>
+                    <a name="//apple_ref/swift/Method/registerURLs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XRouter13RouteProviderP12registerURLsAA6RouterC15URLMatcherGroupVyx_GSgyFZ">registerURLs()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Register a URL matcher group.</p>
+
+<p>Example:</p>
+<pre class="highlight swift"><code><span class="k">return</span> <span class="o">.</span><span class="nf">group</span><span class="p">([</span><span class="s">"website.com"</span><span class="p">,</span> <span class="s">"sales.website.com"</span><span class="p">])</span> <span class="p">{</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="nf">map</span><span class="p">(</span><span class="s">"products"</span><span class="p">)</span> <span class="p">{</span> <span class="o">.</span><span class="nf">allProducts</span><span class="p">(</span><span class="nv">page</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">query</span><span class="p">(</span><span class="s">"page"</span><span class="p">)</span> <span class="p">??</span> <span class="mi">0</span><span class="p">)</span> <span class="p">}</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="nf">map</span><span class="p">(</span><span class="s">"products/{category}/"</span><span class="p">)</span> <span class="p">{</span> <span class="k">try</span> <span class="o">.</span><span class="nf">productsShowcase</span><span class="p">(</span><span class="nv">category</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">param</span><span class="p">(</span><span class="s">"category"</span><span class="p">))</span> <span class="p">}</span>
+    <span class="nv">$0</span><span class="o">.</span><span class="nf">map</span><span class="p">(</span><span class="s">"user/*/logout"</span><span class="p">)</span> <span class="p">{</span> <span class="o">.</span><span class="n">userLogout</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Register URLs (default: none)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">registerURLs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Router.html">Router</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;.</span><span class="kt">URLMatcherGroup</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Computed%20properties"></a>
+                <a name="//apple_ref/swift/Section/Computed properties" class="dashAnchor"></a>
+                <a href="#/Computed%20properties">
+                  <h3 class="section-name">Computed properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XRouter13RouteProviderPAAE8baseNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/baseName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XRouter13RouteProviderPAAE8baseNameSSvp">baseName</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Example: <code>myProfileView(withID: Int)</code> becomes <q>myProfileView</q></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">baseName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Equatable"></a>
+                <a name="//apple_ref/swift/Section/Equatable" class="dashAnchor"></a>
+                <a href="#/Equatable">
+                  <h3 class="section-name">Equatable</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7XRouter13RouteProviderPAAE2eeoiySbx_xtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7XRouter13RouteProviderPAAE2eeoiySbx_xtFZ">==(_:_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equatable (default: Compares on <code><a href="../Protocols/RouteProvider.html#/s:7XRouter13RouteProviderP4nameSSvp">name</a></code> property)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>MIT License</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
