@@ -84,7 +84,7 @@ class MDEditorViewController: UIViewController {
         }
     }
     
-    func handleMarkdownToHTMLNotification(notification: Notification) {
+    @objc func handleMarkdownToHTMLNotification(notification: Notification) {
         if let html = notification.object as? [Int] {
             let newContent = "body { background-color: cyan; } \(html)"
             self.webResults.loadHTMLString(newContent, baseURL: nil)

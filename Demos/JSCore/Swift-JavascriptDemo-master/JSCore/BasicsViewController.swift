@@ -112,7 +112,7 @@ class BasicsViewController: UIViewController {
     }
     // MARK: Private Method
     
-    func handleDidReceiveLuckyNumbersNotification(notification: Notification) {
+    @objc func handleDidReceiveLuckyNumbersNotification(notification: Notification) {
         if let luckyNumbers = notification.object as? [Int] {
             print("\n\nLuckyNumbers: ", luckyNumbers, "GuessNumbers: ", guessedNumbers, "\n")
             var correctGuesses = 0
