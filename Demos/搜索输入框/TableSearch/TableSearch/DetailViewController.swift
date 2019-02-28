@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     // MARK: - Types
 
     // Constants for Storyboard/ViewControllers.
-    static let storyboardName = "MainStoryboard"
+    static let storyboardName = "Main"
     static let viewControllerIdentifier = "DetailViewController"
     
     // Constants for state restoration.

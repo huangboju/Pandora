@@ -1,10 +1,10 @@
-/*
-Copyright (C) 2018 Apple Inc. All Rights Reserved.
-See LICENSE.txt for this sample’s licensing information
-
-Abstract:
-Base or common view controller to share a common UITableViewCell prototype between subclasses.
-*/
+//
+//  ViewController.swift
+//  TableSearch
+//
+//  Created by xiAo_Ju on 2019/2/28.
+//  Copyright © 2019 黄伯驹. All rights reserved.
+//
 
 import UIKit
 
@@ -19,7 +19,7 @@ class BaseTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let nib = UINib(nibName: BaseTableViewController.nibName, bundle: nil)
         
         // Required if our subclasses are to use `dequeueReusableCellWithIdentifier(_:forIndexPath:)`.
@@ -32,15 +32,15 @@ class BaseTableViewController: UITableViewController {
         cell.textLabel?.text = product.title
         
         /*
-            Build the price and year string.
-            Use NSNumberFormatter to get the currency format out of this NSNumber (product.introPrice).
-        */
+         Build the price and year string.
+         Use NSNumberFormatter to get the currency format out of this NSNumber (product.introPrice).
+         */
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         numberFormatter.formatterBehavior = .default
-
+        
         let priceString = numberFormatter.string(from: NSNumber(value: product.introPrice))
-
+        
         cell.detailTextLabel?.text = "\(priceString!) | \(product.yearIntroduced)"
     }
 }

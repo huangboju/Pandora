@@ -1,10 +1,10 @@
-/*
-Copyright (C) 2018 Apple Inc. All Rights Reserved.
-See LICENSE.txt for this sample’s licensing information
-
-Abstract:
-The application delegate class used for setting up our data model and state restoration.
-*/
+//
+//  AppDelegate.swift
+//  TableSearch
+//
+//  Created by xiAo_Ju on 2019/2/28.
+//  Copyright © 2019 黄伯驹. All rights reserved.
+//
 
 import UIKit
 
@@ -12,16 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Properties
-
+    
     /*
-		The app delegate must implement the window from UIApplicationDelegate
-        protocol to use a main storyboard file.
-    */
+     The app delegate must implement the window from UIApplicationDelegate
+     protocol to use a main storyboard file.
+     */
     var window: UIWindow?
     
     // MARK: - Application Life Cycle
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let products = [
             Product(hardwareType: Product.deviceTypeTitle, title: Product.Hardware.iPhone, yearIntroduced: 2007, introPrice: 599.00),
             Product(hardwareType: Product.deviceTypeTitle, title: Product.Hardware.iPod, yearIntroduced: 2001, introPrice: 399.00),
@@ -33,22 +33,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Product(hardwareType: Product.portableTypeTitle, title: Product.Hardware.MacBookAir, yearIntroduced: 2008, introPrice: 1799.00),
             Product(hardwareType: Product.portableTypeTitle, title: Product.Hardware.MacBookPro, yearIntroduced: 2006, introPrice: 1499.00)
         ]
-
-		if let navController = window!.rootViewController as? UINavigationController {
-			/*
-				Note we want the first view controller (not the visibleViewController) in case
-				we are being restored from UIStateRestoration.
-			*/
-			if let tableViewController = navController.viewControllers.first as? MainTableViewController {
-				tableViewController.products = products
-			}
-		}
-
+        
+        if let navController = window!.rootViewController as? UINavigationController {
+            /*
+             Note we want the first view controller (not the visibleViewController) in case
+             we are being restored from UIStateRestoration.
+             */
+            if let tableViewController = navController.viewControllers.first as? MainTableViewController {
+                tableViewController.products = products
+            }
+        }
+        
         return true
     }
-
+    
     // MARK: - UIStateRestoration
-
+    
     func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
         return true
     }
