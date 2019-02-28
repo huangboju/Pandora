@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2F1A3ACCF58DA7D4E1E2F1C /* Pods_TableSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30569CEBEFFF9E89F7C70FE /* Pods_TableSearch.framework */; };
 		F774028A2227E4AF0048BFF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77402892227E4AF0048BFF5 /* AppDelegate.swift */; };
 		F774028C2227E4AF0048BFF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F774028B2227E4AF0048BFF5 /* ViewController.swift */; };
 		F774028F2227E4AF0048BFF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F774028D2227E4AF0048BFF5 /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C4C27DCF8B4BAF2373E9663 /* Pods-TableSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableSearch.debug.xcconfig"; path = "Target Support Files/Pods-TableSearch/Pods-TableSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		A30569CEBEFFF9E89F7C70FE /* Pods_TableSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD77599EED30F90E903DE5B0 /* Pods-TableSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableSearch.release.xcconfig"; path = "Target Support Files/Pods-TableSearch/Pods-TableSearch.release.xcconfig"; sourceTree = "<group>"; };
 		F77402862227E4AF0048BFF5 /* TableSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F77402892227E4AF0048BFF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F774028B2227E4AF0048BFF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F1A3ACCF58DA7D4E1E2F1C /* Pods_TableSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21B023D711B291AC12E6CE38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C4C27DCF8B4BAF2373E9663 /* Pods-TableSearch.debug.xcconfig */,
+				BD77599EED30F90E903DE5B0 /* Pods-TableSearch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7EBB252A0D969D23C5BD8460 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A30569CEBEFFF9E89F7C70FE /* Pods_TableSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F774027D2227E4AF0048BFF5 = {
 			isa = PBXGroup;
 			children = (
 				F77402882227E4AF0048BFF5 /* TableSearch */,
 				F77402872227E4AF0048BFF5 /* Products */,
+				21B023D711B291AC12E6CE38 /* Pods */,
+				7EBB252A0D969D23C5BD8460 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F77402982227E4B00048BFF5 /* Build configuration list for PBXNativeTarget "TableSearch" */;
 			buildPhases = (
+				FAF73E610D189E2EC3D2D32D /* [CP] Check Pods Manifest.lock */,
 				F77402822227E4AF0048BFF5 /* Sources */,
 				F77402832227E4AF0048BFF5 /* Frameworks */,
 				F77402842227E4AF0048BFF5 /* Resources */,
+				B5C8C516273C23A287613639 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5C8C516273C23A287613639 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TableSearch/Pods-TableSearch-frameworks.sh",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-21/iOS/RevealServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TableSearch/Pods-TableSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAF73E610D189E2EC3D2D32D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TableSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F77402822227E4AF0048BFF5 /* Sources */ = {
@@ -308,9 +382,11 @@
 		};
 		F77402992227E4B00048BFF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C4C27DCF8B4BAF2373E9663 /* Pods-TableSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6E5E8VY4L7;
 				INFOPLIST_FILE = TableSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,6 +395,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boju.TableSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "iOS wildcard dev";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -326,9 +403,11 @@
 		};
 		F774029A2227E4B00048BFF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD77599EED30F90E903DE5B0 /* Pods-TableSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TableSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -337,6 +416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.boju.TableSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
