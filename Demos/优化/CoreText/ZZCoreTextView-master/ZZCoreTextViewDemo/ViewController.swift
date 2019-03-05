@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             coreTextView.text = text
 
             coreTextView.handleUrlTap { [weak self] url in
-                self?.showAlert("您点击了== \(url)")
+                self?.showAlert("您点击了== \(String(describing: url))")
             }
 
             coreTextView.handleTelTap { [weak self] str in
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             zztextView.styleModel = styleModel
             // Autolayout部分
             zztextView.handleUrlTap({ [weak self] url in
-                self?.showAlert("您点击了== \(url)")
+                self?.showAlert("您点击了== \(String(describing: url))")
             })
 
             zztextView.handleTelTap({ [weak self] str in

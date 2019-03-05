@@ -28,13 +28,13 @@ public struct ZZUtil {
         let attrString = NSMutableAttributedString(string: text)
         // 设置字体
         let fontRef = CTFontCreateWithName(font.fontName as CFString, font.pointSize, nil)
-        attrString.addAttribute(kCTFontAttributeName as String, value: fontRef, range: attrString.range)
+        attrString.addAttribute(NSAttributedString.Key(rawValue: kCTFontAttributeName as String), value: fontRef, range: attrString.range)
 
         // 设置字体颜色
-        attrString.addAttribute(kCTForegroundColorAttributeName as String, value: styleModel.textColor, range: attrString.range)
+        attrString.addAttribute(NSAttributedString.Key(rawValue: kCTForegroundColorAttributeName as String), value: styleModel.textColor, range: attrString.range)
 
         // 设置字距
-        attrString.addAttribute(kCTKernAttributeName as String, value: fontSpace, range: attrString.range)
+        attrString.addAttribute(NSAttributedString.Key(rawValue: kCTKernAttributeName as String), value: fontSpace, range: attrString.range)
 
         // 添加换行模式
         var lineBreakModel: CTLineBreakMode = .byCharWrapping
@@ -46,7 +46,7 @@ public struct ZZUtil {
         let settings = [lineBreakStyle, lineSpaceStyle]
         let style = CTParagraphStyleCreate(settings, settings.count)
 
-        let attributes = [kCTParagraphStyleAttributeName as String: style]
+        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key(rawValue: kCTParagraphStyleAttributeName as String): style]
         attrString.addAttributes(attributes, range: attrString.range)
 
         return attrString
@@ -124,19 +124,19 @@ public struct ZZUtil {
 
                 attrString.replaceCharacters(in: NSMakeRange(startIndex, matchRange.length), with: replaceStr)
 
-                let range = NSMakeRange(startIndex, replaceStr.characters.count)
+                let range = NSMakeRange(startIndex, replaceStr.count)
 
-                attrString.addAttribute(kCTForegroundColorAttributeName as String, value: styleModel.urlColor.cgColor, range: range)
+                attrString.addAttribute(NSAttributedString.Key(rawValue: kCTForegroundColorAttributeName as String), value: styleModel.urlColor.cgColor, range: range)
 
                 if styleModel.urlUnderLine {
 
-                    attrString.addAttribute(kCTUnderlineStyleAttributeName as String, value: NSNumber(value: CTUnderlineStyle.single.rawValue as Int32), range: range)
+                    attrString.addAttribute(NSAttributedString.Key(rawValue: kCTUnderlineStyleAttributeName as String), value: NSNumber(value: CTUnderlineStyle.single.rawValue as Int32), range: range)
                 }
 
                 let str = String(format: "U%@{%@}", substringForMatch, NSValue(range: range))
-                attrString.addAttribute("keyAttribute", value: str, range: range)
+                attrString.addAttribute(NSAttributedString.Key(rawValue: "keyAttribute"), value: str, range: range)
                 regular.append(range)
-                forIndex += substringForMatch.characters.count - replaceStr.characters.count
+                forIndex += substringForMatch.count - replaceStr.count
             }
 
         } catch let error as NSError {
@@ -155,9 +155,9 @@ public struct ZZUtil {
             for match in arrayOfAllMatches {
                 let matchRange = match.range
                 let substringForMatch = muStr.substring(with: matchRange)
-                attrString.addAttribute(kCTForegroundColorAttributeName as String, value: styleModel.numberColor.cgColor, range: matchRange)
+                attrString.addAttribute(NSAttributedString.Key(rawValue: kCTForegroundColorAttributeName as String), value: styleModel.numberColor.cgColor, range: matchRange)
                 let str = String(format: "T%@{%@}", substringForMatch, NSValue(range: matchRange))
-                attrString.addAttribute("keyAttribute", value: str, range: matchRange)
+                attrString.addAttribute(NSAttributedString.Key(rawValue: "keyAttribute"), value: str, range: matchRange)
                 print(str)
             }
 
@@ -176,9 +176,9 @@ public struct ZZUtil {
             for match in arrayOfAllMatches {
                 let matchRange = match.range
                 let substringForMatch = muStr.substring(with: matchRange)
-                attrString.addAttribute(kCTForegroundColorAttributeName as String, value: styleModel.atSomeOneColor.cgColor, range: matchRange)
+                attrString.addAttribute(NSAttributedString.Key(rawValue: kCTForegroundColorAttributeName as String), value: styleModel.atSomeOneColor.cgColor, range: matchRange)
                 let str = String(format: "A%@{%@}", substringForMatch, NSValue(range: matchRange))
-                attrString.addAttribute("keyAttribute", value: str, range: matchRange)
+                attrString.addAttribute(NSAttributedString.Key(rawValue: "keyAttribute"), value: str, range: matchRange)
             }
 
         } catch let error as NSError {

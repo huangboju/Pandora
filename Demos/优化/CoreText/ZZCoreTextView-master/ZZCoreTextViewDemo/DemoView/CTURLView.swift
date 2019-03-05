@@ -114,7 +114,7 @@ class CTURLView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         // 添加手势
-        let tap = UITapGestureRecognizer(target: self, action: #selector(CTURLView.tap(_:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CTURLView.tap))
         tap.delegate = self
         addGestureRecognizer(tap)
     }
@@ -126,7 +126,7 @@ class CTURLView: UIView {
 
 extension CTURLView: UIGestureRecognizerDelegate {
 
-    func tap(_ gesture: UITapGestureRecognizer) {
+    @objc func tap(_ gesture: UITapGestureRecognizer) {
 
         if gesture.state == .ended {
             let nStr = str as NSString
@@ -181,7 +181,7 @@ extension CTURLView: UIGestureRecognizerDelegate {
         let atResults = atRegular?.matches(in: attrStr.string, options: NSRegularExpression.MatchingOptions.withTransparentBounds, range: NSMakeRange(0, attrStr.length))
         // 4
         for checkResult in atResults! {
-            attrStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.red, range: NSMakeRange(checkResult.range.location, checkResult.range.length))
+            attrStr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.red, range: NSMakeRange(checkResult.range.location, checkResult.range.length))
             rangeArray.append(checkResult.range)
         }
 
@@ -190,7 +190,7 @@ extension CTURLView: UIGestureRecognizerDelegate {
         let atResults1 = atRegular1?.matches(in: attrStr.string, options: NSRegularExpression.MatchingOptions.withTransparentBounds, range: NSMakeRange(0, attrStr.length))
 
         for checkResult in atResults1! {
-            attrStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.blue, range: NSMakeRange(checkResult.range.location, checkResult.range.length))
+            attrStr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue, range: NSMakeRange(checkResult.range.location, checkResult.range.length))
             rangeArray.append(checkResult.range)
         }
 

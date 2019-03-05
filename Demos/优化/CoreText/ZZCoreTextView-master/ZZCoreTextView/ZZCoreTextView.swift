@@ -61,7 +61,7 @@ open class ZZCoreTextView: UIView {
 
     open override var intrinsicContentSize: CGSize {
         selfHeight = ZZUtil.getRowHeightWithText(text, rectSize: CGSize(width: self.bounds.width, height: 10000), styleModel: styleModel)
-        return CGSize(width: UIViewNoIntrinsicMetric, height: selfHeight)
+        return CGSize(width: UIView.noIntrinsicMetric, height: selfHeight)
     }
 
     open override func layoutSubviews() {
@@ -171,7 +171,7 @@ open class ZZCoreTextView: UIView {
 
                     var rect = CGRect.zero
 
-                    if keyAttribute.characters.first == "U" && styleModel.urlShouldInstead {
+                    if keyAttribute.first == "U" && styleModel.urlShouldInstead {
 
                         if !keyDatas.contains(keyAttribute) {
                             let img = ZZAssets.hyperlinkImage
@@ -200,7 +200,7 @@ open class ZZCoreTextView: UIView {
                             keyRect[NSValue(cgRect: rect)] = keyAttribute
                         }
 
-                    } else if keyAttribute.characters.first == "T" || keyAttribute.characters.first == "A" {
+                    } else if keyAttribute.first == "T" || keyAttribute.first == "A" {
 
                         rect = CGRect(x: runPointX, y: runPointY - (lineHeight + styleModel.highlightBackgroundAdjustHeight - lineSpace) / 4 - styleModel.highlightBackgroundOffset, width: runWidth, height: lineHeight + styleModel.highlightBackgroundAdjustHeight)
                         keyRect[NSValue(cgRect: rect)] = keyAttribute
@@ -285,7 +285,7 @@ extension String {
      字符串长度
      */
     public var length: Int {
-        return self.characters.count
+        return self.count
     }
 
     /**
@@ -376,7 +376,7 @@ extension String {
 
     func substr(with range: NSRange) -> String {
         let start = index(startIndex, offsetBy: range.location)
-        let end = index(endIndex, offsetBy: range.location + range.length - characters.count)
+        let end = index(endIndex, offsetBy: range.location + range.length - count)
         return substring(with: start ..< end)
     }
 }

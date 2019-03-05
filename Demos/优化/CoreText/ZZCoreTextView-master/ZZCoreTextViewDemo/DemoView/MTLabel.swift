@@ -59,14 +59,14 @@ class MTLabel: UIView {
         let topRange = NSRange(location: 0, length: topText.length)
 
         mutableAttrStr.addAttributes([
-            NSFontAttributeName: topFont,
-            NSForegroundColorAttributeName: topColor
+            NSAttributedString.Key.font: topFont,
+            NSAttributedString.Key.foregroundColor: topColor
             ], range: topRange)
 
         let bottomRange = NSRange(location: topText.length + 1, length: bottomText.length)
         mutableAttrStr.addAttributes([
-            NSFontAttributeName: bottomFont,
-            NSForegroundColorAttributeName: bottomColor
+            NSAttributedString.Key.font: bottomFont,
+            NSAttributedString.Key.foregroundColor: bottomColor
             ], range: bottomRange)
 
         // http://www.jianshu.com/p/ab6d3cc13c56
@@ -81,7 +81,7 @@ class MTLabel: UIView {
         ]
         let style = CTParagraphStyleCreate(settings, settings.count)
 
-        let attributes = [kCTParagraphStyleAttributeName as String: style]
+        let attributes: [NSAttributedString.Key : Any] = [kCTParagraphStyleAttributeName as NSAttributedString.Key: style]
         mutableAttrStr.addAttributes(attributes, range: NSRange(location: 0, length: mutableAttrStr.length))
 
 
@@ -168,9 +168,9 @@ extension String {
 
         // 设置文本段落排版格式
         let style = CTParagraphStyleCreate(alignmentSetting, alignmentSetting.count)
-        let attributes: [String: Any] = [
-            NSFontAttributeName: font1,
-            NSParagraphStyleAttributeName: style
+        let attributes: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: font1,
+            NSAttributedString.Key.paragraphStyle: style
         ]
 
         let string = NSMutableAttributedString(string: self, attributes: attributes)

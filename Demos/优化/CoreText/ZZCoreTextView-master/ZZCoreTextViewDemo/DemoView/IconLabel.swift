@@ -51,8 +51,8 @@ class IconLabel: UIView {
         }
 
         (title as NSString).draw(in: rect, withAttributes: [
-            NSFontAttributeName: titleFont,
-            NSForegroundColorAttributeName: titleColor
+            NSAttributedString.Key.font: titleFont,
+            NSAttributedString.Key.foregroundColor: titleColor
             ])
     }
 }

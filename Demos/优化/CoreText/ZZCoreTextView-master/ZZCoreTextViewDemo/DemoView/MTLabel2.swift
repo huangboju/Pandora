@@ -61,35 +61,35 @@ class MTLabel2: UIView {
 
         let topAttr = NSMutableAttributedString(string: topText + "\n" + bottomText)
         topAttr.addAttributes([
-            NSFontAttributeName: topFont,
-            NSForegroundColorAttributeName: topColor,
+            NSAttributedString.Key.font: topFont,
+            NSAttributedString.Key.foregroundColor: topColor,
             ], range: NSRange(location: 0, length: topText.length))
 
         topAttr.addAttributes([
-            NSFontAttributeName: bottomFont,
-            NSForegroundColorAttributeName: bottomColor,
+            NSAttributedString.Key.font: bottomFont,
+            NSAttributedString.Key.foregroundColor: bottomColor,
             ], range: NSRange(location: topText.length + 1, length: bottomText.length))
 
-        topAttr.addAttribute(NSParagraphStyleAttributeName, value: style, range: NSRange(location: 0, length: (topText + "\n" + bottomText).length))
+        topAttr.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0, length: (topText + "\n" + bottomText).length))
 
 
         textLayer?.alignmentMode = alignmentMode
         textLayer?.string = topAttr
     }
 
-    var alignmentMode: String {
+    var alignmentMode: CATextLayerAlignmentMode {
         switch textAlignment {
         case .left:
-            return kCAAlignmentLeft
+            return CATextLayerAlignmentMode.left
         case .center:
-            return kCAAlignmentCenter
+            return CATextLayerAlignmentMode.center
         case .right:
-            return kCAAlignmentRight
+            return CATextLayerAlignmentMode.right
         default:
             print("textAlignment do not exist")
             break
         }
-        return kCAAlignmentLeft
+        return CATextLayerAlignmentMode.left
     }
 
     required init?(coder aDecoder: NSCoder) {

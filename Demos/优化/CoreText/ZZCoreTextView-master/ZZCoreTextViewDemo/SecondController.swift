@@ -56,6 +56,7 @@ class SecondController: UIViewController {
 
     var currentView: UIView!
 
+    @objc
     func valueChanged() {
         let i = segementConrol.selectedSegmentIndex
         let title = segementConrol.titleForSegment(at: i) ?? ""
@@ -211,7 +212,10 @@ class SecondController: UIViewController {
             if i == ranges.count - 1 {
                 break
             }
-            attr.addAttributes([NSKernAttributeName: 1, NSFontAttributeName: UIFont.systemFont(ofSize: 16)], range: range)
+            attr.addAttributes([
+                NSAttributedString.Key.kern: 1,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)],
+                               range: range)
         }
         
         textLable.attributedText = attr

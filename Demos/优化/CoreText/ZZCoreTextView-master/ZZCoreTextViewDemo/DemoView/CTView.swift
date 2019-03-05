@@ -35,12 +35,13 @@ class CTView: UIView {
 
         let mutableAttrStr = NSMutableAttributedString(string: attrString)
         mutableAttrStr.addAttributes([
-            NSFontAttributeName: UIFont.systemFont(ofSize: 20),
-            NSForegroundColorAttributeName: UIColor.red,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20),
+            NSAttributedString.Key.foregroundColor: UIColor.red,
         ], range: NSMakeRange(0, 20))
 
         mutableAttrStr.addAttributes([
-            NSFontAttributeName: UIFont.systemFont(ofSize: 13), NSUnderlineStyleAttributeName: 1,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13),
+            NSAttributedString.Key.underlineStyle: 1,
         ], range: NSMakeRange(20, 18))
 
         // 通过CFAttributedString(NSAttributeString 也可以无缝桥接)进行初始化

@@ -37,17 +37,17 @@ class CTPicTxtView: UIView {
 
         let mutableAttrStr = NSMutableAttributedString(string: attrString)
         mutableAttrStr.addAttributes([
-            NSFontAttributeName: UIFont.systemFont(ofSize: 20),
-            NSForegroundColorAttributeName: UIColor.red,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20),
+            NSAttributedString.Key.foregroundColor: UIColor.red,
         ], range: NSMakeRange(0, 5))
         mutableAttrStr.addAttributes([
-            NSFontAttributeName: UIFont.systemFont(ofSize: 13),
-            NSUnderlineStyleAttributeName: 1,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13),
+            NSAttributedString.Key.underlineStyle: 1,
         ], range: NSMakeRange(3, 10))
         let style = NSMutableParagraphStyle() // 用来设置段落样式
         style.lineSpacing = 6 // 行间距
         mutableAttrStr.addAttributes([
-            NSParagraphStyleAttributeName: style,
+            NSAttributedString.Key.paragraphStyle: style,
         ], range: NSMakeRange(0, mutableAttrStr.length))
 
         // 5 为图片设置CTRunDelegate, delegate决定留给图片的空间大小
@@ -73,8 +73,8 @@ class CTPicTxtView: UIView {
 
         let runDelegate = CTRunDelegateCreate(&imageCallback, &imageName)
         let imgString = NSMutableAttributedString(string: " ") // 空格用于给图片留位置
-        imgString.addAttribute(kCTRunDelegateAttributeName as String, value: runDelegate!, range: NSMakeRange(0, 1)) // rundelegate  占一个位置
-        imgString.addAttribute("imageName", value: imageName, range: NSMakeRange(0, 1)) // 添加属性，在CTRun中可以识别出这个字符是图片
+        imgString.addAttribute(NSAttributedString.Key(rawValue: kCTRunDelegateAttributeName as String), value: runDelegate!, range: NSMakeRange(0, 1)) // rundelegate  占一个位置
+        imgString.addAttribute(NSAttributedString.Key(rawValue: "imageName"), value: imageName, range: NSMakeRange(0, 1)) // 添加属性，在CTRun中可以识别出这个字符是图片
         mutableAttrStr.insert(imgString, at: 15)
 
         // 网络图片相关
@@ -92,8 +92,8 @@ class CTPicTxtView: UIView {
         var imageUrl = "http://img3.3lian.com/2013/c2/64/d/65.jpg" // 网络图片链接
         let urlRunDelegate = CTRunDelegateCreate(&imageCallback1, &imageUrl)
         let imgUrlString = NSMutableAttributedString(string: " ") // 空格用于给图片留位置
-        imgUrlString.addAttribute(kCTRunDelegateAttributeName as String, value: urlRunDelegate!, range: NSMakeRange(0, 1)) // rundelegate  占一个位置
-        imgUrlString.addAttribute("urlImageName", value: imageUrl, range: NSMakeRange(0, 1)) // 添加属性，在CTRun中可以识别出这个字符是图片
+        imgUrlString.addAttribute(NSAttributedString.Key(rawValue: kCTRunDelegateAttributeName as String), value: urlRunDelegate!, range: NSMakeRange(0, 1)) // rundelegate  占一个位置
+        imgUrlString.addAttribute(NSAttributedString.Key(rawValue: "urlImageName"), value: imageUrl, range: NSMakeRange(0, 1)) // 添加属性，在CTRun中可以识别出这个字符是图片
         mutableAttrStr.insert(imgUrlString, at: 50)
 
         // 6 生成framesetter

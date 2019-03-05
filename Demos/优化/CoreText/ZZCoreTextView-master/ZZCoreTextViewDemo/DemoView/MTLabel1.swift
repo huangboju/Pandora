@@ -68,13 +68,13 @@ class MTLabel1: UIView {
         }
 
         (topText as NSString).draw(in: topRect, withAttributes: [
-            NSFontAttributeName: topFont,
-            NSForegroundColorAttributeName: topColor
+            NSAttributedString.Key.font: topFont,
+            NSAttributedString.Key.foregroundColor: topColor
             ])
 
         (bottomText as NSString).draw(in: bottomRect, withAttributes: [
-            NSFontAttributeName: bottomFont,
-            NSForegroundColorAttributeName: bottomColor
+            NSAttributedString.Key.font: bottomFont,
+            NSAttributedString.Key.foregroundColor: bottomColor
             ])
     }
 
@@ -85,6 +85,6 @@ class MTLabel1: UIView {
 
 extension String {
     func size(of font: UIFont) -> CGSize {
-        return self.boundingRect(with: CGSize(width: DBL_MAX, height: DBL_MAX), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil).size
+        return self.boundingRect(with: CGSize(width: CGFloat.infinity, height: CGFloat.infinity), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil).size
     }
 }
