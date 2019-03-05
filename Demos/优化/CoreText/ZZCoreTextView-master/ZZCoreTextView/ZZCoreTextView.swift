@@ -343,7 +343,7 @@ extension String {
      */
     func substring(from: Int) -> String {
         let fromIndex = index(from: from)
-        return substring(from: fromIndex)
+        return String(self[fromIndex...])
     }
 
     /**
@@ -354,7 +354,8 @@ extension String {
      - returns: 截取后的字符串
      */
     func substring(to: Int) -> String {
-        return substring(to: index(from: to))
+        let toIndex = index(from: to)
+        return String(self[..<toIndex])
     }
 
     func index(from: Int) -> Index {
@@ -377,7 +378,7 @@ extension String {
     func substr(with range: NSRange) -> String {
         let start = index(startIndex, offsetBy: range.location)
         let end = index(endIndex, offsetBy: range.location + range.length - count)
-        return substring(with: start ..< end)
+        return String(self[start ..< end])
     }
 }
 
