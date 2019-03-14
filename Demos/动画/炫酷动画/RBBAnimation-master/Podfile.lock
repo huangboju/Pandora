@@ -1,0 +1,32 @@
+PODS:
+  - Expecta (0.3.0)
+  - libextobjc/EXTKeyPathCoding (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.4)
+  - Specta (0.2.1)
+
+DEPENDENCIES:
+  - Expecta (= 0.3)
+  - libextobjc/EXTKeyPathCoding
+  - libextobjc/EXTScope (= 0.4)
+  - libextobjc/EXTSynthesize
+  - Specta (~> 0.2.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Expecta
+    - libextobjc
+    - Specta
+
+SPEC CHECKSUMS:
+  Expecta: 917bda2935b63ca7175741b8cf1b26796db6205f
+  libextobjc: f2802d4262f6885570df9799747409ceb1de602c
+  Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
+
+PODFILE CHECKSUM: da3a1d865deb48be3c1600ad5c89b9dc6726081c
+
+COCOAPODS: 1.5.3

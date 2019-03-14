@@ -1,0 +1,5 @@
+language: objective-c
+
+script:
+    - xcodebuild -workspace RBBAnimation.xcworkspace -scheme "RBBAnimation iOS" test
+    - xcodebuild -workspace RBBAnimation.xcworkspace -scheme "RBBAnimation Mac" test

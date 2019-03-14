@@ -65,8 +65,8 @@ public class AnimatedWaveView: UIView {
         self.finalPath = calculateFinalPath()
         self.clipsToBounds = true
         
-        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground(sender:)), name: .UIApplicationWillEnterForeground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground(sender:)), name: .UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -226,7 +226,7 @@ public class AnimatedWaveView: UIView {
         scaleWave.duration = duration
         scaleWave.isRemovedOnCompletion = false
         scaleWave.repeatCount = Float.infinity
-        scaleWave.fillMode = kCAFillModeForwards
+        scaleWave.fillMode = CAMediaTimingFillMode.forwards
         scaleWave.timeOffset = offset
         waveLayer.add(scaleWave, forKey: waveAnimationKey)
     }

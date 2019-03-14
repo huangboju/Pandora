@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var baseNavViewController: UINavigationController = UINavigationController()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        
         UIScrollView.initializeParade()
         
@@ -26,16 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor : UIColor.white,
-                                                             NSAttributedStringKey.font : UIFont(name: "HELVETICA", size: 14)!], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white,
+                                                             NSAttributedString.Key.font : UIFont(name: "HELVETICA", size: 14)!], for: .normal)
         let navigationBarAppearace = UINavigationBar.appearance()
         
         navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.barTintColor =  UIColor.color(forHex: 0x000000)
         navigationBarAppearace.backgroundColor = UIColor.color(forHex: 0x000000)
-        navigationBarAppearace.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white,
-                                                      NSAttributedStringKey.kern : 1.3,
-                                                      NSAttributedStringKey.font : UIFont(name: "HELVETICA", size: 16)!]
+        navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white,
+                                                      NSAttributedString.Key.kern : 1.3,
+                                                      NSAttributedString.Key.font : UIFont(name: "HELVETICA", size: 16)!]
 
         let homeViewController = ParallaxImageViewController()
         baseNavViewController.pushViewController(homeViewController, animated: false)

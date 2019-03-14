@@ -36,16 +36,16 @@ class ParallaxTheEndCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(scallingLabel)
         
         let font = UIFont(name: "Helvetica", size: 48)
-        var attributes = Dictionary<NSAttributedStringKey , AnyObject>()
+        var attributes = Dictionary<NSAttributedString.Key , AnyObject>()
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
         paragraphStyle.lineBreakMode = .byWordWrapping
         
-        attributes[NSAttributedStringKey.paragraphStyle] = paragraphStyle
-        attributes[NSAttributedStringKey.foregroundColor] = UIColor.white
-        attributes[NSAttributedStringKey.font] = UIFont(descriptor: font!.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font!.pointSize)
-        attributes[NSAttributedStringKey.kern] =  (font!.pointSize * 200 / CGFloat(1000.0) as AnyObject?)
+        attributes[NSAttributedString.Key.paragraphStyle] = paragraphStyle
+        attributes[NSAttributedString.Key.foregroundColor] = UIColor.white
+        attributes[NSAttributedString.Key.font] = UIFont(descriptor: font!.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font!.pointSize)
+        attributes[NSAttributedString.Key.kern] =  (font!.pointSize * 200 / CGFloat(1000.0) as AnyObject?)
 
         // Not the most effiecient way to layout
         // content, but good enought for a demo

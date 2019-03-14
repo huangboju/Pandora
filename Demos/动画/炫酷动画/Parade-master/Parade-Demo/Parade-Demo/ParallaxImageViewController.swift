@@ -55,7 +55,7 @@ class ParallaxImageViewController : UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = defaultBlackColor
         collectionView.alwaysBounceVertical = false
-        collectionView.decelerationRate = UIScrollViewDecelerationRateNormal
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.normal
         collectionView.delegate = self
         collectionView.bounces = true
         collectionView.dataSource = self
