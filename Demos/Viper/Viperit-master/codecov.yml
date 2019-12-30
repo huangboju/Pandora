@@ -1,5 +1,0 @@
-coverage:
-  ignore:
-    - Viperit/Core/ViperitError.swift
-    - ViperitTests/*
-    - ViperitTests/Sample/*
