@@ -41,7 +41,7 @@ class MovieService {
       let common = try String(contentsOfFile: commonJSPath, encoding: .utf8)
       let additions = try String(contentsOfFile: additionsJSPath, encoding: .utf8)
       
-      context?.setObject(Movie.self, forKeyedSubscript: "Movie" as (NSCopying & NSObjectProtocol)!)
+        context?.setObject(Movie.self, forKeyedSubscript: "Movie" as (NSCopying & NSObjectProtocol)?)
       _ = context?.evaluateScript(common)
       _ = context?.evaluateScript(additions)
     } catch (let error) {
