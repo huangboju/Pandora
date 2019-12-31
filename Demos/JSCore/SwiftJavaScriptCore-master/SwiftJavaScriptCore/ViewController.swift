@@ -118,7 +118,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        self.jsContext = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as! JSContext
+        self.jsContext = webView.value(forKeyPath: "documentView.webView.mainFrame.javaScriptContext") as? JSContext
         let model = SwiftJavaScriptModel()
         model.controller = self
         model.jsContext = self.jsContext
