@@ -65,7 +65,7 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         jsContext.evaluateScript("consoleLog")
         
         // Set the DeviceInfo class to the JSContext.
-        self.jsContext.setObject(DeviceInfo.self, forKeyedSubscript: "DeviceInfo" as (NSCopying & NSObjectProtocol)!)
+        self.jsContext.setObject(DeviceInfo.self, forKeyedSubscript: "DeviceInfo" as (NSCopying & NSObjectProtocol))
 
     }
     

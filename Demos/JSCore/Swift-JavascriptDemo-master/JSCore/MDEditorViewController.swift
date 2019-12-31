@@ -80,7 +80,7 @@ class MDEditorViewController: UIViewController {
 
     func convertMarkdownToHTML() {
         if let funcConvertMarkdownToHTML = jsContext.objectForKeyedSubscript("convertMarkdownToHTML") {
-            funcConvertMarkdownToHTML.call(withArguments: [self.tvEditor.text])
+            funcConvertMarkdownToHTML.call(withArguments: [self.tvEditor.text ?? ""])
         }
     }
     

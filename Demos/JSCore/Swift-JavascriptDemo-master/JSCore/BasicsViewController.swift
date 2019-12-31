@@ -69,7 +69,7 @@ class BasicsViewController: UIViewController {
     
     func helloWorld() {
         if let valiableHW = jsContext.objectForKeyedSubscript("helloWorld") {
-            print(valiableHW.toString())
+            print(valiableHW.toString() ?? "")
         }
     }
     
@@ -117,7 +117,7 @@ class BasicsViewController: UIViewController {
             print("\n\nLuckyNumbers: ", luckyNumbers, "GuessNumbers: ", guessedNumbers, "\n")
             var correctGuesses = 0
             for number in luckyNumbers {
-                if let _ = guessedNumbers.index(of: number) {
+                if let _ = guessedNumbers.firstIndex(of: number) {
                     print("You guessed correctly: ", number)
                     correctGuesses += 1
                 }
