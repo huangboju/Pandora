@@ -1,0 +1,13 @@
+PODS:
+  - Colours (5.3.0)
+  - SVProgressHUD (1.0)
+
+DEPENDENCIES:
+  - Colours (~> 5.3.0)
+  - SVProgressHUD (~> 1.0)
+
+SPEC CHECKSUMS:
+  Colours: 60b2e4dbdf2a0f077a98a07dae1ed18ac3333e21
+  SVProgressHUD: 5034c6e22b8c2ca3e09402e48d41ed0340aa1c50
+
+COCOAPODS: 0.32.1
