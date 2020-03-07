@@ -33,7 +33,7 @@ class ArtistDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     title = selectedArtist.name
-    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 300
   }
 }
