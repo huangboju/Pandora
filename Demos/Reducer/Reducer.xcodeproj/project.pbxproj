@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEC6B11E1F485BF200A91191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B11D1F485BF200A91191 /* AppDelegate.swift */; };
+		BEC6B1201F485BF200A91191 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B11F1F485BF200A91191 /* TableViewController.swift */; };
+		BEC6B1231F485BF200A91191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC6B1211F485BF200A91191 /* Main.storyboard */; };
+		BEC6B1251F485BF200A91191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC6B1241F485BF200A91191 /* Assets.xcassets */; };
+		BEC6B1281F485BF200A91191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC6B1261F485BF200A91191 /* LaunchScreen.storyboard */; };
+		BEC6B1331F485BF200A91191 /* ReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B1321F485BF200A91191 /* ReducerTests.swift */; };
+		BEC6B13E1F485BF200A91191 /* ReducerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B13D1F485BF200A91191 /* ReducerUITests.swift */; };
+		BEC6B14C1F485C0900A91191 /* TableViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B14B1F485C0900A91191 /* TableViewControllerDataSource.swift */; };
+		BEC6B14E1F485C3600A91191 /* ToDoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B14D1F485C3600A91191 /* ToDoStore.swift */; };
+		BEC6B1501F485C6000A91191 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B14F1F485C6000A91191 /* Store.swift */; };
+		BEC6B1521F485CE400A91191 /* TableViewInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B1511F485CE400A91191 /* TableViewInputCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEC6B12F1F485BF200A91191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEC6B1121F485BF200A91191 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEC6B1191F485BF200A91191;
+			remoteInfo = Reducer;
+		};
+		BEC6B13A1F485BF200A91191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEC6B1121F485BF200A91191 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEC6B1191F485BF200A91191;
+			remoteInfo = Reducer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BEC6B11A1F485BF200A91191 /* Reducer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reducer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC6B11D1F485BF200A91191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEC6B11F1F485BF200A91191 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BEC6B1221F485BF200A91191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEC6B1241F485BF200A91191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEC6B1271F485BF200A91191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEC6B1291F485BF200A91191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC6B12E1F485BF200A91191 /* ReducerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReducerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC6B1321F485BF200A91191 /* ReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerTests.swift; sourceTree = "<group>"; };
+		BEC6B1341F485BF200A91191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC6B1391F485BF200A91191 /* ReducerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReducerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC6B13D1F485BF200A91191 /* ReducerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerUITests.swift; sourceTree = "<group>"; };
+		BEC6B13F1F485BF200A91191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC6B14B1F485C0900A91191 /* TableViewControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerDataSource.swift; sourceTree = "<group>"; };
+		BEC6B14D1F485C3600A91191 /* ToDoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoStore.swift; sourceTree = "<group>"; };
+		BEC6B14F1F485C6000A91191 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		BEC6B1511F485CE400A91191 /* TableViewInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewInputCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEC6B1171F485BF200A91191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC6B12B1F485BF200A91191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC6B1361F485BF200A91191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEC6B1111F485BF200A91191 = {
+			isa = PBXGroup;
+			children = (
+				BEC6B11C1F485BF200A91191 /* Reducer */,
+				BEC6B1311F485BF200A91191 /* ReducerTests */,
+				BEC6B13C1F485BF200A91191 /* ReducerUITests */,
+				BEC6B11B1F485BF200A91191 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEC6B11B1F485BF200A91191 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEC6B11A1F485BF200A91191 /* Reducer.app */,
+				BEC6B12E1F485BF200A91191 /* ReducerTests.xctest */,
+				BEC6B1391F485BF200A91191 /* ReducerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEC6B11C1F485BF200A91191 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				BEC6B11D1F485BF200A91191 /* AppDelegate.swift */,
+				BEC6B11F1F485BF200A91191 /* TableViewController.swift */,
+				BEC6B1211F485BF200A91191 /* Main.storyboard */,
+				BEC6B1241F485BF200A91191 /* Assets.xcassets */,
+				BEC6B1261F485BF200A91191 /* LaunchScreen.storyboard */,
+				BEC6B1291F485BF200A91191 /* Info.plist */,
+				BEC6B14B1F485C0900A91191 /* TableViewControllerDataSource.swift */,
+				BEC6B14D1F485C3600A91191 /* ToDoStore.swift */,
+				BEC6B14F1F485C6000A91191 /* Store.swift */,
+				BEC6B1511F485CE400A91191 /* TableViewInputCell.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		BEC6B1311F485BF200A91191 /* ReducerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEC6B1321F485BF200A91191 /* ReducerTests.swift */,
+				BEC6B1341F485BF200A91191 /* Info.plist */,
+			);
+			path = ReducerTests;
+			sourceTree = "<group>";
+		};
+		BEC6B13C1F485BF200A91191 /* ReducerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BEC6B13D1F485BF200A91191 /* ReducerUITests.swift */,
+				BEC6B13F1F485BF200A91191 /* Info.plist */,
+			);
+			path = ReducerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEC6B1191F485BF200A91191 /* Reducer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC6B1421F485BF200A91191 /* Build configuration list for PBXNativeTarget "Reducer" */;
+			buildPhases = (
+				BEC6B1161F485BF200A91191 /* Sources */,
+				BEC6B1171F485BF200A91191 /* Frameworks */,
+				BEC6B1181F485BF200A91191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Reducer;
+			productName = Reducer;
+			productReference = BEC6B11A1F485BF200A91191 /* Reducer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEC6B12D1F485BF200A91191 /* ReducerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC6B1451F485BF200A91191 /* Build configuration list for PBXNativeTarget "ReducerTests" */;
+			buildPhases = (
+				BEC6B12A1F485BF200A91191 /* Sources */,
+				BEC6B12B1F485BF200A91191 /* Frameworks */,
+				BEC6B12C1F485BF200A91191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEC6B1301F485BF200A91191 /* PBXTargetDependency */,
+			);
+			name = ReducerTests;
+			productName = ReducerTests;
+			productReference = BEC6B12E1F485BF200A91191 /* ReducerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEC6B1381F485BF200A91191 /* ReducerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC6B1481F485BF200A91191 /* Build configuration list for PBXNativeTarget "ReducerUITests" */;
+			buildPhases = (
+				BEC6B1351F485BF200A91191 /* Sources */,
+				BEC6B1361F485BF200A91191 /* Frameworks */,
+				BEC6B1371F485BF200A91191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEC6B13B1F485BF200A91191 /* PBXTargetDependency */,
+			);
+			name = ReducerUITests;
+			productName = ReducerUITests;
+			productReference = BEC6B1391F485BF200A91191 /* ReducerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEC6B1121F485BF200A91191 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "黄伯驹";
+				TargetAttributes = {
+					BEC6B1191F485BF200A91191 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					BEC6B12D1F485BF200A91191 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BEC6B1191F485BF200A91191;
+					};
+					BEC6B1381F485BF200A91191 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BEC6B1191F485BF200A91191;
+					};
+				};
+			};
+			buildConfigurationList = BEC6B1151F485BF200A91191 /* Build configuration list for PBXProject "Reducer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEC6B1111F485BF200A91191;
+			productRefGroup = BEC6B11B1F485BF200A91191 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEC6B1191F485BF200A91191 /* Reducer */,
+				BEC6B12D1F485BF200A91191 /* ReducerTests */,
+				BEC6B1381F485BF200A91191 /* ReducerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEC6B1181F485BF200A91191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC6B1281F485BF200A91191 /* LaunchScreen.storyboard in Resources */,
+				BEC6B1251F485BF200A91191 /* Assets.xcassets in Resources */,
+				BEC6B1231F485BF200A91191 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC6B12C1F485BF200A91191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC6B1371F485BF200A91191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEC6B1161F485BF200A91191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC6B1521F485CE400A91191 /* TableViewInputCell.swift in Sources */,
+				BEC6B1501F485C6000A91191 /* Store.swift in Sources */,
+				BEC6B1201F485BF200A91191 /* TableViewController.swift in Sources */,
+				BEC6B14E1F485C3600A91191 /* ToDoStore.swift in Sources */,
+				BEC6B14C1F485C0900A91191 /* TableViewControllerDataSource.swift in Sources */,
+				BEC6B11E1F485BF200A91191 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC6B12A1F485BF200A91191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC6B1331F485BF200A91191 /* ReducerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC6B1351F485BF200A91191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC6B13E1F485BF200A91191 /* ReducerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEC6B1301F485BF200A91191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEC6B1191F485BF200A91191 /* Reducer */;
+			targetProxy = BEC6B12F1F485BF200A91191 /* PBXContainerItemProxy */;
+		};
+		BEC6B13B1F485BF200A91191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEC6B1191F485BF200A91191 /* Reducer */;
+			targetProxy = BEC6B13A1F485BF200A91191 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEC6B1211F485BF200A91191 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEC6B1221F485BF200A91191 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEC6B1261F485BF200A91191 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEC6B1271F485BF200A91191 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEC6B1401F485BF200A91191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEC6B1411F485BF200A91191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEC6B1431F485BF200A91191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Reducer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = huangboju.Reducer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BEC6B1441F485BF200A91191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Reducer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = huangboju.Reducer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BEC6B1461F485BF200A91191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReducerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = huangboju.ReducerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reducer.app/Reducer";
+			};
+			name = Debug;
+		};
+		BEC6B1471F485BF200A91191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReducerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = huangboju.ReducerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reducer.app/Reducer";
+			};
+			name = Release;
+		};
+		BEC6B1491F485BF200A91191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ReducerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = huangboju.ReducerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Reducer;
+			};
+			name = Debug;
+		};
+		BEC6B14A1F485BF200A91191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ReducerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = huangboju.ReducerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Reducer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEC6B1151F485BF200A91191 /* Build configuration list for PBXProject "Reducer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC6B1401F485BF200A91191 /* Debug */,
+				BEC6B1411F485BF200A91191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC6B1421F485BF200A91191 /* Build configuration list for PBXNativeTarget "Reducer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC6B1431F485BF200A91191 /* Debug */,
+				BEC6B1441F485BF200A91191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC6B1451F485BF200A91191 /* Build configuration list for PBXNativeTarget "ReducerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC6B1461F485BF200A91191 /* Debug */,
+				BEC6B1471F485BF200A91191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC6B1481F485BF200A91191 /* Build configuration list for PBXNativeTarget "ReducerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC6B1491F485BF200A91191 /* Debug */,
+				BEC6B14A1F485BF200A91191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEC6B1121F485BF200A91191 /* Project object */;
+}
