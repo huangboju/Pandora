@@ -26,10 +26,10 @@ class BonjourServer: NSObject, NetServiceBrowserDelegate, NetServiceDelegate, GC
     
     var coServiceBrowser: NetServiceBrowser!
     
-    var devices: [NetService]!
+    var devices: Array<NetService>!
     
     var connectedService: NetService!
-
+    
     var sockets: [String : GCDAsyncSocket]!
     
     override init() {
@@ -59,21 +59,21 @@ class BonjourServer: NSObject, NetServiceBrowserDelegate, NetServiceDelegate, GC
     // MARK: NSNetServiceBrowser helpers
     
     func stopBrowsing() {
-        if coServiceBrowser != nil {
-            coServiceBrowser.stop()
-            coServiceBrowser.delegate = nil
-            coServiceBrowser = nil
+        if self.coServiceBrowser != nil {
+            self.coServiceBrowser.stop()
+            self.coServiceBrowser.delegate = nil
+            self.coServiceBrowser = nil
         }
     }
     
     func startService() {
-        if devices != nil {
-            devices.removeAll(keepingCapacity: true)
+        if self.devices != nil {
+            self.devices.removeAll(keepingCapacity: true)
         }
-
-        coServiceBrowser = NetServiceBrowser()
-        coServiceBrowser.delegate = self
-        coServiceBrowser.searchForServices(ofType: "_probonjore._tcp.", inDomain: "local.")
+        
+        self.coServiceBrowser = NetServiceBrowser()
+        self.coServiceBrowser.delegate = self
+        self.coServiceBrowser.searchForServices(ofType: "_probonjore._tcp.", inDomain: "local.")
     }
     
     func send(_ data: Data) {
@@ -128,16 +128,16 @@ class BonjourServer: NSObject, NetServiceBrowserDelegate, NetServiceDelegate, GC
     
     // MARK: GCDAsyncSocket Delegates
     
-    func socket(_ sock: GCDAsyncSocket!, didConnectToHost host: String!, port: UInt16) {
-        print("connected to host \(host), on port \(port)")
+    func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
+        print("connected to host \(String(describing: host)), on port \(port)")
         sock.readData(toLength: UInt(MemoryLayout<UInt64>.size), withTimeout: -1.0, tag: 0)
     }
-
-    func socketDidDisconnect(_ sock: GCDAsyncSocket!, withError err: Error!) {
-        print("socket did disconnect \(sock), error: \(err._userInfo)")
+    
+    func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
+        print("socket did disconnect \(String(describing: sock)), error: \(String(describing: err?._userInfo))")
     }
     
-    func socket(_ sock: GCDAsyncSocket!, didRead data: Data!, withTag tag: Int) {
+    func socket(_ sock: GCDAsyncSocket, didRead data: Data, withTag tag: Int) {
         print("socket did read data. tag: \(tag)")
         
         if self.getSelectedSocket() == sock {
@@ -152,7 +152,7 @@ class BonjourServer: NSObject, NetServiceBrowserDelegate, NetServiceDelegate, GC
         }
     }
     
-    func socketDidCloseReadStream(_ sock: GCDAsyncSocket!) {
+    func socketDidCloseReadStream(_ sock: GCDAsyncSocket) {
         print("socket did close read stream")
     }    
     
@@ -166,26 +166,26 @@ class BonjourServer: NSObject, NetServiceBrowserDelegate, NetServiceDelegate, GC
     }
     
     func netServiceBrowser(_ aNetServiceBrowser: NetServiceBrowser, didRemove aNetService: NetService, moreComing: Bool) {
-        devices.removeObject(aNetService)
+        self.devices.removeObject(aNetService)
         if !moreComing {
-            delegate.didChangeServices()
+            self.delegate.didChangeServices()            
         }
     }
     
     func netServiceBrowserDidStopSearch(_ aNetServiceBrowser: NetServiceBrowser) {
-        stopBrowsing()
+        self.stopBrowsing()
     }
     
     func netServiceBrowser(_ aNetServiceBrowser: NetServiceBrowser, didNotSearch errorDict: [String : NSNumber]) {
-        stopBrowsing()
+        self.stopBrowsing()
     }
     
     // MARK: helpers
     
     func getSelectedSocket() -> GCDAsyncSocket? {
         var sock: GCDAsyncSocket?
-        if connectedService != nil {
-            sock = sockets[connectedService.name]!
+        if self.connectedService != nil {
+            sock = self.sockets[self.connectedService.name]!
         }
         return sock
     }

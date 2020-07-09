@@ -116,7 +116,7 @@ class BrowserViewController: UITableViewController {
                 
                 let spinner = UIActivityIndicatorView(frame: frame)
                 spinner.stopAnimating()
-                spinner.activityIndicatorViewStyle = .gray
+                spinner.style = .gray
                 spinner.sizeToFit()
                 spinner.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
                 cell.accessoryView = spinner
@@ -146,7 +146,7 @@ class BrowserViewController: UITableViewController {
         // If another resolve was running, stop it & remove the activity indicator from that cell
         if let currentResolve = currentResolve {
             // Get the indexPath for the active resolve cell
-            let indexPath = IndexPath(row: services.index(of: currentResolve) ?? -1, section: 0)
+            let indexPath = IndexPath(row: services.firstIndex(of: currentResolve) ?? -1, section: 0)
             
             // Stop the current resolve, which will also set self.needsActivityIndicator
             stopCurrentResolve()
@@ -172,7 +172,7 @@ class BrowserViewController: UITableViewController {
     }
     
     // If necessary, sets up state to show an activity indicator to let the user know that a resolve is occuring.
-    func showWaiting(_ timer: Timer) {
+    @objc func showWaiting(_ timer: Timer) {
         if timer != self.timer {
             return
         }
@@ -185,7 +185,7 @@ class BrowserViewController: UITableViewController {
         }
         needsActivityIndicator = true
 
-        let indexPath = IndexPath(row: services.index(of: currentResolve) ?? -1, section: 0)
+        let indexPath = IndexPath(row: services.firstIndex(of: currentResolve) ?? -1, section: 0)
         if indexPath.row != NSNotFound {
             tableView.reloadRows(at: [indexPath], with: .none)
             // Deselect the row since the activity indicator shows the user something is happening.
@@ -193,7 +193,7 @@ class BrowserViewController: UITableViewController {
         }
     }
 
-    func initialWaitOver(timer: Timer) {
+    @objc func initialWaitOver(timer: Timer) {
         _initialWaitOver = true
         if services.isEmpty {
             return
@@ -213,7 +213,7 @@ class BrowserViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
     }
 
-    func cancelAction() {
+    @objc func cancelAction() {
         delegate?.browserViewController(bvc: self, didResolveInstance: nil)
     }
 
@@ -270,7 +270,7 @@ extension Array where Element: Equatable {
     
     // Remove first collection element that is equal to the given `object`:
     mutating func remove(object: Element) {
-        if let index = index(of: object) {
+        if let index = firstIndex(of: object) {
             remove(at: index)
         }
     }

@@ -115,7 +115,7 @@ class DomainViewController: UITableViewController {
         return true
     }
     
-    func addAction() {
+    @objc func addAction() {
         let alert = UIAlertController(title: addDomainTitle, message: nil, preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
         alert.action("取消", style: .cancel)
@@ -127,17 +127,17 @@ class DomainViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func doneAction() {
+    @objc func doneAction() {
         tableView.setEditing(false, animated: true)
         addButtons(tableView.isEditing)
     }
     
-    func editAction() {
+    @objc func editAction() {
         tableView.setEditing(true, animated: true)
         addButtons(tableView.isEditing)
     }
     
-    func cancelAction() {
+    @objc func cancelAction() {
         delegate?.domainViewController(dvc: self, didSelectDomain: nil)
     }
     
@@ -154,7 +154,7 @@ class DomainViewController: UITableViewController {
         addButtons(self.tableView.isEditing)
         tableView.reloadData()
         
-        guard let n = customs.index(of: text) else {
+        guard let n = customs.firstIndex(of: text) else {
             return
         }
         
@@ -200,7 +200,7 @@ class DomainViewController: UITableViewController {
         delegate?.domainViewController(dvc: self, didSelectDomain: text)
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         assert(editingStyle == .delete)
         assert(indexPath.section == 1)
         customs.remove(at: indexPath.row)
@@ -252,7 +252,7 @@ extension DomainViewController: NetServiceBrowserDelegate {
 
 extension UIAlertController {
     @discardableResult
-    func action(_ title: String?, style: UIAlertActionStyle = .`default`, _ handle: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
+    func action(_ title: String?, style: UIAlertAction.Style = .`default`, _ handle: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
         let action = UIAlertAction(title: title, style: style, handler: handle)
         addAction(action)
         return self

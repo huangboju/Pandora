@@ -10,29 +10,23 @@ import Cocoa
 
 class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, BonjourServerDelegate {
     
-    var bonjourServer: BonjourServer!
+    private var bonjourServer: BonjourServer!
     
-    @IBOutlet var tableView: NSTableView!
-    @IBOutlet var toSendTextField: NSTextField!
-    @IBOutlet var readLabel: NSTextField!
-    @IBOutlet var sendButton: NSButton!
-    
-    @IBAction func sendData(_ sender: NSButton) {
-        if let data = toSendTextField.stringValue.data(using: String.Encoding.utf8) {
-            bonjourServer.send(data)
-        }
-    }
-    
+    @IBOutlet private var tableView: NSTableView!
+    @IBOutlet private var toSendTextField: NSTextField!
+    @IBOutlet private var readLabel: NSTextField!
+    @IBOutlet private var sendButton: NSButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.bonjourServer = BonjourServer()
-        self.bonjourServer.delegate = self
+        bonjourServer = BonjourServer()
+        bonjourServer.delegate = self
     }
     
     // MARK: Bonjour server delegates
     
     func didChangeServices() {
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     func connected() {
@@ -44,7 +38,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
     
     func handleBody(_ body: NSString?) {
-        readLabel.stringValue = body! as String
+        guard let body = body else { return }
+        readLabel.stringValue = body as String
     }
     
     // MARK: TableView Delegates
@@ -55,21 +50,29 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any?{
         var result = ""
-        
-        let columnIdentifier = tableColumn!.identifier
+
+        let columnIdentifier = tableColumn!.identifier.rawValue
         if columnIdentifier == "bonjour-device" {
             let device = bonjourServer.devices[row]
             result = device.name
         }
         return result
     }
-
+    
     func tableViewSelectionDidChange(_ notification: Notification) {
-        print("notification: \(notification.userInfo)")
+        print("notification: \(String(describing: notification.userInfo))")
 
-        if bonjourServer.devices.count > 0 {
+        if !bonjourServer.devices.isEmpty {
             let service = bonjourServer.devices[tableView.selectedRow]
             bonjourServer.connectTo(service)
+        }
+    }
+
+    // MARK: - Private
+
+    @IBAction private func sendData(_ sender: NSButton) {
+        if let data = toSendTextField.stringValue.data(using: String.Encoding.utf8) {
+            bonjourServer.send(data)
         }
     }
 }
