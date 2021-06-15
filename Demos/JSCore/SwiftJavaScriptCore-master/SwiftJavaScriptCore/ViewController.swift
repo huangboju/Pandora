@@ -48,10 +48,11 @@ class SwiftJavaScriptModel: NSObject, SwiftJavaScriptDelegate {
     }
     
     func showDialog(_ title: String, message: String) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
-        controller?.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
+            self.controller?.present(alert, animated: true, completion: nil)
+        }
     }
 
     func callHandler(_ handleFuncName: String) {
