@@ -29,7 +29,7 @@ class ViewController: UIViewController, WKScriptMessageHandler, WKNavigationDele
         configuretion.preferences.javaScriptEnabled = true
         configuretion.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
         // 默认是不能通过JS自动打开窗口的，必须通过用户交互才能打开
-        configuretion.preferences.javaScriptCanOpenWindowsAutomatically = false
+        configuretion.preferences.javaScriptCanOpenWindowsAutomatically = true
 
         // 通过js与webview内容交互配置
         configuretion.userContentController = WKUserContentController()
@@ -47,7 +47,9 @@ class ViewController: UIViewController, WKScriptMessageHandler, WKNavigationDele
         self.webView = WKWebView(frame: self.view.bounds, configuration: configuretion)
 
         guard let url = Bundle.main.url(forResource: "index", withExtension: "html") else { return }
-        webView.loadFileURL(url, allowingReadAccessTo: url)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.webView.loadFileURL(url, allowingReadAccessTo: url)
+        }
 //        self.webView.load(URLRequest(url: url!))
         self.view.addSubview(self.webView)
         
