@@ -27,6 +27,7 @@ class ViewController: UIViewController, WKScriptMessageHandler, WKNavigationDele
         configuretion.preferences = WKPreferences()
         configuretion.preferences.minimumFontSize = 10
         configuretion.preferences.javaScriptEnabled = true
+        configuretion.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
         // 默认是不能通过JS自动打开窗口的，必须通过用户交互才能打开
         configuretion.preferences.javaScriptCanOpenWindowsAutomatically = false
 
@@ -37,7 +38,7 @@ class ViewController: UIViewController, WKScriptMessageHandler, WKNavigationDele
         let script = WKUserScript(source: "function showAlert() { alert('在载入webview时通过Swift注入的JS方法'); }",
                                   injectionTime: .atDocumentStart,// 在载入时就添加JS
             forMainFrameOnly: true) // 只添加到mainFrame中
-        configuretion.userContentController.addUserScript(script)
+//        configuretion.userContentController.addUserScript(script)
         
         // 添加一个名称，就可以在JS通过这个名称发送消息：
         // window.webkit.messageHandlers.AppModel.postMessage({body: 'xxx'})
@@ -45,10 +46,9 @@ class ViewController: UIViewController, WKScriptMessageHandler, WKNavigationDele
         
         self.webView = WKWebView(frame: self.view.bounds, configuration: configuretion)
 
-        let url = Bundle.main.url(forResource: "test", withExtension: "html")
-        self.webView.load(URLRequest(url: url!))
-        //    UIApplication.shared.openURL(NSURL(string: "http://huaban.com/")!)
-        //    self.webView.load(URLRequest(url: URL(string: "http://www.huajiao.com/mobile/index")!))
+        guard let url = Bundle.main.url(forResource: "index", withExtension: "html") else { return }
+        webView.loadFileURL(url, allowingReadAccessTo: url)
+//        self.webView.load(URLRequest(url: url!))
         self.view.addSubview(self.webView)
         
         
@@ -69,13 +69,13 @@ class ViewController: UIViewController, WKScriptMessageHandler, WKNavigationDele
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "后退", style: .done, target: self, action: #selector(nextPage))
     }
     
-    func previousPage() {
+    @objc func previousPage() {
         if self.webView.canGoBack {
             self.webView.goBack()
         }
     }
     
-    func nextPage() {
+    @objc func nextPage() {
         if self.webView.canGoForward {
             self.webView.goForward()
         }
@@ -149,19 +149,19 @@ class ViewController: UIViewController, WKScriptMessageHandler, WKNavigationDele
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        let aa = "function registerImageClickAction(){var imgs=document.getElementsByTagName('img'); var length=imgs.length; for(var i=0;i<length;i++){img=imgs[i]; img.onclick=function(){window.location.href='image-preview:'+this.src}}}"
-        webView.evaluateJavaScript(aa) { (str, error) in
-            print(error)
-        }
-        webView.evaluateJavaScript("registerImageClickAction();") { (str, error) in
-            print(error)
-        }
+//        let aa = "function registerImageClickAction(){var imgs=document.getElementsByTagName('img'); var length=imgs.length; for(var i=0;i<length;i++){img=imgs[i]; img.onclick=function(){window.location.href='image-preview:'+this.src}}}"
+//        webView.evaluateJavaScript(aa) { (str, error) in
+//            print(error)
+//        }
+//        webView.evaluateJavaScript("registerImageClickAction();") { (str, error) in
+//            print(error)
+//        }
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         print(#function)
         
-        print(navigation)
+        print(navigation, "dddddd")
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
