@@ -23,17 +23,17 @@
 import UIKit
 
 public extension Int {
-    public static func random(_ n: Int) -> Int {
+    static func random(_ n: Int) -> Int {
         return Int(arc4random_uniform(UInt32(n)))
     }
     
-    public static func random(min: Int, max: Int) -> Int {
+    static func random(min: Int, max: Int) -> Int {
         return Int(arc4random_uniform(UInt32(max - min - 1))) + min
     }
 }
 
 public extension Double {
-    public static func random() -> Double {
+    static func random() -> Double {
         return Double(arc4random()) / 0xFFFFFFFF
     }
     
@@ -64,7 +64,7 @@ public extension CGFloat {
 
 extension Collection {
     /// Return a copy of `self` with its elements shuffled
-    func shuffle() -> [Generator.Element] {
+    func shuffle() -> [Iterator.Element] {
         var list = Array(self)
         list.shuffleInPlace()
         return list
@@ -80,7 +80,7 @@ extension MutableCollection where Index == Int {
         for i in startIndex ..< endIndex - 1 {
             let j = Int(arc4random_uniform(UInt32(endIndex - i))) + i
             guard i != j else { continue }
-            swap(&self[i], &self[j])
+            self.swapAt(i, j)
         }
     }
 }

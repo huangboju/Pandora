@@ -26,8 +26,8 @@ class SPAnimation {
     static func animate(_ duration: TimeInterval,
                         animations: (() -> Void)!,
                         delay: TimeInterval = 0,
-                        options: UIViewAnimationOptions = [],
-                        withComplection completion: (() -> Void)! = {}) {
+                        options: UIView.AnimationOptions = [],
+                        withComplection completion: ((Bool) -> Void)? = nil) {
         
         UIView.animate(
             withDuration: duration,
@@ -36,14 +36,14 @@ class SPAnimation {
             animations: {
                 animations()
             }, completion: { finished in
-                completion()
+                completion?(finished)
         })
     }
     
     static func animateWithRepeatition(_ duration: TimeInterval,
                                        animations: (() -> Void)!,
                                        delay: TimeInterval = 0,
-                                       options: UIViewAnimationOptions = [],
+                                       options: UIView.AnimationOptions = [],
                                        withComplection completion: (() -> Void)! = {}) {
         
         var optionsWithRepeatition = options

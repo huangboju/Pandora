@@ -14,37 +14,37 @@ struct SPConstraintsAssistent {
         subView.translatesAutoresizingMaskIntoConstraints = false;
         let topMarginConstraint = NSLayoutConstraint(
             item: subView,
-            attribute: NSLayoutAttribute.topMargin,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.topMargin,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: superVuew,
-            attribute: NSLayoutAttribute.top,
+            attribute: NSLayoutConstraint.Attribute.top,
             multiplier: 1,
             constant: 0)
         
         let bottomMarginConstraint = NSLayoutConstraint(
             item: subView,
-            attribute: NSLayoutAttribute.bottomMargin,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.bottomMargin,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: superVuew,
-            attribute: NSLayoutAttribute.bottom,
+            attribute: NSLayoutConstraint.Attribute.bottom,
             multiplier: 1,
             constant: 0)
         
         let leadingMarginConstraint = NSLayoutConstraint(
             item: subView,
-            attribute: NSLayoutAttribute.leadingMargin,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.leadingMargin,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: superVuew,
-            attribute: NSLayoutAttribute.leading,
+            attribute: NSLayoutConstraint.Attribute.leading,
             multiplier: 1,
             constant: 0)
         
         let trailingMarginConstraint = NSLayoutConstraint(
             item: subView,
-            attribute: NSLayoutAttribute.trailingMargin,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.trailingMargin,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: superVuew,
-            attribute: NSLayoutAttribute.trailing,
+            attribute: NSLayoutConstraint.Attribute.trailing,
             multiplier: 1,
             constant: 0)
         
@@ -57,37 +57,37 @@ struct SPConstraintsAssistent {
         subView.translatesAutoresizingMaskIntoConstraints = false;
         let topMarginConstraint = NSLayoutConstraint(
             item: subView,
-            attribute: NSLayoutAttribute.topMargin,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.topMargin,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: superVuew,
-            attribute: NSLayoutAttribute.top,
+            attribute: NSLayoutConstraint.Attribute.top,
             multiplier: 1,
             constant: top)
         
         let bottomMarginConstraint = NSLayoutConstraint(
             item: subView,
-            attribute: NSLayoutAttribute.bottomMargin,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.bottomMargin,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: superVuew,
-            attribute: NSLayoutAttribute.bottom,
+            attribute: NSLayoutConstraint.Attribute.bottom,
             multiplier: 1,
             constant: -bottom)
         
         let leadingMarginConstraint = NSLayoutConstraint(
             item: subView,
-            attribute: NSLayoutAttribute.leadingMargin,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.leadingMargin,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: superVuew,
-            attribute: NSLayoutAttribute.leading,
+            attribute: NSLayoutConstraint.Attribute.leading,
             multiplier: 1,
             constant: leading)
         
         let trailingMarginConstraint = NSLayoutConstraint(
             item: subView,
-            attribute: NSLayoutAttribute.trailingMargin,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.trailingMargin,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: superVuew,
-            attribute: NSLayoutAttribute.trailing,
+            attribute: NSLayoutConstraint.Attribute.trailing,
             multiplier: 1,
             constant: -trailing)
         

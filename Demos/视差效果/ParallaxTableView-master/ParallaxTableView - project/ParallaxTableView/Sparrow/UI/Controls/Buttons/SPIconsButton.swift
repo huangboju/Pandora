@@ -27,7 +27,7 @@ class SPIconsButton: SPRoundFrameButton {
     
     fileprivate func commonInit(_ normalIconImage: UIImage? = nil, highlightedIconImage: UIImage? = nil) {
         self.backgroundColor = UIColor.clear
-        self.setImage(normalIconImage, for: UIControlState.normal)
-        self.setImage(highlightedIconImage, for: UIControlState.highlighted)
+        self.setImage(normalIconImage, for: UIControl.State.normal)
+        self.setImage(highlightedIconImage, for: UIControl.State.highlighted)
     }
 }

@@ -41,6 +41,6 @@ class SPPageItemsScallingViewController: SPGradientViewController, UICollectionV
         let width = self.collectionView.frame.width
         let itemWidth = self.collectionView.layout.itemSize.width
         let edgeInsets = (width - itemWidth) / 2
-        return UIEdgeInsetsMake(0, edgeInsets, 0, edgeInsets)
+        return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
     }
 }

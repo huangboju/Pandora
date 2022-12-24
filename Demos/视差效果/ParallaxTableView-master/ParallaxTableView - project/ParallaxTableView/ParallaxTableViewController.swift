@@ -64,9 +64,9 @@ class ParallaxTableViewController: SPParallaxTableViewController {
         self.titles = DataAPI.getTitles()
         self.backgroundImages = DataAPI.getBackgroundImages()
         
-        tableView.contentInset = UIEdgeInsetsMake(
-            -cellHeight * 0.2,
-            0, 0, 0
+        tableView.contentInset = UIEdgeInsets(
+            top: -cellHeight * 0.2,
+            left: 0, bottom: 0, right: 0
         );
         
         self.view.backgroundColor = UIColor.black

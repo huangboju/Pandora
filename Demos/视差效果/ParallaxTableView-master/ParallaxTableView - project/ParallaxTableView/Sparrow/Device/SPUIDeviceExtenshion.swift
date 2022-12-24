@@ -105,7 +105,7 @@ public extension UIDevice {
     }
     
     func isPortraitOrientation() -> Bool {
-        if (UIDeviceOrientationIsPortrait(UIDevice.current.orientation)) {
+        if (UIDevice.current.orientation.isPortrait) {
             return true
         } else {
             return false

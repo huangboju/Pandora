@@ -92,9 +92,9 @@ extension SPLaunchAnimation {
         let startTime = CACurrentMediaTime() + delay
         scaleAnimation.beginTime = startTime
         scaleAnimation.isRemovedOnCompletion = false
-        scaleAnimation.fillMode = kCAFillModeForwards
+        scaleAnimation.fillMode = CAMediaTimingFillMode.forwards
         scaleAnimation.timingFunctions = [
-            CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),
+            CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut),
             self.scalingToFrontTimingFunction
         ]
         rootViewController.view.layer.mask?.add(scaleAnimation, forKey: "maskScaleAnimation")
@@ -104,7 +104,7 @@ extension SPLaunchAnimation {
                                 gradeView.alpha = 0
             },
                             delay: self.delayHidyingGradeView,
-                            options: UIViewAnimationOptions.curveEaseInOut,
+                            options: UIView.AnimationOptions.curveEaseInOut,
                             withComplection: {
                                 finished in
                                 gradeView.removeFromSuperview()
@@ -115,7 +115,7 @@ extension SPLaunchAnimation {
                                 rootViewController.view.transform = CGAffineTransform.identity
             },
                             delay: delayScalingRootView,
-                            options: UIViewAnimationOptions.curveEaseOut,
+                            options: UIView.AnimationOptions.curveEaseOut,
                             withComplection: {
                                 finished in
                                 //rootViewController.view.layer.mask = nil
@@ -189,9 +189,9 @@ extension SPLaunchAnimation {
         let startTime = CACurrentMediaTime() + delay
         scaleAnimation.beginTime = startTime
         scaleAnimation.isRemovedOnCompletion = false
-        scaleAnimation.fillMode = kCAFillModeForwards
+        scaleAnimation.fillMode = CAMediaTimingFillMode.forwards
         scaleAnimation.timingFunctions = [
-            CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut),
+            CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut),
             self.scalingToFrontTimingFunction
         ]
         rootViewController.view.layer.mask?.add(scaleAnimation, forKey: "maskScaleAnimation")
@@ -201,7 +201,7 @@ extension SPLaunchAnimation {
                                 gradeView.alpha = 0
             },
                             delay: delayHidyingGradeView,
-                            options: UIViewAnimationOptions.curveEaseInOut,
+                            options: UIView.AnimationOptions.curveEaseInOut,
                             withComplection: {
                                 finished in
                                 gradeView.removeFromSuperview()
@@ -212,7 +212,7 @@ extension SPLaunchAnimation {
                                 rootViewController.view.transform = CGAffineTransform.identity
             },
                             delay: delayScalingRootView,
-                            options: UIViewAnimationOptions.curveEaseOut,
+                            options: UIView.AnimationOptions.curveEaseOut,
                             withComplection: {
                                 finished in
                                 //rootViewController.view.layer.mask = nil
