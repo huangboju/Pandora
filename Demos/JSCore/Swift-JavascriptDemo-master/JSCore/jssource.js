@@ -5,6 +5,10 @@ function getFullName(firstName, lastName) {
     return firstName + " " + lastName;
 }
 
+function sendDict(dict) {
+    consoleLog(dict.string);
+}
+
 function maxMinAverage(values) {
     var max = Math.max.apply(null, values);
     var min = Math.min.apply(null, values);
@@ -28,7 +32,7 @@ function maxMinAverage(values) {
 function generateLuckyNumbers() {
     
     consoleLog("打印东东啊");
-    
+
     var luckyNumbers = [];
     while (luckyNumbers.length != 6) {
         var randomNumber = Math.floor((Math.random() * 50) + 1);
@@ -55,6 +59,8 @@ function parseiPhoneList(originalData) {
             var model = results.data[i]["Model"];
             
             var deviceInfo = DeviceInfo.initializeDeviceWithModel(model);
+
+            DeviceInfo.testWithModel(model)
             
             deviceInfo.initialOS = results.data[i]["Initial OS"];
             deviceInfo.latestOS = results.data[i]["Latest OS"];

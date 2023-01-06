@@ -81,6 +81,13 @@ class BasicsViewController: UIViewController {
                 print(fullName)
             }
         }
+
+
+        if let sendDict = jsContext.objectForKeyedSubscript("sendDict") {
+            if let result = sendDict.call(withArguments: [["string": "🍀"]]) {
+                print(result)
+            }
+        }
     }
     
     func jsDemo2() {

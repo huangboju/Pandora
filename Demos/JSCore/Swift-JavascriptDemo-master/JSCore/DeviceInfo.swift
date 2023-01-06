@@ -16,6 +16,8 @@ import JavaScriptCore
     var imageURL: String! { get set}
     
     static func initializeDevice(withModel: String) -> DeviceInfo
+
+    static func test(withModel: String)
 }
 
 class DeviceInfo: NSObject, DeviceInfoJSExport {
@@ -31,7 +33,12 @@ class DeviceInfo: NSObject, DeviceInfoJSExport {
     }
     
     class func initializeDevice(withModel: String) -> DeviceInfo {
+        print(#function)
         return DeviceInfo(withModel: withModel)
+    }
+
+    static func test(withModel: String) {
+        print(#function)
     }
     
     func concatOS() -> String {
